@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<registrati xmlns="http://127.0.0.1">
+   <utente>
+      <username>pippo</username>
+      <password>casa</password>
+      <nome>giacomo</nome>
+      <cognome>cattelan</cognome>
+      <telefono>54786731321468</telefono>
+   </utente>
+   <utente>
+      <username>pippo</username>
+      <password>casa</password>
+      <nome>giacomo</nome>
+      <cognome>cattelan</cognome>
+      <telefono>54786731321468</telefono>
+   </utente>
+</registrati>
