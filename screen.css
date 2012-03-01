@@ -112,10 +112,10 @@ img {
 	border-bottom: 1px solid #4c4c4c;
 	border-top: 1px solid #ccc;
 	line-height: 2.7em;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
+	-webkit-transition: background-color 0.4s ease-in-out;
+	-moz-transition: background-color 0.4s ease-in-out;
+	-o-transition: background-color 0.4s ease-in-out;
+	transition: background-color 0.4s ease-in-out;
 }
 #navigation ul li:hover {
 	background-color: #e6e6e6;
@@ -128,6 +128,7 @@ img {
 #navigation ul li a {
 	display: block;
 	padding-left: 3em;
+	outline: none;
 }
 #navigation ul li.homepage {
 	background-image: url('images/menu/homepage.png');
@@ -187,14 +188,14 @@ img {
 	margin-top: 1em;
 	background: #f6f5f2 url('images/noise.png') repeat;
 	background-color: #f6f5f2;
-	background-image: url('images/fold1.png'), url('images/noise.png');
-	background-repeat: no-repeat, repeat;
-	background-position: right -5px, left top;
+	background-image: url('images/noise.png');
+	background-repeat: repeat;
+	background-position: left top;
 }
 .product_container h3 {
 	font-size: 1.3em;
 	color: #51090a;
-	margin: 0 2em 0.5em 0;
+	margin: 0 0 0.5em 0;
 	padding: 0 0 0.5em 0;
 	border-bottom: 1px solid #ccc;
 }
