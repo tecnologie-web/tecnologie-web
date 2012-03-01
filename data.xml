@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+<data xmlns="http://www.monti.it">
+
+	<iscritti>
+		<utente>
+			<username>Riki</username>
+			<password>password</password>
+			<nome>Riccardo</nome>
+			<cognome>De Stefani</cognome>
+			<email>riccardo.destefani@gmail.com</email>
+			<telefono>3485281914</telefono>
+		</utente>
+		<utente>
+			<username>Ale</username>
+			<password>password</password>
+			<nome>Alessandro</nome>
+			<cognome>Cornaglia</cognome>
+			<email>ale.corny@gmail.com</email>
+			<telefono>3485281915</telefono>
+		</utente>
+		<utente>
+			<username>Catte</username>
+			<password>password</password>
+			<nome>Giacomo</nome>
+			<cognome>Cattelan</cognome>
+			<email>giacomo.cattelan@gmail.com</email>
+			<telefono>3485281916</telefono>
+		</utente>
+	</iscritti>
+
+	<prodotti>
+		<vino>
+			<etichetta>Fior d'arancio</etichetta>
+			<categoria>Bianco</categoria>
+			<stato>Frizzante</stato>
+			<colore>Colore giallo paglierino.....</colore>
+		</vino>
+		<vino>
+			<etichetta>Barbera</etichetta>
+			<categoria>Rosso</categoria>
+			<stato>Fermo</stato>
+			<colore>Colore rosso intenso.....</colore>
+		</vino>
+	</prodotti>
+	
+</data>
+	
