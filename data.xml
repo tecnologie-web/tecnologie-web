@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="transform.xsl"?>
-<data xmlns="http://www.monti.it">
+<data xmlns="http://www.monti.it"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+xsd:schemaLocation="http://www.monti.it schema.xsd">
 
 	<iscritti>
 		<utente>
@@ -35,12 +37,14 @@
 			<categoria>Bianco</categoria>
 			<stato>Frizzante</stato>
 			<colore>Colore giallo paglierino.....</colore>
+         <prezzo valuta="euro">20.36</prezzo>
 		</vino>
 		<vino>
 			<etichetta>Barbera</etichetta>
 			<categoria>Rosso</categoria>
 			<stato>Fermo</stato>
 			<colore>Colore rosso intenso.....</colore>
+         <prezzo valuta="euro">20.25</prezzo>
 		</vino>
 	</prodotti>
 	
