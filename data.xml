@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+<?xml-stylesheet type="text/xsl" href="catalogo.xsl"?>
 <data xmlns="http://www.monti.it"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
 xsd:schemaLocation="http://www.monti.it schema.xsd">
@@ -34,6 +34,7 @@ xsd:schemaLocation="http://www.monti.it schema.xsd">
 	<prodotti>
 		<vino>
 			<etichetta>Fior d'arancio</etichetta>
+         <immagine>images/prodotti/fiordarancio.png</immagine>
 			<categoria>Bianco</categoria>
 			<stato>Frizzante</stato>
 			<colore>Colore giallo paglierino.....</colore>
@@ -41,6 +42,7 @@ xsd:schemaLocation="http://www.monti.it schema.xsd">
 		</vino>
 		<vino>
 			<etichetta>Barbera</etichetta>
+         <immagine>images/prodotti/fiordarancio.png</immagine>
 			<categoria>Rosso</categoria>
 			<stato>Fermo</stato>
 			<colore>Colore rosso intenso.....</colore>

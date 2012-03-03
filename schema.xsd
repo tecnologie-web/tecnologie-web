@@ -31,6 +31,7 @@
                   <xsd:complexType>
                      <xsd:sequence>
                         <xsd:element name="etichetta" type="xsd:ID"/>
+                        <xsd:element name="immagine" type="xsd:anyURI"/>
                         <xsd:element name="categoria" type="xsd:string"/>
                         <xsd:element name="stato" type="xsd:string"/>
                         <xsd:element name="colore" type="xsd:string"/>
