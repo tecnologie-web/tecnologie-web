@@ -37,16 +37,53 @@
          <xsd:element name="vino" type="Tvino" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
-   
+   <!--
+   <etichetta>
+	<tipologia> (bianco|rosso|rosato)
+	<categoria> (dolce|secco)
+	<stato> (frizzante|fermo|spumante)
+	<immagine>
+	<categoria>
+	<uve>
+	<provenienza>
+	<produzione>
+	<altitudine>
+	<terreno>
+	<densita` piante>
+	<periodo di raccolta>
+	<vinificazione e afinamento>
+	<gradazione alcolica>
+	<colore>
+	<note di degustazione>
+	<abbinamenti gastronomici>
+	<temperatura di servizio> -->
    <xsd:complexType name="Tvino">
       <xsd:sequence>
          <xsd:element name="etichetta" type="xsd:ID"/>
          <xsd:element name="immagine" type="xsd:anyURI"/>
-         <xsd:element name="categoria" type="xsd:string"/>
-         <xsd:element name="stato" type="xsd:string"/>
+         <xsd:element name="tipologia" type="Ttipologia"/>
+         <xsd:element name="categoria" type="Tcategoria"/>
+         <xsd:element name="stato" type="Tstato"/>
          <xsd:element name="colore" type="xsd:string"/>
+         <xsd:element name="uve" type="xsd:string"/>
+         <xsd:element name="provenienza" type="xsd:string"/>
+         <xsd:element name="produzione" type="Tproduzione"/>
+         <xsd:element name="altitudine" type="Taltitudine"/>
+         <xsd:element name="terreno" type="xsd:string"/>
+         <xsd:element name="densita_p" type="xsd:string"/>
+         <xsd:element name="periodoraccolta" type="xsd:string"/>
+         <xsd:element name="vinificazione" type="xsd:string"/>
+         <xsd:element name="gradazione" type="Tgradazione"/>
+         <xsd:element name="degustazione" type="xsd:string"/>
+         <xsd:element name="abbinamenti" type="xsd:string"/>
+         <xsd:element name="temperatura" type="xsd:string"/>
          <xsd:element name="prezzo" type="Tprezzo"/>
+         
       </xsd:sequence>
+   </xsd:complexType>
+   
+   <xsd:complexType name="Ttipologia">
+      <
    </xsd:complexType>
    
    <xsd:complexType name="Tprezzo">
@@ -62,15 +99,17 @@
          <xsd:element name="commissione" type="Tcommissione" maxOccurs="unbounded" />          
       </xsd:sequence>
    </xsd:complexType>
-      <xsd:complexType name="Tcommissione">
-         <xsd:sequence>
-            <xsd:element name="cliente" type="xsd:string"/>
-               <xsd:sequence minOccurs="1" maxOccurs="unbounded">
-                  <xsd:element name="ordine" type="xsd:string"/>
-                  <xsd:element name="quantita" type="xsd:integer"/>
-               </xsd:sequence>
-            <xsd:element name="data" type="xsd:date"/>
-         </xsd:sequence>
+   
+   <xsd:complexType name="Tcommissione">
+      <xsd:sequence>
+         <xsd:element name="cliente" type="xsd:string"/>
+            <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+               <xsd:element name="ordine" type="xsd:string"/>
+               <xsd:element name="quantita" type="xsd:integer"/>
+            </xsd:sequence>
+         <xsd:element name="data" type="xsd:date"/>
+         <xsd:element name="evaso" type="xsd:boolean" default="false"/>
+      </xsd:sequence>
       </xsd:complexType>
 </xsd:schema>
 
