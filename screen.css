@@ -130,6 +130,11 @@ img {
 	padding-left: 3em;
 	outline: none;
 }
+#navigation ul li a:focus {
+	background-color: e6e6e6;
+	outline: 1px dotted #0062cc;
+	outline-offset: 2px;
+}
 #navigation ul li.homepage {
 	background-image: url('images/menu/homepage.png');
 }
