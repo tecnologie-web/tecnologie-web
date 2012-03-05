@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   
+   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      targetNamespace="http://www.monti.it"
+      xmlns="http://www.monti.it"
+      elementFormDefault="qualified">
+      
+      <xsd:element name="iscritti">
+         <xsd:complexType>
+            <xsd:sequence>
+               <xsd:element name="utente">
+                  <xsd:complexType>
+                     <xsd:sequence>
+                        <xsd:element name="username" type="xsd:ID" />
+                        <xsd:element name="password" type="xsd:string" />
+                        <xsd:element name="nome" type="xsd:string" />
+                        <xsd:element name="cognome" type="xsd:string" />
+                        <xsd:element name="email" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="telefono" type="xsd:integer" />
+                     </xsd:sequence>
+                  </xsd:complexType>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:complexType>
+      </xsd:element>
+      
+      <xsd:element name="prodotti">
+         <xsd:complexType>
+            <xsd:sequence>
+               <xsd:element name="vino" maxOccurs="unbounded">
+                  <xsd:complexType>
+                     <xsd:sequence>
+                        <xsd:element name="etichetta" type="xsd:ID"/>
+                        <xsd:element name="immagine" type="xsd:anyURI"/>
+                        <xsd:element name="categoria" type="xsd:string"/>
+                        <xsd:element name="stato" type="xsd:string"/>
+                        <xsd:element name="colore" type="xsd:string"/>
+                        <xsd:element name="prezzo">
+                           <xsd:complexType>
+                              <xsd:simpleContent>
+                                 <xsd:extension base="xsd:decimal">
+                                    <xsd:attribute name="valuta" type="xsd:string" use="required"/>
+                                 </xsd:extension>
+                              </xsd:simpleContent>
+                           </xsd:complexType>
+                        </xsd:element>                        
+                     </xsd:sequence>
+                  </xsd:complexType>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:complexType>
+      </xsd:element>
+      
+      <xsd:element name="prenotazioni">
+         <xsd:complexType>
+            <xsd:sequence>
+               <xsd:element name="commissione" maxOccurs="unbounded">
+                  <xsd:complexType>
+                     <xsd:sequence>
+                        <xsd:element name="cliente" type="xsd:string"/>
+                        <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+                           <xsd:element name="ordine" type="xsd:string"/>
+                           <xsd:element name="quantita" type="xsd:integer"/>
+                        </xsd:sequence>
+                        <xsd:element name="data" type="xsd:date"/>
+                     </xsd:sequence>
+                  </xsd:complexType>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:complexType>
+      </xsd:element>
+    
+   </xsd:schema>
+
+	     
