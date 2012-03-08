@@ -6,7 +6,8 @@
 		<meta name="author" content="Giacomo Cattelan, Alessandro Cornaglia, Riccardo De Stefani, Jorge Sotomayor" />
 		<meta name="description" content=".." />
 		<meta name="keywords" content=".." />
-		<link href="screen.css" rel="stylesheet" media="screen" type="text/css" />
+		<link href="css/screen/main.css" rel="stylesheet" media="screen" type="text/css" />
+		<link href="css/print/main.css" rel="stylesheet" media="print" type="text/css" />
 		<title>Homepage ~ Cantina Benato</title>
 	</head>
 	
@@ -31,9 +32,8 @@
 				</ul>
 			</div>  <!--navigation-->
 			<div id="content">
-				<h2><a name="top"></a>Form di registrazione al sito</h2>
-				
-				<form method="post" action="cgi-bin/register.cgi">
+				<h2></a>Form di registrazione al sito</h2>
+				<form id="user" method="post" action="cgi-bin/register.cgi">
 					<fieldset id="site">
 						<legend>Dati accesso al sito</legend>
 						<p>
@@ -73,7 +73,6 @@
 						<input type="submit" value="Invia" />
 					</p>
 				</form>
-				
 			</div>  <!--content-->
 		</div>  <!--container-->
 		<div id="footer">

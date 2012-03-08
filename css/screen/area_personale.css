@@ -1,0 +1,20 @@
+
+#nav_cliente {
+	list-style-type: none;
+}
+#nav_cliente li {
+	display: inline;
+	padding: 0.7em 1em;
+	background-color: #ccc;
+	border: 1px solid #666;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+#nav_cliente a {
+}
+
+#data_cliente {
+	margin-top: 0.7em;
+	border: 1px solid #333;
+	padding: 2em;
+}

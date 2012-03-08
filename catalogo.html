@@ -6,7 +6,8 @@
 		<meta name="author" content="Giacomo Cattelan, Alessandro Cornaglia, Riccardo De Stefani, Jorge Sotomayor" />
 		<meta name="description" content=".." />
 		<meta name="keywords" content=".." />
-		<link href="screen.css" rel="stylesheet" media="screen" type="text/css" />
+		<link href="css/screen/main.css" rel="stylesheet" media="screen" type="text/css" />
+		<link href="css/print/main.css" rel="stylesheet" media="print" type="text/css" />
 		<title>Catalogo Vini ~ Cantina Benato</title>
 	</head>
 	
@@ -33,44 +34,33 @@
 			<div id="content">
 				<h2><a name="top"></a>Catalogo dei nostri prodotti</h2>
 				
-				<div class="product_container">
-					<h3>Fior d'arancio</h3>
-					<img src="images/prodotti/fiordarancio.png" alt="vino xxx breve descr" />
-					<div>
-						<dl>
-							<dt>Categoria:</dt>
-								<dd>Vino bianco</dd>
-							<dt>Stato:</dt>
-								<dd>Vino frizzante</dd>
-							<dt>Colore:</dt>
-								<dd>Giallo paglierino</dd>
-							<dt>Caratteristiche organolettiche:</dt>
-								<dd>Lorem ipsum dolor sit amet</dd>
-							<dt>Caratteristiche Donec sollicitudin:</dt>
-								<dd>Donec sollicitudin egestas lacus, euismod rutrum nibh aliquet venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
-						</dl>
-						<a href="visualizza_prodotto.html?vino=fiordarancio">Vedi tutte le caratteristiche</a>
+				<div class="pr_container">
+					<div id="pr_head">
+						<h3>Fior d'arancio</h3>
+						<form method="post" action="cgi-bin/prenota.cgi">
+							<fieldset>
+								<input type="hidden" name="etichetta" value="NOME DEL VINO CORRENTE" />
+								<label for="quantita">Quantit&agrave;</label>
+								<input type="text" name="quantita" value="6" size="1" />
+								<input id="prenota" type="submit" value="Prenota" />
+							</fieldset>
+						</form>
+						
 					</div>
-				</div> <!--product container-->
-				
-				<div class="product_container">
-					<h3>Fior d'arancio</h3>
-					<img src="images/prodotti/fiordarancio.png" alt="vino xxx breve descr" />
-					<div>
-						<dl>
-							<dt>Categoria:</dt>
-								<dd>Vino bianco</dd>
-							<dt>Stato:</dt>
-								<dd>Vino frizzante</dd>
-							<dt>Colore:</dt>
-								<dd>Giallo paglierino</dd>
-							<dt>Caratteristiche organolettiche:</dt>
-								<dd>Lorem ipsum dolor sit amet</dd>
-							<dt>Caratteristiche Donec sollicitudin:</dt>
-								<dd>Donec sollicitudin egestas lacus, euismod rutrum nibh aliquet venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
-						</dl>
-						<a href="visualizza_prodotto.html?vino=barbera">Vedi tutte le caratteristiche</a>
-					</div>
+					<img src="images/prodotti/fiordarancio.png" alt="" />
+					<dl>
+						<dt>Etichetta:</dt>
+							<dd>Colli euganei Fior d'Arancio D.O.C.G.</dd>
+						<dt>Tipologia:</dt>
+							<dd>Vino Bianco</dd>
+						<dt>Categoria:</dt>
+							<dd>Vino Dolce</dd>
+						<dt>Stato:</dt>
+							<dd>Vino Spumante</dd>
+						<dt>Prezzo:</dt>
+							<dd>Euro 3.30</dd>
+					</dl>
+					<a href="visualizza_prodotto.html?vino=barbera">Vedi tutte le caratteristiche</a>
 				</div> <!--product container-->
 								
 			</div>  <!--content-->
