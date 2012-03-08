@@ -3,7 +3,7 @@
   # login.pl
   use CGI;
   use CGI::Carp qw/fatalsToBrowser warningsToBrowser/;
-  use CGI::Session ( '-ip_match' );
+  use CGI::Session;# ( '-ip_match' );
   
   $q = new CGI;
   
@@ -24,12 +24,12 @@
           print $q->header(-type=>"text/html",-location=>"errore.html");
       }
   }
-  elsif($q->param('action') eq 'logout')
-  {
-      $session = CGI::Session->load() or die CGI::Session->errstr;
-      $session->delete();
-      print $session->header(-location=>'login.pl');
-  }
+  #elsif($q->param('action') eq 'logout')
+  #{
+  #    $session = CGI::Session->load() or die CGI::Session->errstr;
+  #    $session->delete();
+  #    print $session->header(-location=>'login.pl');
+  #}
   else
   {
       $page = new CGI;

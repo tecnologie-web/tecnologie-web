@@ -7,22 +7,27 @@
   
   $session = CGI::Session->load();
   $q = new CGI;
+  $vuoto = null;#"";
   
-  if($session->is_expired)
+  if($session->is_expired)#se la sessione è scaduta
   {
       print $q->header(-cache_control=>"no-cache, no-store, must-revalidate");
       print "Your has session expired. Please login again.";
- print "<br/><a href='login.pl>Login</a>";
+      print "<br/><a href='login.pl>Login</a>";
   }
-  elsif($session->is_empty)
+  elsif($session->is_empty)#se la sessione non contiene dati
   {
       print $q->header(-cache_control=>"no-cache, no-store, must-revalidate");
       print "You have not logged in";
   }
-  else
+  else #se la sessione contiene parametri validi
   {
+      my $campo = $session->param("usr");
+      if($campo eq ''){print "dio boia";print length($campo);}
       print $q->header(-cache_control=>"no-cache, no-store, must-revalidate");
-      print "<h2>Welcome";
+      print "<h2>Benvenuto ";
       print $session->param("usr");
-      print "<a href='login.pl?action=logout'>Logout";
+      print " ";
+      print "<a href='logout.cgi'>Logout";
+    
   }
