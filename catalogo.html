@@ -10,6 +10,8 @@
 		<link href="css/print/main.css" rel="stylesheet" media="print" type="text/css" />
 		<title>Catalogo Vini ~ Cantina Benato</title>
 		<script src="js/scripts.js" type="text/javascript"></script>
+		<script src="filter_catalogo.js" type="text/javascript"></script>
+		
 	</head>
 	
 	<body onload="focusOnSearchEtichetta();">
@@ -48,7 +50,7 @@
 								<label>per tipologia:</label>
 								<span>
 									<label class="check" for="bianchi">Vini Bianchi</label>
-									<input type="checkbox" id="bianchi" name="bianchi" value="bianchi" checked="true" />
+									<input type="checkbox" id="bianchi" name="bianchi" value="Vino Bianco" checked="true" onchange="filter(value)"/>
 									<label class="check" for="rossi">Vini Rossi</label>
 									<input type="checkbox" id="rossi" name="rossi" value="rossi" checked="true" />
 									<label class="check" for="rosati">Vini Rosati</label>
@@ -96,7 +98,7 @@
 							<dt>Etichetta:</dt>
 								<dd>Colli euganei Fior d'Arancio D.O.C.G.</dd>
 							<dt>Tipologia:</dt>
-								<dd>Vino Bianco</dd>
+								<dd class="tipologia">Vino Bianco</dd>
 							<dt>Categoria:</dt>
 								<dd>Vino Dolce</dd>
 							<dt>Stato:</dt>
