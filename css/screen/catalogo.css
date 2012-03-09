@@ -1,3 +1,50 @@
+/*FORM RICERCA NEL PRODUCT CONTAINER*/
+#search fieldset {
+	border: 1px solid #b3b3b3;
+	border-radius: 3px;
+	padding: 1em;
+	background: #f6f5f2 url('../../images/noise.png') repeat;
+	margin-bottom: 2em;
+}
+#search legend {
+	font-size: 0.9em;
+}
+#search p {
+	margin-bottom: 1em;
+}
+#search label {
+	float: left;
+}
+#search label#etich {
+	position: relative;
+	top: 5px;
+}
+#search span {
+	display: block;
+	margin-left: 10em;
+}
+#search input#etichetta {
+	border-radius: 20px;
+	background: #fff url('../../images/magnify.png') no-repeat 5px 4gipx;
+	padding: 0.3em;
+	padding-left: 2em;
+	font-size: 0.9em;
+	margin: 0;
+	outline: none;
+	border: 1px solid #999;
+	box-shadow: 0 4px 4px -4px #808080 inset, 0 -4px 4px -4px #808080 inset;
+}
+#search input#etichetta:focus {
+	box-shadow: 0 0 5px 0 #0062cc;
+	border: 1px solid #0062cc;
+}
+#search label.check {
+	float: none;
+}
+#search input[type="checkbox"] {
+	margin-right: 5em;
+}
+
 /*CONTAINER PER IL CATALOGO VINI*/
 .pr_container {
 	border: 1px solid #b3b3b3;
@@ -6,21 +53,6 @@
 	background: #f6f5f2 url('../../images/noise.png') repeat;
 	margin-bottom: 2em;
 }
-
-/*FORM RICERCA NEL PRODUCT CONTAINER*/
-.pr_container #search p {
-	margin-bottom: 1em;
-}
-.pr_container #search input[type="text"] {
-	border-radius: 20px;
-	background: #fff url('../../images/magnify.png') no-repeat 5px 5px;
-	padding-left: 2em;
-	font-size: 0.9em;
-}
-.pr_container #search input[type="checkbox"] {
-	margin-left: 2em;
-}
-
 .pr_container #pr_head {
 	padding-bottom: 1em;
 	border-bottom: 1px solid #ccc;
@@ -48,7 +80,7 @@
 .pr_container #form_prenota label {
 	font-size: 0.8em;
 }
-.pr_container input[type=text] {
+.pr_container #form_prenota input {
 	display: inline;
 	margin: 0;
 	margin-left: 1em;
@@ -56,15 +88,16 @@
 	border-radius: 2px;
 	outline: none;
 	border: 1px solid #999;
-	box-shadow: 1px 1px 3px 0 #c5c5c5 inset;
+	box-shadow: 0 4px 4px -4px #808080 inset, 0 -4px 4px -4px #808080 inset;
 	font-size: 1em;
 	padding: 0.4em;
 }
-.pr_container input[type=text]:focus {
+.pr_container #form_prenota input:focus {
 	box-shadow: 0 0 5px 0 #0062cc;
 	border: 1px solid #0062cc;
 }
 .pr_container #form_prenota #prenota {
+	box-shadow: 0 0 0 0 inset;
 	background-color: #4D90FE;
 	border: 1px solid #3079ED;
 	border-radius: 2px;
