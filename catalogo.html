@@ -35,9 +35,24 @@
 				<h2><a name="top"></a>Catalogo dei nostri prodotti</h2>
 				
 				<div class="pr_container">
+					<form id="search">
+						<P>
+							<label for="etichetta">Ricerca per etichetta</label>
+							<input name="etichetta" id="etichetta" type="text" size="30">
+						</p>
+						<p>
+							Ricerca per tipologia
+							<input type="checkbox" name="Vini Bianchi" value="Vini Bianchi" />Vini Bianchi
+							<input type="checkbox" name="Vini Rossi" value="Vini Rossi" />Vini Rossi
+							<input type="checkbox" name="Vini Rosati" value="Vini Rosati" />Vini Rosati
+						</p>
+					</form>
+				</div> <!--product container-->
+				
+				<div class="pr_container">
 					<div id="pr_head">
 						<h3>Fior d'arancio</h3>
-						<form method="post" action="cgi-bin/prenota.cgi">
+						<form id="form_prenota" method="post" action="cgi-bin/prenota.cgi">
 							<fieldset>
 								<input type="hidden" name="etichetta" value="NOME DEL VINO CORRENTE" />
 								<label for="quantita">Quantit&agrave;</label>
@@ -45,7 +60,34 @@
 								<input id="prenota" type="submit" value="Prenota" />
 							</fieldset>
 						</form>
-						
+					</div>
+					<img src="images/prodotti/fiordarancio.png" alt="" />
+					<dl>
+						<dt>Etichetta:</dt>
+							<dd>Colli euganei Fior d'Arancio D.O.C.G.</dd>
+						<dt>Tipologia:</dt>
+							<dd>Vino Bianco</dd>
+						<dt>Categoria:</dt>
+							<dd>Vino Dolce</dd>
+						<dt>Stato:</dt>
+							<dd>Vino Spumante</dd>
+						<dt>Prezzo:</dt>
+							<dd>Euro 3.30</dd>
+					</dl>
+					<a href="visualizza_prodotto.html?vino=barbera">Vedi tutte le caratteristiche</a>
+				</div> <!--product container-->
+				
+				<div class="pr_container">
+					<div id="pr_head">
+						<h3>Fior d'arancio</h3>
+						<form id="form_prenota" method="post" action="cgi-bin/prenota.cgi">
+							<fieldset>
+								<input type="hidden" name="etichetta" value="NOME DEL VINO CORRENTE" />
+								<label for="quantita">Quantit&agrave;</label>
+								<input type="text" name="quantita" value="6" size="1" />
+								<input id="prenota" type="submit" value="Prenota" />
+							</fieldset>
+						</form>
 					</div>
 					<img src="images/prodotti/fiordarancio.png" alt="" />
 					<dl>
