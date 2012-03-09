@@ -23,7 +23,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"/>
 			<div class="clear"></div>
 		</div>  <!--header-->
 		<div id="path">
-			Ti trovi in: <span xml:lang="en">Homepage</span>  Catalogo Vini
+			Ti trovi in: <span xml:lang="en">Homepage</span> Catalogo Vini
 		</div>  <!--path-->
 		<div id="container">
 			<div id="navigation">
@@ -43,7 +43,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"/>
             	<xsl:sort select="v:etichetta"/>
                <div class="product_container">
                   <h3><xsl:value-of select="v:etichetta"/></h3>
-                  <img src="" alt="" />
+                  &lt; img src=&quot;<xsl:value-of select="v:immagine"/>&quot; alt="" /&gt;
                   <div>
                      <dl>
                         <dt>Categoria:</dt>
