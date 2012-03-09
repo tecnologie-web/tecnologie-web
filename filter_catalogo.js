@@ -1,9 +1,9 @@
 
-function filter(value, theCleckBox) {
+function filter(value, theCleckBox, filtro) {
 	var div_array = document.getElementsByClassName("pr_container");
 
 	for(i=0; i<div_array.length; i++){
-		var dd_array = div_array[i].getElementsByClassName("tipologia");
+		var dd_array = div_array[i].getElementsByClassName(filtro);
 
 		if(!theCleckBox.checked)
 		{
