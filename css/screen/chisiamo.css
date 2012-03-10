@@ -28,6 +28,7 @@ ul.address li {
 /*TABELLA DEGLI ORARI*/
 #orari {
 	text-align: center;
+	margin-bottom: 2em;
 }
 #orari caption {
 	display: none;

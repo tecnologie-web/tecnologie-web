@@ -41,6 +41,10 @@ a:active {
 a.internal_nav {
 	font-size: 0.8em;
 	color: #0062cc;
+	display: block;
+	margin-bottom: 3em;
+	margin-right: 3em;
+	text-align: right;
 }
 img {
 	border: 0;
