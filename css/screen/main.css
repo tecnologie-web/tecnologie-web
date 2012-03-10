@@ -33,6 +33,10 @@ a:focus {
 	outline: 1px dotted #0062cc;
 	outline-offset: 2px;
 }
+/*Link al click del mouse*/
+a:active {
+	outline: none;
+}
 /*Link speciali di navigazione interna alla pagina (torna su)*/
 a.internal_nav {
 	font-size: 0.8em;

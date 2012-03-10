@@ -9,9 +9,12 @@
 		<link href="css/screen/main.css" rel="stylesheet" media="screen" type="text/css" />
 		<link href="css/print/main.css" rel="stylesheet" media="print" type="text/css" />
 		<title>Catalogo Vini ~ Cantina Benato</title>
+		<script src="js/scripts.js" type="text/javascript"></script>
+		<script src="filter_catalogo.js" type="text/javascript"></script>
+		
 	</head>
 	
-	<body>
+	<body onload="focusOnSearchEtichetta();">
 		<div id="header">
 			<img src="images/logo.png" width="260px" alt="" />
 			<h1>Cantina Benato</h1>
@@ -37,43 +40,43 @@
 					<form id="search">
 						<fieldset>
 						<legend>Ricerca Vini</legend>
-						<p>
-							<label id="etich" for="etichetta">per etichetta:</label>
-							<span>
-								<input name="etichetta" id="etichetta" type="text" size="30">
-							</span>
-						</p>
-						<p>
-							<label>per tipologia:</label>
-							<span>
-								<label class="check" for="bianchi">Vini Bianchi</label>
-								<input type="checkbox" id="bianchi" name="bianchi" value="bianchi" checked="true" />
-								<label class="check" for="rossi">Vini Rossi</label>
-								<input type="checkbox" id="rossi" name="rossi" value="rossi" checked="true" />
-								<label class="check" for="rosati">Vini Rosati</label>
-								<input type="checkbox" id="rosati" name="rosati" value="rosati" checked="true" />
-							</span>
-						</p>
-						<p>
-							<label>per categoria:</label>
-							<span>
-								<label class="check" for="dolci">Vini Dolci</label>
-								<input type="checkbox" id="dolci" name="dolci" value="dolci" checked="true" />
-								<label class="check" for="secchi">Vini Secchi</label>
-								<input type="checkbox" id="secchi" name="secchi" value="secchi" checked="true" />
-							</span>
-						</p>
-						<p>
-							<label>per stato:</label>
-							<span>
-								<label class="check" for="frizzanti">Vini Frizzanti</label>
-								<input type="checkbox" id="frizzanti" name="frizzanti" value="frizzanti" checked="true" />
-								<label class="check" for="fermi">Vini Fermi</label>
-								<input type="checkbox" id="fermi" name="fermi" value="fermi" checked="true" />
-								<label class="check" for="spumanti">Vini Spumanti</label>
-								<input type="checkbox" id="spumanti" name="spumanti" value="spumanti" checked="true" />
-							</span>
-						</p>
+							<p>
+								<label id="etich" for="etichetta">per etichetta:</label>
+								<span>
+									<input name="etichetta" id="etichetta" type="text" size="30" />
+								</span>
+							</p>
+							<p>
+								<label>per tipologia:</label>
+								<span>
+									<label class="check" for="bianchi">Vini Bianchi</label>
+									<input type="checkbox" id="bianchi" name="bianchi" value="Vino Bianco" checked="true" onclick="filter(value, this, 'tipologia')"/>
+									<label class="check" for="rossi">Vini Rossi</label>
+									<input type="checkbox" id="rossi" name="rossi" value="rossi" checked="true" onclick="filter(value, this, 'tipologia')" />
+									<label class="check" for="rosati">Vini Rosati</label>
+									<input type="checkbox" id="rosati" name="rosati" value="rosati" checked="true" onclick="filter(value, this, 'tipologia')"/>
+								</span>
+							</p>
+							<p>
+								<label>per categoria:</label>
+								<span>
+									<label class="check" for="dolci">Vini Dolci</label>
+									<input type="checkbox" id="dolci" name="dolci" value="Vino Dolce" checked="true" onclick="filter(value, this, 'categoria')" />
+									<label class="check" for="secchi">Vini Secchi</label>
+									<input type="checkbox" id="secchi" name="secchi" value="Vino Secco" checked="true" onclick="filter(value, this, 'categoria')"/>
+								</span>
+							</p>
+							<p>
+								<label>per stato:</label>
+								<span>
+									<label class="check" for="frizzanti">Vini Frizzanti</label>
+									<input type="checkbox" id="frizzanti" name="frizzanti" value="frizzanti" checked="true" onclick="filter(value, this, 'stato')" />
+									<label class="check" for="fermi">Vini Fermi</label>
+									<input type="checkbox" id="fermi" name="fermi" value="fermi" checked="true" onclick="filter(value, this, 'stato')"/>
+									<label class="check" for="spumanti">Vini Spumanti</label>
+									<input type="checkbox" id="spumanti" name="spumanti" value="spumanti" checked="true" onclick="filter(value, this, 'stato')"/>
+								</span>
+							</p>
 						</fieldset>
 					</form>
 				
@@ -89,20 +92,23 @@
 							</fieldset>
 						</form>
 					</div>
-					<img src="images/prodotti/fiordarancio.png" alt="" />
-					<dl>
-						<dt>Etichetta:</dt>
-							<dd>Colli euganei Fior d'Arancio D.O.C.G.</dd>
-						<dt>Tipologia:</dt>
-							<dd>Vino Bianco</dd>
-						<dt>Categoria:</dt>
-							<dd>Vino Dolce</dd>
-						<dt>Stato:</dt>
-							<dd>Vino Spumante</dd>
-						<dt>Prezzo:</dt>
-							<dd>Euro 3.30</dd>
-					</dl>
-					<a href="visualizza_prodotto.html?vino=barbera">Vedi tutte le caratteristiche</a>
+					<img src="images/prodotti/fiordarancio.png" width="135px" alt="" />
+					<div id="pr_body">
+						<dl>
+							<dt>Etichetta:</dt>
+								<dd>Colli euganei Fior d'Arancio D.O.C.G.</dd>
+							<dt>Tipologia:</dt>
+								<dd class="tipologia">Vino Bianco</dd>
+							<dt>Categoria:</dt>
+								<dd class="categoria">Vino Dolce</dd>
+							<dt>Stato:</dt>
+								<dd class="stato">Vino Spumante</dd>
+							<dt>Prezzo:</dt>
+								<dd>Euro 3.30</dd>
+						</dl>
+						<a href="visualizza_prodotto.html?vino=barbera">Vedi tutte le caratteristiche</a>
+					</div>
+					<div class="clear"></div>
 				</div> <!--product container-->
 				
 				<div class="pr_container">
@@ -117,20 +123,23 @@
 							</fieldset>
 						</form>
 					</div>
-					<img src="images/prodotti/fiordarancio.png" alt="" />
-					<dl>
-						<dt>Etichetta:</dt>
-							<dd>Colli euganei Fior d'Arancio D.O.C.G.</dd>
-						<dt>Tipologia:</dt>
-							<dd>Vino Bianco</dd>
-						<dt>Categoria:</dt>
-							<dd>Vino Dolce</dd>
-						<dt>Stato:</dt>
-							<dd>Vino Spumante</dd>
-						<dt>Prezzo:</dt>
-							<dd>Euro 3.30</dd>
-					</dl>
-					<a href="visualizza_prodotto.html?vino=barbera">Vedi tutte le caratteristiche</a>
+					<img src="images/prodotti/fiordarancio.png" width="135px" alt="" />
+					<div id="pr_body">
+						<dl>
+							<dt>Etichetta:</dt>
+								<dd>Colli euganei Fior d'Arancio D.O.C.G.</dd>
+							<dt>Tipologia:</dt>
+								<dd>Vino Bianco</dd>
+							<dt>Categoria:</dt>
+								<dd>Vino Dolce</dd>
+							<dt>Stato:</dt>
+								<dd>Vino Spumante</dd>
+							<dt>Prezzo:</dt>
+								<dd>Euro 3.30</dd>
+						</dl>
+						<a href="visualizza_prodotto.html?vino=barbera">Vedi tutte le caratteristiche</a>
+					</div>
+					<div class="clear"></div>
 				</div> <!--product container-->
 								
 			</div>  <!--content-->
