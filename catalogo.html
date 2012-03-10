@@ -22,7 +22,7 @@
 			<div class="clear"></div>
 		</div>  <!--header-->
 		<div id="path">
-			Ti trovi in: <span xml:lang="en">Homepage</span> &raquo; Catalogo Vini
+			Ti trovi in: <span xml:lang="en">Homepage</span> &#187; Catalogo Vini
 		</div>  <!--path-->
 		<div id="container">
 			<div id="navigation">
@@ -37,7 +37,7 @@
 			<div id="content">
 				<h2><a name="top"></a>Catalogo dei nostri prodotti</h2>
 				
-					<form id="search">
+					<form id="search" action="#">
 						<fieldset>
 						<legend>Ricerca Vini</legend>
 							<p>
@@ -50,50 +50,50 @@
 								<label>per tipologia:</label>
 								<span>
 									<label class="check" for="bianchi">Vini Bianchi</label>
-									<input type="checkbox" id="bianchi" name="bianchi" value="Vino Bianco" checked="true" onclick="filter(value, this, 'tipologia')"/>
+									<input type="checkbox" id="bianchi" name="bianchi" value="Vino Bianco" checked="checked" onclick="filter(value, this, 'tipologia')"/>
 									<label class="check" for="rossi">Vini Rossi</label>
-									<input type="checkbox" id="rossi" name="rossi" value="rossi" checked="true" onclick="filter(value, this, 'tipologia')" />
+									<input type="checkbox" id="rossi" name="rossi" value="rossi" checked="checked" onclick="filter(value, this, 'tipologia')" />
 									<label class="check" for="rosati">Vini Rosati</label>
-									<input type="checkbox" id="rosati" name="rosati" value="rosati" checked="true" onclick="filter(value, this, 'tipologia')"/>
+									<input type="checkbox" id="rosati" name="rosati" value="rosati" checked="checked" onclick="filter(value, this, 'tipologia')"/>
 								</span>
 							</p>
 							<p>
 								<label>per categoria:</label>
 								<span>
 									<label class="check" for="dolci">Vini Dolci</label>
-									<input type="checkbox" id="dolci" name="dolci" value="Vino Dolce" checked="true" onclick="filter(value, this, 'categoria')" />
+									<input type="checkbox" id="dolci" name="dolci" value="Vino Dolce" checked="checked" onclick="filter(value, this, 'categoria')" />
 									<label class="check" for="secchi">Vini Secchi</label>
-									<input type="checkbox" id="secchi" name="secchi" value="Vino Secco" checked="true" onclick="filter(value, this, 'categoria')"/>
+									<input type="checkbox" id="secchi" name="secchi" value="Vino Secco" checked="checked" onclick="filter(value, this, 'categoria')"/>
 								</span>
 							</p>
 							<p>
 								<label>per stato:</label>
 								<span>
 									<label class="check" for="frizzanti">Vini Frizzanti</label>
-									<input type="checkbox" id="frizzanti" name="frizzanti" value="frizzanti" checked="true" onclick="filter(value, this, 'stato')" />
+									<input type="checkbox" id="frizzanti" name="frizzanti" value="frizzanti" checked="checked" onclick="filter(value, this, 'stato')" />
 									<label class="check" for="fermi">Vini Fermi</label>
-									<input type="checkbox" id="fermi" name="fermi" value="fermi" checked="true" onclick="filter(value, this, 'stato')"/>
+									<input type="checkbox" id="fermi" name="fermi" value="fermi" checked="checked" onclick="filter(value, this, 'stato')"/>
 									<label class="check" for="spumanti">Vini Spumanti</label>
-									<input type="checkbox" id="spumanti" name="spumanti" value="spumanti" checked="true" onclick="filter(value, this, 'stato')"/>
+									<input type="checkbox" id="spumanti" name="spumanti" value="spumanti" checked="checked" onclick="filter(value, this, 'stato')"/>
 								</span>
 							</p>
 						</fieldset>
 					</form>
 				
 				<div class="pr_container">
-					<div id="pr_head">
+					<div class="pr_head">
 						<h3>Fior d'arancio</h3>
-						<form id="form_prenota" method="post" action="cgi-bin/prenota.cgi">
+						<form class="form_prenota" method="post" action="cgi-bin/prenota.cgi">
 							<fieldset>
 								<input type="hidden" name="etichetta" value="NOME DEL VINO CORRENTE" />
 								<label for="quantita">Quantit&agrave;</label>
-								<input type="text" name="quantita" value="6" size="1" />
+								<input type="text" id="quantita" name="quantita" value="6" size="1" />
 								<input id="prenota" type="submit" value="Prenota" />
 							</fieldset>
 						</form>
 					</div>
 					<img src="images/prodotti/fiordarancio.png" width="135px" alt="" />
-					<div id="pr_body">
+					<div class="pr_body">
 						<dl>
 							<dt>Etichetta:</dt>
 								<dd>Colli euganei Fior d'Arancio D.O.C.G.</dd>
@@ -112,19 +112,19 @@
 				</div> <!--product container-->
 				
 				<div class="pr_container">
-					<div id="pr_head">
+					<div class="pr_head">
 						<h3>Fior d'arancio</h3>
-						<form id="form_prenota" method="post" action="cgi-bin/prenota.cgi">
+						<form class="form_prenota" method="post" action="cgi-bin/prenota.cgi">
 							<fieldset>
 								<input type="hidden" name="etichetta" value="NOME DEL VINO CORRENTE" />
 								<label for="quantita">Quantit&agrave;</label>
-								<input type="text" name="quantita" value="6" size="1" />
+								<input type="text" id="quantita" name="quantita" value="6" size="1" />
 								<input id="prenota" type="submit" value="Prenota" />
 							</fieldset>
 						</form>
 					</div>
 					<img src="images/prodotti/fiordarancio.png" width="135px" alt="" />
-					<div id="pr_body">
+					<div class="pr_body">
 						<dl>
 							<dt>Etichetta:</dt>
 								<dd>Colli euganei Fior d'Arancio D.O.C.G.</dd>
