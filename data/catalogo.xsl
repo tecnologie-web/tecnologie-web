@@ -86,22 +86,26 @@ indent='yes'/>
                   <xsl:sort select="v:etichetta"/>
 						<div class="pr_container">
                   <div id="pr_head">
-						<h3>Fior d'arancio</h3>
+						<h3><xsl:value-of select="v:etichetta"/></h3>
 						<form id="form_prenota" method="post" action="cgi-bin/prenota.cgi">
 							<fieldset>
 								<input type="hidden" name="etichetta" value=''/>
-                        <xsl:attribute-set name="input">
+                        <xsl:element name="input">
                            <xsl:attribute name="type">hidden</xsl:attribute>
                            <xsl:attribute name="name">etichetta</xsl:attribute>
                            <xsl:attribute name="value"><xsl:value-of select="v:etichetta"/></xsl:attribute>
-                        </xsl:attribute-set>
+                        </xsl:element>
 								<label for="quantita">Quantità</label>
 								<input type="text" name="quantita" value="6" size="1" />
 								<input id="prenota" type="submit" value="Prenota" />
 							</fieldset>
 						</form>
 					</div>
-					<img src="images/prodotti/fiordarancio.png" alt="" />
+					<xsl:element name="img">
+                           <xsl:attribute name="src"><xsl:value-of select="v:immagine"/></xsl:attribute>
+                           <xsl:attribute name="alt"></xsl:attribute>
+                           <xsl:attribute name="width">135px</xsl:attribute>
+                        </xsl:element>
 					<dl>
 						<dt>Etichetta:</dt>
 							<dd><xsl:value-of select="v:etichetta"/></dd>
