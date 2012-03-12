@@ -6,11 +6,11 @@
 	padding: 0.5em;
 	background: #f6f5f2 url('../../images/noise.png') repeat left top;
 }
-#user legend, #user_modify legend {
+#user legend {
 	font-size: 0.9em;
 	color: #4c4c4c;
 }
-#user fieldset, #user_modify fieldset {
+#user fieldset {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 1em;
@@ -18,22 +18,23 @@
 	background-position: 97% 50%;
 	background-repeat: no-repeat;
 }
-#user fieldset#site, #user_modify fieldset#site {
+#user fieldset#site {
 	background-image: url('../../images/form/site.png');
 }
-#user fieldset#personal, #user_modify fieldset#personal {
+#user fieldset#personal {
 	background-image: url('../../images/form/personal.png');
 }
-#user fieldset p, #user_modify fieldset p {
+#user fieldset p {
 	margin: 1.1em 0;
 }
-#user label, #user_modify label {
-	float: left;
+#user label {
+	display: inline-block;
+	width: 30%;
 	padding-top: 0.3em;
 }
-#user input, #user_modify input {
-	display: block;
-	margin-left: 13em;
+#user input {
+	display: inline;
+	margin-left: 0.5em;
 	padding: 0.3em 0.5em;
 	background-color: #fff;
 	border-radius: 2px;
@@ -42,17 +43,23 @@
 	box-shadow: 1px 1px 3px 0 #c5c5c5 inset;
 	font-size: 0.9em;
 }
-#user_modify input {
-	margin-left: 17em;
-}
-#user input:focus, #user_modify input:focus {
+#user input:focus {
 	box-shadow: 0 0 5px 0 #0062cc;
 	border: 1px solid #0062cc;
 }
-#user p.buttons, #user_modify p.buttons {
+#user span.help {
+	color: red;
+	font-weight: bold;
+	margin-left: 1em;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+#user p.buttons {
 	margin: 1em;
 }
-#user p.buttons input, #user_modify p.buttons input {
+#user p.buttons input {
 	display: inline;
 	width: 7em;
 	margin-left: 1em;
@@ -62,9 +69,9 @@
 	font-weight: bold;
 	text-shadow: 0 1px 1px #ccc;
 }
-#user p.buttons input:hover, #user p.buttons input:focus, #user_modify p.buttons input:hover, #user_modify p.buttons input:focus {
+#user p.buttons input:hover, #user p.buttons input:focus {
 	background-color: #ccc;
 }
-#user p.buttons input:active, #user_modify p.buttons input:active {
+#user p.buttons input:active {
 	background-color: #b3b3b3;
 }
