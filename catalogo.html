@@ -37,44 +37,44 @@
 			<div id="content">
 				<h2><a name="top"></a>Catalogo dei nostri prodotti</h2>
 				
-					<form id="search" action="#">
+					<form id="search" action="#" onclick="filter()">
 						<fieldset>
 						<legend>Ricerca Vini</legend>
 							<p>
 								<label id="etich" for="etichetta">per etichetta:</label>
 								<span>
-									<input name="etichetta" id="etichetta" type="text" size="30"/>
+									<input name="etichetta" id="etichetta" type="text" size="30" onkeydown="return nameSearch()"/>
 								</span>
 							</p>
 							<p>
 								<label>per tipologia:</label>
 								<span>
 									<label class="check" for="bianchi">Vini Bianchi</label>
-									<input type="checkbox" id="bianchi" name="bianchi" value="Vino Bianco" checked="checked" onclick="filter(this)"/>
+									<input type="checkbox" id="bianchi" name="bianchi" value="Vino Bianco" checked="checked"/>
 									<label class="check" for="rossi">Vini Rossi</label>
-									<input type="checkbox" id="rossi" name="rossi" value="Vino Rosso" checked="checked" onclick="filter(this)" />
+									<input type="checkbox" id="rossi" name="rossi" value="Vino Rosso" checked="checked"/>
 									<label class="check" for="rosati">Vini Rosati</label>
-									<input type="checkbox" id="rosati" name="rosati" value="Vino Rosato" checked="checked" onclick="filter(this)"/>
+									<input type="checkbox" id="rosati" name="rosati" value="Vino Rosato" checked="checked"/>
 								</span>
 							</p>
 							<p>
 								<label>per categoria:</label>
 								<span>
 									<label class="check" for="dolci">Vini Dolci</label>
-									<input type="checkbox" id="dolci" name="dolci" value="Vino Dolce" checked="checked" onclick="filter(this)" />
+									<input type="checkbox" id="dolci" name="dolci" value="Vino Dolce" checked="checked"/>
 									<label class="check" for="secchi">Vini Secchi</label>
-									<input type="checkbox" id="secchi" name="secchi" value="Vino Secco" checked="checked" onclick="filter(this)"/>
+									<input type="checkbox" id="secchi" name="secchi" value="Vino Secco" checked="checked" onclick="filter()"/>
 								</span>
 							</p>
 							<p>
 								<label>per stato:</label>
 								<span>
 									<label class="check" for="frizzanti">Vini Frizzanti</label>
-									<input type="checkbox" id="frizzanti" name="frizzanti" value="Vino Frizzante" checked="checked" onclick="filter(this)" />
+									<input type="checkbox" id="frizzanti" name="frizzanti" value="Vino Frizzante" checked="checked" onclick="filter()" />
 									<label class="check" for="fermi">Vini Fermi</label>
-									<input type="checkbox" id="fermi" name="fermi" value="Vino Fermo" checked="checked" onclick="filter(this)"/>
+									<input type="checkbox" id="fermi" name="fermi" value="Vino Fermo" checked="checked" onclick="filter()"/>
 									<label class="check" for="spumanti">Vini Spumanti</label>
-									<input type="checkbox" id="spumanti" name="spumanti" value="Vino Spumante" checked="checked" onclick="filter(this)"/>
+									<input type="checkbox" id="spumanti" name="spumanti" value="Vino Spumante" checked="checked" onclick="filter()"/>
 								</span>
 							</p>
 						</fieldset>
