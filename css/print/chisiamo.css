@@ -1,0 +1,10 @@
+#chisiamo img {
+	display: none;
+}
+ul.address {
+	list-style-type: none;
+	margin-left: 0;
+}
+ul.address li {
+	margin-left: 0;
+}

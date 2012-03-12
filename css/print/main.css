@@ -1,0 +1,46 @@
+@import "catalogo.css";
+@import "chisiamo.css";
+
+body {
+	background: trasparent;
+	font: normal 10pt/1.2em "Times New Roman", Times, Georgia, serif;
+	color: black;
+}
+a {
+	color: black;
+	text-decoration: underline;
+}
+a.internal_nav {
+	display: none;
+}
+#header img {
+	width: 150px;
+	float: right;
+	margin-right: 40px;
+	position: relative;
+	top: -20px;
+}
+#header h1 {
+	display: inline;
+	float: none;
+	font-size: 20pt;
+}
+#header p {
+	display: none;
+}
+#path {
+	font-size: 10pt;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+#content h2 {
+	font-size: 14pt;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+#navigation {
+	display: none;
+}
+#footer {
+	display: none;
+}
