@@ -19,7 +19,7 @@ indent='yes'/>
 	
 	<body>
 		<div id="header">
-			<img src="images/logo.png" width="260px" alt="" />
+			<img src="../images/logo.png" width="260px" alt="" />
 			<h1>Cantina Benato</h1>
 			<p>Premiata cantina di Benato Romeo e figlio, dal 1960</p>
 			<div class="clear"></div>
@@ -39,87 +39,92 @@ indent='yes'/>
 			</div>  <!--navigation-->
 			<div id="content">
 				<h2><a name="top"></a>Catalogo dei nostri prodotti</h2>
-				
-					<form id="search">
+					<form id="search" action="#">
 						<fieldset>
 						<legend>Ricerca Vini</legend>
-						<p>
-							<label id="etich" for="etichetta">per etichetta:</label>
-							<span>
-								<input name="etichetta" id="etichetta" type="text" size="30" />
-							</span>
-						</p>
-						<p>
-							<label>per tipologia:</label>
-							<span>
-								<label class="check" for="bianchi">Vini Bianchi</label>
-								<input type="checkbox" id="bianchi" name="bianchi" value="bianchi" checked="true" />
-								<label class="check" for="rossi">Vini Rossi</label>
-								<input type="checkbox" id="rossi" name="rossi" value="rossi" checked="true" />
-								<label class="check" for="rosati">Vini Rosati</label>
-								<input type="checkbox" id="rosati" name="rosati" value="rosati" checked="true" />
-							</span>
-						</p>
-						<p>
-							<label>per categoria:</label>
-							<span>
-								<label class="check" for="dolci">Vini Dolci</label>
-								<input type="checkbox" id="dolci" name="dolci" value="dolci" checked="true" />
-								<label class="check" for="secchi">Vini Secchi</label>
-								<input type="checkbox" id="secchi" name="secchi" value="secchi" checked="true" />
-							</span>
-						</p>
-						<p>
-							<label>per stato:</label>
-							<span>
-								<label class="check" for="frizzanti">Vini Frizzanti</label>
-								<input type="checkbox" id="frizzanti" name="frizzanti" value="frizzanti" checked="true" />
-								<label class="check" for="fermi">Vini Fermi</label>
-								<input type="checkbox" id="fermi" name="fermi" value="fermi" checked="true" />
-								<label class="check" for="spumanti">Vini Spumanti</label>
-								<input type="checkbox" id="spumanti" name="spumanti" value="spumanti" checked="true" />
-							</span>
-						</p>
+							<p>
+								<label id="etich" for="etichetta">per etichetta:</label>
+								<span>
+									<input name="etichetta" id="etichetta" type="text" size="30"/>
+								</span>
+							</p>
+							<p>
+								<label>per tipologia:</label>
+								<span>
+									<label class="check" for="bianchi">Vini Bianchi</label>
+									<input type="checkbox" id="bianchi" name="bianchi" value="Vino Bianco" checked="checked" onclick="filter(this)"/>
+									<label class="check" for="rossi">Vini Rossi</label>
+									<input type="checkbox" id="rossi" name="rossi" value="Vino Rosso" checked="checked" onclick="filter(this)" />
+									<label class="check" for="rosati">Vini Rosati</label>
+									<input type="checkbox" id="rosati" name="rosati" value="Vino Rosato" checked="checked" onclick="filter(this)"/>
+								</span>
+							</p>
+							<p>
+								<label>per categoria:</label>
+								<span>
+									<label class="check" for="dolci">Vini Dolci</label>
+									<input type="checkbox" id="dolci" name="dolci" value="Vino Dolce" checked="checked" onclick="filter(this)" />
+									<label class="check" for="secchi">Vini Secchi</label>
+									<input type="checkbox" id="secchi" name="secchi" value="Vino Secco" checked="checked" onclick="filter(this)"/>
+								</span>
+							</p>
+							<p>
+								<label>per stato:</label>
+								<span>
+									<label class="check" for="frizzanti">Vini Frizzanti</label>
+									<input type="checkbox" id="frizzanti" name="frizzanti" value="Vino Frizzante" checked="checked" onclick="filter(this)" />
+									<label class="check" for="fermi">Vini Fermi</label>
+									<input type="checkbox" id="fermi" name="fermi" value="Vino Fermo" checked="checked" onclick="filter(this)"/>
+									<label class="check" for="spumanti">Vini Spumanti</label>
+									<input type="checkbox" id="spumanti" name="spumanti" value="Vino Spumante" checked="checked" onclick="filter(this)"/>
+								</span>
+							</p>
 						</fieldset>
 					</form>
                <xsl:for-each select="v:dati/v:prodotti/v:vino">
                   <xsl:sort select="v:etichetta"/>
 						<div class="pr_container">
-                  <div id="pr_head">
-						<h3><xsl:value-of select="v:etichetta"/></h3>
-						<form id="form_prenota" method="post" action="cgi-bin/prenota.cgi">
-							<fieldset>
-								<input type="hidden" name="etichetta" value=''/>
-                        <xsl:element name="input">
-                           <xsl:attribute name="type">hidden</xsl:attribute>
-                           <xsl:attribute name="name">etichetta</xsl:attribute>
-                           <xsl:attribute name="value"><xsl:value-of select="v:etichetta"/></xsl:attribute>
+                     <div id="pr_head">
+                        <h3><xsl:value-of select="v:etichetta"/></h3>
+                        <form id="form_prenota" method="post" action="cgi-bin/prenota.cgi">
+                        <fieldset>
+                           <input type="hidden" name="etichetta" value=''/>
+                           <xsl:element name="input">
+                              <xsl:attribute name="type">hidden</xsl:attribute>
+                              <xsl:attribute name="name">etichetta</xsl:attribute>
+                              <xsl:attribute name="value"><xsl:value-of select="v:etichetta"/></xsl:attribute>
+                           </xsl:element>
+                           <label for="quantita">Quantità</label>
+                           <input type="text" name="quantita" value="6" size="1" />
+                           <input id="prenota" type="submit" value="Prenota" />
+                        </fieldset>
+                        </form>
+                     </div>
+                     <xsl:element name="img">
+                        <xsl:attribute name="src"><xsl:value-of select="v:immagine"/></xsl:attribute>
+                        <xsl:attribute name="alt"></xsl:attribute>
+                        <xsl:attribute name="width">135px</xsl:attribute>
+                     </xsl:element>
+                     <div class="pr_body">
+                        <dl>
+                           <dt>Etichetta:</dt>
+                              <dd><xsl:value-of select="v:etichetta"/></dd>
+                           <dt>Tipologia:</dt>
+                              <dd><xsl:value-of select="v:tipologia"/></dd>
+                           <dt>Categoria:</dt>
+                              <dd>Vino <xsl:value-of select="v:categoria"/></dd>
+                           <dt>Stato:</dt>
+                              <dd>Vino <xsl:value-of select="v:stato"/></dd>
+                           <dt>Prezzo:</dt>
+                              <dd>Euro <xsl:value-of select="v:prezzo"/></dd>
+                        </dl>
+                        <xsl:element name="a">
+                           <xsl:attribute name="href">visualizza_prodotto.cgi?vino=<xsl:value-of select="v:etichetta"/></xsl:attribute>
+                           Vedi tutte le caratteristiche
                         </xsl:element>
-								<label for="quantita">Quantità</label>
-								<input type="text" name="quantita" value="6" size="1" />
-								<input id="prenota" type="submit" value="Prenota" />
-							</fieldset>
-						</form>
-					</div>
-					<xsl:element name="img">
-                           <xsl:attribute name="src"><xsl:value-of select="v:immagine"/></xsl:attribute>
-                           <xsl:attribute name="alt"></xsl:attribute>
-                           <xsl:attribute name="width">135px</xsl:attribute>
-                        </xsl:element>
-					<dl>
-						<dt>Etichetta:</dt>
-							<dd><xsl:value-of select="v:etichetta"/></dd>
-						<dt>Tipologia:</dt>
-							<dd><xsl:value-of select="v:tipologia"/></dd>
-						<dt>Categoria:</dt>
-							<dd>Vino <xsl:value-of select="v:categoria"/></dd>
-						<dt>Stato:</dt>
-							<dd>Vino <xsl:value-of select="v:stato"/></dd>
-						<dt>Prezzo:</dt>
-							<dd><xsl:value-of select="@valuta"/> <xsl:value-of select="v:prezzo"/></dd>
-					</dl>
-					<a href="visualizza_prodotto.html?vino=barbera">Vedi tutte le caratteristiche</a>
-               </div> <!--product container-->
+                     </div>
+                     <div class="clear"></div>
+                  </div> <!--product container-->
                </xsl:for-each> 
             </div>  <!--content-->
           </div>  <!--container-->
