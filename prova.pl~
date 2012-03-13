@@ -1,0 +1,12 @@
+#!/usr/bin/perl  
+use XML::LibXML; 
+
+#my $file = 'data.xml';
+#creazione oggetto parser
+#my $parser = XML::LibXML->new();
+#apertura file e lettura input
+#my $doc = $parser->parse_file($file);
+#estrazione elemento radice
+#my $radice= $doc->getDocumentElement;
+#my @elementi = $radice->getElementsByTagName('elementi');
+#foreach $elemento(@elementi){print;}
