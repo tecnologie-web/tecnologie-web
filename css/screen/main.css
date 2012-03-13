@@ -1,10 +1,10 @@
 /*Importa da Google Fonts il font 'Alex Brush'*/
 @import url(http://fonts.googleapis.com/css?family=Alex+Brush);
 /*Importo altri fogli di stile*/
-@import "chisiamo.css";
-@import "catalogo.css";
-@import "form_user.css";
-@import "area_personale.css";
+@import url("chisiamo.css");
+@import url("catalogo.css");
+@import url("form_user.css");
+@import url("area_personale.css");
 
 /*RESET MARGINI E PADDING DI TUTTI GLI ELEMENTI*/
 
@@ -45,6 +45,12 @@ a.internal_nav {
 	margin-bottom: 3em;
 	margin-right: 3em;
 	text-align: right;
+}
+/*Link speciali non visibili su schermo che aiutano chi legge con screen reader a saltare determinate parti della pagina es. navigazione*/
+a.nav_help {
+	position: absolute;
+	height: 0;
+	overflow: hidden;
 }
 img {
 	border: 0;
