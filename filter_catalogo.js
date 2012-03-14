@@ -4,7 +4,7 @@ function registration() {
 
 	if(document.getElementById('username').value == ""){
 		alert("username vuoto");
-		flag =false
+		flag =false;
 	}else{
 		if(document.getElementById('username').value.match(/[A-Za-z0-9]+/))
 			var username = document.getElementById('username').value;
@@ -18,7 +18,7 @@ function registration() {
 
 	if(document.getElementById('password').value == ""){
 		alert("password vuota");
-		flag =false
+		flag =false;
 	}else{
 		if(document.getElementById('password').value.match(/\w+/))
 			var password = document.getElementById('password').value;
@@ -30,7 +30,7 @@ function registration() {
 
 	if(document.getElementById('confirm_password').value == ""){
 		alert("conferma password vuota");
-		flag =false
+		flag =false;
 	}else{
 		if(document.getElementById('confirm_password').value.match(/\w+/))
 			var confirmPassword = document.getElementById('confirm_password').value;
@@ -39,8 +39,58 @@ function registration() {
 //			document.getElementById('errorConfirm_password').style.borderColor="red";
 		}
 	}
+	
+	if(document.getElementById('nome').value == ""){
+		alert("campo nome vuoto");
+		flag =false;
+	}else{
+		if(document.getElementById('nome').value.match(/^[A-Za-z]+/))
+			var nome = document.getElementById('nome').value;
+		else {
+			flag=false;
+//			document.getElementById('errorConfirm_password').style.borderColor="red";
+		}
+	}
 
-
+	if(document.getElementById('cognome').value == ""){
+		alert("campo cognome vuoto");
+		flag =false;
+	}else{
+		if(document.getElementById('cognome').value.match(/^[A-Za-z]+/))
+			var cognome = document.getElementById('cognome').value;
+		else {
+			flag=false;
+//			document.getElementById('errorConfirm_password').style.borderColor="red";
+		}
+	}
+	
+	if(document.getElementById('email').value == ""){
+		alert("campo email vuoto");
+		flag =false;
+	}else{
+		
+		if(document.getElementById('email').value.match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/))
+			var email = document.getElementById('email').value;
+		else {
+			alert("formato email sbagliato");
+			flag=false;
+//			document.getElementById('errorConfirm_password').style.borderColor="red";
+		}
+	}
+	
+	if(document.getElementById('telefono').value == ""){
+		alert("campo telefono vuoto");
+		flag =false;
+	}else{
+		var telefono = document.getElementById('telefono').value;
+		var pos = telefono.search(/[0-9]/);
+		if(pos != 0){
+			alert("inserire solo numeri");
+			flag = false;
+		}
+	}
+	
+	
 	if(flag==false) {
 
 		return false;
