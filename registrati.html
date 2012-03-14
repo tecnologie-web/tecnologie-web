@@ -8,6 +8,7 @@
 		<meta name="keywords" content=".." />
 		<link href="css/screen/main.css" rel="stylesheet" media="screen" type="text/css" />
 		<link href="css/print/main.css" rel="stylesheet" media="print" type="text/css" />
+		<script type="text/javascript" src="filter_catalogo.js"></script>
 		<title>Homepage ~ Cantina Benato</title>
 	</head>
 	
@@ -33,8 +34,8 @@
 				</ul>
 			</div>  <!--navigation-->
 			<div id="content">
-				<h2>Form di registrazione al sito</h2>
-				<form id="user" method="post" action="cgi-bin/register.cgi">
+				<h2>Form di registrazione al sito</h2>	
+				<form id="user" method="post" action="cgi-bin/register.cgi" onsubmit="return registration();">
 					<fieldset id="site">
 						<legend>Dati accesso al sito</legend>
 						<p>
@@ -78,7 +79,7 @@
 					</fieldset>
 					<p class="buttons">
 						<input type="reset" value="Cancella" />
-						<input type="submit" value="Invia" />
+						<input type="submit" value="Invia"/>
 					</p>
 				</form>
 			</div>  <!--content-->

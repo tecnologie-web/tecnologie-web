@@ -1,91 +1,48 @@
-//function filterByName(theInput) {
-//var div_array = document.getElementsByClassName("pr_container");
-
-//for(i=0; i<div_array.length; i++){
-//var dt_array = div_array[i].getElementsByTagName("dd");
-//for(j=0; j<dd_array.length; j++){
-//if(dd_array[j].innerHTML != theInput.value)
-//{
-//div_array[i].style.display='none';
-//}
-
-//else
-//{
-//div_array[i].style.display='';
-//}
-//}
-
-//}
-//}
-
-function nameSearch() {
-	if (event.keyCode == 13) 
-		return false;
-	else
-		prova();
-		return true;
-}
-
-function prova() {
-	setTimeout("alert(\'tette\')",2000);
-}
 function registration() {
 
 	var flag = true;
-	var errore = "Devi completare i campi: \n";
 
-//	if(document.getElementById('username').value.match(/^[A-Za-z]+/))
-//	var username = document.getElementById('username').value;
-//	else {
-//	flag=false;
-//	document.getElementById('errorName').style.borderColor="red";
-//	}
-
-//	if(document.getElementById('surname').value.match(/^[A-Za-z]+/))
-//	var surname = document.getElementById('surname').value;
-//	else {
-//	flag=false;
-//	document.getElementById('errorSurname').style.borderColor="red";
-//	}
-
-//	if(document.getElementById('birthdate').value!="") {	
-//	var validDate = verifyDateFormat(document.getElementById('birthdate').value, "it");
-//	if(validDate == false) {
-//	document.getElementById('errorBirthday').style.borderColor="red";
-//	flag = false;
-//	}
-//	}
-//	else {
-//	document.getElementById('errorBirthday').style.borderColor="red";
-//	flag = false;
-//	}
-
-//	var address = document.getElementById('address').value;
-//	var cap = document.getElementById('postal_code').value;
-//	var city = document.getElementById('city').value;
-//	var province = document.getElementById('province').value;
-//	var telephone = document.getElementById('telephone').value;
-
-	if(document.getElementById('username').value.match(/[A-Za-z0-9]+/))
-		var username = document.getElementById('username').value;
-	else {
-		flag=false;
-//		document.getElementById('errorUsername_r').style.borderColor="red";
+	if(document.getElementById('username').value == ""){
+		alert("username vuoto");
+		flag =false
+	}else{
+		if(document.getElementById('username').value.match(/[A-Za-z0-9]+/))
+			var username = document.getElementById('username').value;
+		else {
+			flag=false;
+//			document.getElementById('errorUsername_r').style.borderColor="red";
+		}
 	}
-	if(document.getElementById('password').value.match(/\w+/))
-		var password = document.getElementById('password').value;
-	else {
-		flag=false;
-//		document.getElementById('errorPassword_r').style.borderColor="red";
+
+
+
+	if(document.getElementById('password').value == ""){
+		alert("password vuota");
+		flag =false
+	}else{
+		if(document.getElementById('password').value.match(/\w+/))
+			var password = document.getElementById('password').value;
+		else {
+			flag=false;
+//			document.getElementById('errorPassword_r').style.borderColor="red";
+		}
 	}
-	if(document.getElementById('confirm_password').value.match(/\w+/))
-		var confirmPassword = document.getElementById('confirm_password').value;
-	else {
-		flag=false;
-//		document.getElementById('errorConfirm_password').style.borderColor="red";
+
+	if(document.getElementById('confirm_password').value == ""){
+		alert("conferma password vuota");
+		flag =false
+	}else{
+		if(document.getElementById('confirm_password').value.match(/\w+/))
+			var confirmPassword = document.getElementById('confirm_password').value;
+		else {
+			flag=false;
+//			document.getElementById('errorConfirm_password').style.borderColor="red";
+		}
 	}
+
 
 	if(flag==false) {
+
 		return false;
 	}
 	else {
@@ -95,6 +52,7 @@ function registration() {
 		else {
 //			document.getElementById('errorPassword_r').style.borderColor="red";
 //			document.getElementById('errorConfirm_password').style.borderColor="red";
+			alert("uno o più campi sbagliati");
 			return false;
 		}
 
@@ -121,21 +79,72 @@ function registration() {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var checkBox_array;
+//var searchText_array;
+
+String.prototype.startsWith = function(str) 
+{return (this.match("^"+str)==str)}
+
+String.prototype.trim = function(){return 
+	(this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, ""))}
+
+function nameSearch(nameToSearch) {
+//	if (event.keyCode == 13) 
+//	return;
+//	else
+//	{
+//	onFormLoad(theForm);
+//	var x = document.getElementById("etichetta").value
+	alert(nameToSearch.length);
+//	filter();
+//	}
+//	return true;
+}
+function noEnter() {
+	if (event.keyCode == 13) 
+		return false;
+	else
+		return true;
+}
+//function searchWithName() {
+//if(searchText_array.length < 1)
+////setTimeout("alert(\'tette\')",1000);
+//return false;
+//else
+//return true;
+//}
 
 function onFormLoad(theForm) {
+	checkBox_array = [];
 	checkBox_array = theForm.getElementsByTagName("input");
 	var temp = [];
 	for(i=0; i<checkBox_array.length; i++) {
 		if(checkBox_array[i].getAttribute("type") != "text"){
 			temp.push(checkBox_array[i]);
 		}
+//		else{
+
+//		searchText_array.push(checkBox_array[i]);
+////		alert(searchText_array.length);
+//		}
 	}
 	checkBox_array = temp;
-}
-
-function filterByName() {
-	
 }
 
 function filter(){
@@ -150,6 +159,14 @@ function filter(){
 //		per ogni checkbox controllo tutti i <dd>
 		for(j=0; j<checkBox_array.length; j++){
 			for(t=0; t<dd_array.length; t++){
+//				se è una ricerca anche per nome allora fa questo blocco if
+//				var temp = document.getElementById("etichetta").value;
+//				var stringToSearch = temp.trim();
+//				if(stringToSearch !=""){
+//				var ddToSearch = dd_array[t].innerHTML;
+//				if(ddToSearch.startsWith(stringToSearch))
+//				flag = flag * true;
+//				}
 //				se ce match tra il valore della checkbox e il valore dell tag
 //				allora controllo se la checkbox è true o false
 				if(checkBox_array[j].value == dd_array[t].innerHTML){
