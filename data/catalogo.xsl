@@ -144,7 +144,7 @@ indent='yes'/>
 					<a href="http://jigsaw.w3.org/css-validator/check/referer"><span xml:lang="en">Valid CSS3!</span></a>
 				</li>
 				<li>
-					<a href="http://contentquality.com"><span xml:lang="en">Valid <acronym title="Web Content Accessibility Guidelines">WCAG</acronym> Priority 2!</span></a>
+					<a href="http://contentquality.com"><span xml:lang="en">Valid WCAG Priority 2!</span></a>
 				</li>
 			</ul>
 			<div class="clear"></div>
