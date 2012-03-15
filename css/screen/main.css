@@ -20,16 +20,17 @@ body {
 }
 /*Link non visitati*/
 a:link { 
+	text-decoration: none;
 	color: #0062cc;
 	outline: none;
 }
 /*Link al passaggio del mouse*/
 a:hover {
-	text-decoration: none;
+	text-decoration: underline;
 }
 /*Link con focus da tastiera*/
 a:focus {
-	text-decoration: none;
+	text-decoration: underline;
 	outline: 1px dotted #0062cc;
 	outline-offset: 2px;
 }
