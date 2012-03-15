@@ -15,7 +15,7 @@ indent='yes'/>
 		<link href="../css/screen/main.css" rel="stylesheet" media="screen" type="text/css" />
 		<link href="../css/print/main.css" rel="stylesheet" media="print" type="text/css" />
 		<title>Catalogo Vini ~ Cantina Benato</title>
-		<script src="js/scripts.js" type="text/javascript"></script>
+		<script src="../js/scripts.js" type="text/javascript"></script>
 	</head>
 	
 	<body onload="focusOnSearchEtichetta();">
@@ -98,8 +98,8 @@ indent='yes'/>
                               <xsl:attribute name="value"><xsl:value-of select="v:etichetta"/></xsl:attribute>
                            </xsl:element>
                            <label for="quantita">Quantità</label>
-                           <input type="text" name="quantita" value="" size="1" />
-                           <input id="prenota" type="submit" value="Prenota" />
+                           <input type="text" id="quantita" name="quantita" value="" size="1" />
+                           <input class="prenota" type="submit" value="Prenota" />
                         </fieldset>
                         </form>
                      </div>
