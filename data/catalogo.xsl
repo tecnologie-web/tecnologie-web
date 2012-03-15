@@ -113,7 +113,7 @@ indent='yes'/>
                            <dt>Etichetta:</dt>
                               <dd><xsl:value-of select="v:etichetta"/></dd>
                            <dt>Tipologia:</dt>
-                              <dd><xsl:value-of select="v:tipologia"/></dd>
+                              <dd>Vino <xsl:value-of select="v:tipologia"/></dd>
                            <dt>Categoria:</dt>
                               <dd>Vino <xsl:value-of select="v:categoria"/></dd>
                            <dt>Stato:</dt>

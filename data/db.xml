@@ -216,6 +216,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <degustazione>All’olfatto profumo delicato, gradevole, di frutta verde, si riconosce la mela e la banana. Molto saporito strutturato, armonico e persistente elegante di corpo</degustazione>
          <abbinamenti>Tutta la gamma degli antipasti magri, piatti a base di uova e di pesce. Aperitivo</abbinamenti>
          <temperatura>12</temperatura>
+         <prezzo valuta="euro">4</prezzo>
       </vino>
       <vino>
          <etichetta>Cabernet Sauvignon del veneto</etichetta>
@@ -236,6 +237,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <degustazione>Ha un profumo fine, intenso, netto, con sentori composti di frutta rossa di confettura, erbacei e di sottobosco. Al palato dimostra buona struttura, ottimo equilibrio e lunga persistenza aromatica.</degustazione>
          <abbinamenti>Servirlo con i primi a salsa sapida, carni rosse, carni bianche e pollame nobile in salsa, cacciagione, formaggi stagionati</abbinamenti>
          <temperatura>16</temperatura>
+         <prezzo valuta="euro">3.70</prezzo>
       </vino>
       <vino>
          <etichetta>Cabernet Frank del Veneto</etichetta>
@@ -256,6 +258,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <degustazione>Ha un profumo intenso aromi delicatamente vegetali erbacei e di frutta rossa, si può sentire il peperone, il cacao, il tabacco. Al gusto una armoniosa fusione di persistenza aromatica con una struttura interessante e con tannini di particolare, vinoso</degustazione>
          <abbinamenti>Indicato con gli arrosti di carni rosse, brasati e la selvaggina. Il suo sapore pieno si armonizza perfettamente con i formaggi stagionati</abbinamenti>
          <temperatura>16</temperatura>
+         <prezzo valuta="euro">3.5</prezzo>
       </vino>  
    </prodotti>
    
