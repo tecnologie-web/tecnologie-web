@@ -15,7 +15,7 @@ indent='yes'/>
 		<link href="../css/screen/main.css" rel="stylesheet" media="screen" type="text/css" />
 		<link href="../css/print/main.css" rel="stylesheet" media="print" type="text/css" />
 		<title>Catalogo Vini ~ Cantina Benato</title>
-		<script src="js/scripts.js" type="text/javascript"></script>
+		<script src="../js/scripts.js" type="text/javascript"></script>
 	</head>
 	
 	<body onload="focusOnSearchEtichetta();">
@@ -42,13 +42,13 @@ indent='yes'/>
 			<div id="content">
 				<h2><a name="top"></a>Catalogo dei nostri prodotti</h2>
 				
-					<form id="search" action="#" >
+					<form id="search" action="#" onsubmit="return false;" >
 						<fieldset>
 						<legend>Ricerca Vini</legend>
 							<p>
 								<label id="etich" for="etichetta">per etichetta:</label>
 								<span>
-									<input name="etichetta" id="etichetta" type="text" size="30" onchange="nameSearch(this.value)"/>
+									<input name="etichetta" id="etichetta" type="text" size="30" onchange="filter()"/>
 								</span>
 							</p>
 							<p>
@@ -98,8 +98,8 @@ indent='yes'/>
                               <xsl:attribute name="value"><xsl:value-of select="v:etichetta"/></xsl:attribute>
                            </xsl:element>
                            <label for="quantita">Quantità</label>
-                           <input type="text" name="quantita" value="" size="1" />
-                           <input id="prenota" type="submit" value="Prenota" />
+                           <input type="text" id="quantita" name="quantita" value="" size="1" />
+                           <input class="prenota" type="submit" value="Prenota" />
                         </fieldset>
                         </form>
                      </div>
@@ -144,7 +144,7 @@ indent='yes'/>
 					<a href="http://jigsaw.w3.org/css-validator/check/referer"><span xml:lang="en">Valid CSS3!</span></a>
 				</li>
 				<li>
-					<a href="http://contentquality.com"><span xml:lang="en">Valid <acronym title="Web Content Accessibility Guidelines">WCAG</acronym> Priority 2!</span></a>
+					<a href="http://contentquality.com"><span xml:lang="en">Valid WCAG Priority 2!</span></a>
 				</li>
 			</ul>
 			<div class="clear"></div>
