@@ -23,7 +23,7 @@
   else #se la sessione contiene parametri validi
   {
       my $campo = $session->param("usr");
-      if($campo eq ''){print "ciao";print length($campo);}
+      if($campo eq ''){print "dio boia";print length($campo);}
       print $q->header(-cache_control=>"no-cache, no-store, must-revalidate");
       print "<h2>Benvenuto ";
       print $session->param("usr");
