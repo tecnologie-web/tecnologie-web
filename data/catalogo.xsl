@@ -10,14 +10,15 @@ indent='yes'/>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="language" content="it" />
 		<meta name="author" content="Giacomo Cattelan, Alessandro Cornaglia, Riccardo De Stefani, Jorge Sotomayor" />
-		<meta name="description" content=".." />
-		<meta name="keywords" content=".." />
+		<meta name="description" content="Cantina Benato, vendita al dettaglio presso la nostra cantina di Boccon di Vo e prenotazione online dal nostro sito di vini tipici dei Colli Euganei in bottiglia " />
+		<meta name="keywords" content="Cantina Benato, vini in bottiglia, vini bianchi, vini rossi, vini rosati, vini dolci, vini secchi, vini frizzanti, vini fermi, vini spumanti" />
 		<link href="../css/screen/main.css" rel="stylesheet" media="screen" type="text/css" />
 		<link href="../css/print/main.css" rel="stylesheet" media="print" type="text/css" />
 		<title>Catalogo Vini ~ Cantina Benato</title>
+		<script src="js/scripts.js" type="text/javascript"></script>
 	</head>
 	
-	<body>
+	<body onload="focusOnSearchEtichetta();">
 		<div id="header">
 			<img src="../images/logo.png" width="260px" alt="" />
 			<h1>Cantina Benato</h1>
@@ -28,6 +29,7 @@ indent='yes'/>
 			Ti trovi in: <span xml:lang="en">Homepage</span> &#187; Catalogo Vini
 		</div>  <!--path-->
 		<div id="container">
+			<a class="nav_help" href="#content" />
 			<div id="navigation">
 				<ul>
 					<li class="homepage"> <a tabindex="1" accesskey="h" href="index.html"><span xml:lang="en">Homepage</span></a> </li>
@@ -39,44 +41,45 @@ indent='yes'/>
 			</div>  <!--navigation-->
 			<div id="content">
 				<h2><a name="top"></a>Catalogo dei nostri prodotti</h2>
-					<form id="search" action="#">
+				
+					<form id="search" action="#" >
 						<fieldset>
 						<legend>Ricerca Vini</legend>
 							<p>
 								<label id="etich" for="etichetta">per etichetta:</label>
 								<span>
-									<input name="etichetta" id="etichetta" type="text" size="30"/>
+									<input name="etichetta" id="etichetta" type="text" size="30" onchange="nameSearch(this.value)"/>
 								</span>
 							</p>
 							<p>
 								<label>per tipologia:</label>
 								<span>
 									<label class="check" for="bianchi">Vini Bianchi</label>
-									<input type="checkbox" id="bianchi" name="bianchi" value="Vino Bianco" checked="checked" onclick="filter(this)"/>
+									<input type="checkbox" id="bianchi" name="bianchi" value="Vino Bianco" checked="checked" onclick="filter()"/>
 									<label class="check" for="rossi">Vini Rossi</label>
-									<input type="checkbox" id="rossi" name="rossi" value="Vino Rosso" checked="checked" onclick="filter(this)" />
+									<input type="checkbox" id="rossi" name="rossi" value="Vino Rosso" checked="checked" onclick="filter()"/>
 									<label class="check" for="rosati">Vini Rosati</label>
-									<input type="checkbox" id="rosati" name="rosati" value="Vino Rosato" checked="checked" onclick="filter(this)"/>
+									<input type="checkbox" id="rosati" name="rosati" value="Vino Rosato" checked="checked" onclick="filter()"/>
 								</span>
 							</p>
 							<p>
 								<label>per categoria:</label>
 								<span>
 									<label class="check" for="dolci">Vini Dolci</label>
-									<input type="checkbox" id="dolci" name="dolci" value="Vino Dolce" checked="checked" onclick="filter(this)" />
+									<input type="checkbox" id="dolci" name="dolci" value="Vino Dolce" checked="checked" onclick="filter()"/>
 									<label class="check" for="secchi">Vini Secchi</label>
-									<input type="checkbox" id="secchi" name="secchi" value="Vino Secco" checked="checked" onclick="filter(this)"/>
+									<input type="checkbox" id="secchi" name="secchi" value="Vino Secco" checked="checked" onclick="filter()"/>
 								</span>
 							</p>
 							<p>
 								<label>per stato:</label>
 								<span>
 									<label class="check" for="frizzanti">Vini Frizzanti</label>
-									<input type="checkbox" id="frizzanti" name="frizzanti" value="Vino Frizzante" checked="checked" onclick="filter(this)" />
+									<input type="checkbox" id="frizzanti" name="frizzanti" value="Vino Frizzante" checked="checked" onclick="filter()"/>
 									<label class="check" for="fermi">Vini Fermi</label>
-									<input type="checkbox" id="fermi" name="fermi" value="Vino Fermo" checked="checked" onclick="filter(this)"/>
+									<input type="checkbox" id="fermi" name="fermi" value="Vino Fermo" checked="checked" onclick="filter()"/>
 									<label class="check" for="spumanti">Vini Spumanti</label>
-									<input type="checkbox" id="spumanti" name="spumanti" value="Vino Spumante" checked="checked" onclick="filter(this)"/>
+									<input type="checkbox" id="spumanti" name="spumanti" value="Vino Spumante" checked="checked" onclick="filter()"/>
 								</span>
 							</p>
 						</fieldset>
@@ -84,9 +87,9 @@ indent='yes'/>
                <xsl:for-each select="v:dati/v:prodotti/v:vino">
                   <xsl:sort select="v:etichetta"/>
 						<div class="pr_container">
-                     <div id="pr_head">
+                     <div class="pr_head">
                         <h3><xsl:value-of select="v:etichetta"/></h3>
-                        <form id="form_prenota" method="post" action="cgi-bin/prenota.cgi">
+                        <form class="form_prenota" method="post" action="cgi-bin/prenota.cgi">
                         <fieldset>
                            <input type="hidden" name="etichetta" value=''/>
                            <xsl:element name="input">
@@ -95,7 +98,7 @@ indent='yes'/>
                               <xsl:attribute name="value"><xsl:value-of select="v:etichetta"/></xsl:attribute>
                            </xsl:element>
                            <label for="quantita">Quantità</label>
-                           <input type="text" name="quantita" value="6" size="1" />
+                           <input type="text" name="quantita" value="" size="1" />
                            <input id="prenota" type="submit" value="Prenota" />
                         </fieldset>
                         </form>
@@ -115,7 +118,7 @@ indent='yes'/>
                               <dd>Vino <xsl:value-of select="v:categoria"/></dd>
                            <dt>Stato:</dt>
                               <dd>Vino <xsl:value-of select="v:stato"/></dd>
-                           <dt>Prezzo:</dt>
+                           <dt>Prezzo unitario:</dt>
                               <dd>Euro <xsl:value-of select="v:prezzo"/></dd>
                         </dl>
                         <xsl:element name="a">
@@ -125,9 +128,10 @@ indent='yes'/>
                      </div>
                      <div class="clear"></div>
                   </div> <!--product container-->
+                  <a class="internal_nav" href="#top">Torna su &#9650;</a>
                </xsl:for-each> 
-            </div>  <!--content-->
-          </div>  <!--container-->
+         </div>  <!--content-->
+      </div>  <!--container-->
 		<div id="footer">
 			<p id="authors">
 				Sito realizzato da G. Cattelan, A. Cornaglia, R. De Stefani, J. Sotomayor
