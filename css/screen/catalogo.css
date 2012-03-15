@@ -40,6 +40,7 @@
 }
 #search label.check {
 	float: none;
+	margin-right: 0.5em;
 }
 #search input[type="checkbox"] {
 	margin-right: 5em;
@@ -96,7 +97,7 @@
 	box-shadow: 0 0 5px 0 #0062cc;
 	border: 1px solid #0062cc;
 }
-.pr_container .form_prenota #prenota {
+.pr_container .form_prenota .prenota {
 	box-shadow: 0 0 0 0 inset;
 	background-color: #4D90FE;
 	border: 1px solid #3079ED;

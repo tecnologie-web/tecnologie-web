@@ -29,7 +29,7 @@ indent='yes'/>
 			Ti trovi in: <span xml:lang="en">Homepage</span> &#187; Catalogo Vini
 		</div>  <!--path-->
 		<div id="container">
-			<a class="nav_help" href="#content" />
+			<a class="nav_help" href="#content"></a>
 			<div id="navigation">
 				<ul>
 					<li class="homepage"> <a tabindex="1" accesskey="h" href="index.html"><span xml:lang="en">Homepage</span></a> </li>
