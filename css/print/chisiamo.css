@@ -4,7 +4,22 @@
 ul.address {
 	list-style-type: none;
 	margin-left: 0;
+	padding-left: 0;
 }
 ul.address li {
 	margin-left: 0;
+	padding-left: 0;
+}
+ul.address li:first-child {
+	font-weight: bold;
+}
+table#orari caption {
+	display: none;
+}
+table#orari th,td {
+	padding: 1em 0.5em;
+	border: 1px solid gray;
+}
+table#orari thead th:first-child {
+	border: 0;
 }

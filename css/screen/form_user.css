@@ -6,6 +6,10 @@
 	padding: 0.5em;
 	background: #f6f5f2 url('../../images/noise.png') repeat left top;
 }
+#data_cliente #user {
+	border: 0;
+	margin: 0;
+}
 #user legend {
 	font-size: 0.9em;
 	color: #4c4c4c;
