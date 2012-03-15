@@ -39,7 +39,7 @@ function registration() {
 //			document.getElementById('errorConfirm_password').style.borderColor="red";
 		}
 	}
-	
+
 	if(document.getElementById('nome').value == ""){
 		alert("campo nome vuoto");
 		flag =false;
@@ -63,12 +63,12 @@ function registration() {
 //			document.getElementById('errorConfirm_password').style.borderColor="red";
 		}
 	}
-	
+
 	if(document.getElementById('email').value == ""){
 		alert("campo email vuoto");
 		flag =false;
 	}else{
-		
+
 		if(document.getElementById('email').value.match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/))
 			var email = document.getElementById('email').value;
 		else {
@@ -77,7 +77,7 @@ function registration() {
 //			document.getElementById('errorConfirm_password').style.borderColor="red";
 		}
 	}
-	
+
 	if(document.getElementById('telefono').value == ""){
 		alert("campo telefono vuoto");
 		flag =false;
@@ -89,8 +89,8 @@ function registration() {
 			flag = false;
 		}
 	}
-	
-	
+
+
 	if(flag==false) {
 
 		return false;
@@ -154,24 +154,19 @@ String.prototype.startsWith = function(str)
 String.prototype.trim = function(){return 
 	(this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, ""))}
 
-function nameSearch(nameToSearch) {
-//	if (event.keyCode == 13) 
-//	return;
-//	else
-//	{
-//	onFormLoad(theForm);
-//	var x = document.getElementById("etichetta").value
-	alert(nameToSearch.length);
-//	filter();
-//	}
-//	return true;
-}
-function noEnter() {
-	if (event.keyCode == 13) 
-		return false;
-	else
-		return true;
-}
+//function nameSearch() {
+//onFormLoad(theForm);
+////var x = document.getElementById("etichetta").value
+////alert(nameToSearch.length);
+//filter();
+//return true;
+//}
+//function noEnter() {
+//if (event.keyCode == 13) 
+//return false;
+//else
+//return true;
+//}
 //function searchWithName() {
 //if(searchText_array.length < 1)
 ////setTimeout("alert(\'tette\')",1000);
@@ -188,11 +183,6 @@ function onFormLoad(theForm) {
 		if(checkBox_array[i].getAttribute("type") != "text"){
 			temp.push(checkBox_array[i]);
 		}
-//		else{
-
-//		searchText_array.push(checkBox_array[i]);
-////		alert(searchText_array.length);
-//		}
 	}
 	checkBox_array = temp;
 }
@@ -201,6 +191,7 @@ function filter(){
 //	per ogni per ogni checkbox controllo tutti i div e se trovo
 //	che uno dei dd hai il valore da non mostrare allora non lo mostro.
 	onFormLoad(document.getElementById("search"));
+
 	var div_array = document.getElementsByClassName("pr_container");
 //	per ogni <div> cerco i sui <dd>
 	for(i=0; i<div_array.length; i++){
@@ -210,12 +201,16 @@ function filter(){
 		for(j=0; j<checkBox_array.length; j++){
 			for(t=0; t<dd_array.length; t++){
 //				se è una ricerca anche per nome allora fa questo blocco if
-//				var temp = document.getElementById("etichetta").value;
+//				var temp1 = new String(document.getElementById("etichetta").value);
 //				var stringToSearch = temp.trim();
+//
 //				if(stringToSearch !=""){
-//				var ddToSearch = dd_array[t].innerHTML;
-//				if(ddToSearch.startsWith(stringToSearch))
-//				flag = flag * true;
+//					var temp2 = new String(dd_array[t].innerHTML);
+//					var ddToSearch = temp2.trim();
+//					if(ddToSearch.startsWith(stringToSearch))
+//						flag = flag * false;
+//					else
+//						flag= flag * true;
 //				}
 //				se ce match tra il valore della checkbox e il valore dell tag
 //				allora controllo se la checkbox è true o false
@@ -227,8 +222,7 @@ function filter(){
 
 		if(flag){
 			div_array[i].style.display='block';
-		}else
-		{
+		}else{
 			div_array[i].style.display='none';
 		}
 	}
