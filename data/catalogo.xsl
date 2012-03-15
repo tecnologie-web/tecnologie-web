@@ -42,13 +42,13 @@ indent='yes'/>
 			<div id="content">
 				<h2><a name="top"></a>Catalogo dei nostri prodotti</h2>
 				
-					<form id="search" action="#" >
+					<form id="search" action="#" onsubmit="return false;" >
 						<fieldset>
 						<legend>Ricerca Vini</legend>
 							<p>
 								<label id="etich" for="etichetta">per etichetta:</label>
 								<span>
-									<input name="etichetta" id="etichetta" type="text" size="30" onchange="nameSearch(this.value)"/>
+									<input name="etichetta" id="etichetta" type="text" size="30" onchange="filter()"/>
 								</span>
 							</p>
 							<p>
