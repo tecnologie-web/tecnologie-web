@@ -148,11 +148,11 @@ function registration() {
 var checkBox_array;
 //var searchText_array;
 
-String.prototype.startsWith = function(str) 
-{return (this.match("^"+str)==str)}
-
-String.prototype.trim = function(){return 
-	(this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, ""))}
+//String.prototype.startsWith = function(str) 
+//{return (this.match("^"+str)==str)}
+//
+//String.prototype.trim = function(){return 
+//	(this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, ""))}
 
 //function nameSearch() {
 //onFormLoad(theForm);
@@ -174,6 +174,28 @@ String.prototype.trim = function(){return
 //else
 //return true;
 //}
+
+function verifyString(myString, prefix) 
+{
+    // Remove any white space at the left of the string.
+    myString = myString.trimStart();
+
+    // Set to lower case.
+    myString = myString.toLowerCase();
+
+    // Determine if the string starts with the specified prefix.
+    var hasPrefix = myString.startsWith(prefix.toString());
+    if (hasPrefix === true)
+    {
+//        alert("The string \"" + myString + "\" starts with \"" + prefix + "\""); 
+    	return true;
+    }
+    else
+    {
+//       alert("The string \"" + myString + " does not start with \"" + prefix + "\""); 
+    	return false;
+    }
+ }
 
 function onFormLoad(theForm) {
 	checkBox_array = [];
@@ -201,16 +223,16 @@ function filter(){
 		for(j=0; j<checkBox_array.length; j++){
 			for(t=0; t<dd_array.length; t++){
 //				se è una ricerca anche per nome allora fa questo blocco if
-//				var temp1 = new String(document.getElementById("etichetta").value);
-//				var stringToSearch = temp.trim();
-//
-//				if(stringToSearch !=""){
-//					var temp2 = new String(dd_array[t].innerHTML);
-//					var ddToSearch = temp2.trim();
-//					if(ddToSearch.startsWith(stringToSearch))
-//						flag = flag * false;
-//					else
-//						flag= flag * true;
+//				var temp1 = 
+//				var stringToSearch = new String(document.getElementById("etichetta").value);
+				
+//				if(stringToSearch !==""){
+//					var ddToSearch = new String(dd_array[t].innerHTML);
+////					var ddToSearch = temp2.trim();
+////					if(ddToSearch.startsWith(stringToSearch))
+//						flag = flag * verifyString(ddToSearch, stringToSearch);
+////					else
+////						flag= flag * true;
 //				}
 //				se ce match tra il valore della checkbox e il valore dell tag
 //				allora controllo se la checkbox è true o false
