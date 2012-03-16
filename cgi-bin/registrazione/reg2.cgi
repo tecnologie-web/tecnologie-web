@@ -12,22 +12,27 @@ my $pagina = new CGI;
 #controllo se ci sono dati nella sessione
   #recupero dati sessione
   my $username = $pagina->param('username');
-  #my $password = $pagina->param('password'); non servono
-  #my $confirm_password = $pagina->param('confirm_password');
+  my $password = $pagina->param('password'); #non servono
+  my $confirm_password = $pagina->param('confirm_password');
   my $nome = $pagina->param('nome');
   my $cognome = $pagina->param('cognome');
   my $email = $pagina->param('email');
   my $telefono = $pagina->param('telefono');
+  #cripto password e confirm_password
+  my $chiave = "ciao";
+  my $cryptPass = crypt($chiave,$password);
+  my $cryptControlPass = crypt($chiave,$confirm_password);
   #recupero dati errori
-  my @err_usr = $pagina->param('err_usr');
-  my @err_nome = $pagina->param('err_nome');
-  my @err_cogn = $pagina->param('err_cogn');
-  my @err_mail = $pagina->param('err_mail');
-  my @err_tel = $pagina->param('err_tel');
+  my @err_usr;# = $pagina->param('err_usr');
+  my @err_nome;# = $pagina->param('err_nome');
+  my @err_cogn;# = $pagina->param('err_cogn');
+  my @err_mail;# = $pagina->param('err_mail');
+  my @err_tel;# = $pagina->param('err_tel');
+  my @err_pass;
   #recupero dato se ricevuto o no;
   my $spedito = $pagina->param('spedito');
   #recupero numero errori
-  my $n_errori = @err_usr+@err_nome+@err_cogn+@err_mail+@err_tel;
+  #my $n_errori = @err_usr+@err_nome+@err_cogn+@err_mail+@err_tel;
   
   my $prima_volta = 1;  #valore di default 
   if ( $spedito == 1){  #se ho ricevuto i dati porto prima volta a 0
@@ -41,6 +46,27 @@ my $pagina = new CGI;
   else{
    #devo effettuare i vari controlli
    my $num_err = 0;
+   #tutti obbligatori devono venir riempiti
+   if(&not_vuoto($username) == 1){
+      push(@err_usr,6);
+      $num_err++;
+   }
+   if(&not_vuoto($password) == 1){
+      push(@err_pass,6);
+      $num_err++;
+   }
+   if(&not_vuoto($nome) == 1){
+      push(@err_nome,6);
+      $num_err++;
+   }
+   if(&not_vuoto($cognome) == 1){
+      push(@err_cogn,6);
+      $num_err++;
+   }
+   if(&not_vuoto($telefono) == 1){
+      push(@err_tel,6);
+      $num_err++;
+   }
    #controllo per ogni parametro se presenti angolari
     if(&angolari($username) == 1){
       push(@err_usr,1);
@@ -63,8 +89,37 @@ my $pagina = new CGI;
       $num_err++;       
     }
 #fine controlli angolari
+    #controllo che i campi siano nei formati corretti
+    if(&not_numbchar($username) == 1){
+      push(@err_usr,2);
+      $num_err++;
+    }
+    if(&not_alpha($nome) == 1){
+      push(@err_nome,2);
+      $num_err++;
+    }
+    if(&not_alpha($cognome) == 1){
+      push(@err_cogn,2);
+      $num_err++;
+    }
+    if(&control_mail($email) == 1){
+      push(@err_mail,3);
+      $num_err++;
+    }
+    if(&control_numb($telefono) == 1){
+      push(@err_tel,2);
+      $num_err++;
+    }
+    if(!($cryptPass eq $cryptControlPass))
+    {
+      push(@err_pass,4);
+      $num_err++;
+    }
 
-  if ($num_err == 0){print "=0";
+    #fine campi corretti
+    
+    
+  if ($num_err == 0){print "DATI CORRETTI";
     #redirect
   }
   #se num_err == 0 allora vado alla pagina successiva
@@ -85,7 +140,7 @@ my $pagina = new CGI;
 						<p>
 							<label for="password">Scegli la password</label>
 							<input id="password" type="password" name="password" size="30" />
-							<span class="help"></span>
+							<span class="help">'.&get_errore(@err_pass[0]).'</span>
 						</p>
 						<p>
 							<label for="confirm_password">Conferma la password</label>
@@ -123,6 +178,17 @@ my $pagina = new CGI;
 
   #funzione che dato in ingresso un codice di errore restituisce una descrizione di esso
   sub get_errore($){
+      ###############################
+      #    TIPI DI ERRORE           #
+      # 1 : campo contiene < o >    #
+      # 2 : campo contiene char non #
+      #     validi o numeri         #
+      # 3 : campo non nel formato   #
+      #     starndard               #
+      # 4 : password e conferma non #
+      #     corrispondono           #
+      # 5 : già presente            #
+      # 6 : campo vuoto             #
       my $errore = shift;
       if ($errore == 1){
         return "il campo non deve contenere < o >";
@@ -131,10 +197,16 @@ my $pagina = new CGI;
         return "il campo dati contiene caratteri non validi";
       }
       if ($errore == 3){
-        return "il campo dati non è inn forma standard";
+        return "il campo dati non è in forma standard";
       }
       if ($errore == 4){
         return "password e conferma non corrispondono";
+      }
+      if ($errore == 5){
+        return "lo username è già presente";
+      }
+      if ($errore == 6){
+        return "il campo non può essere lasciato vuoto";
       }
   }
   
@@ -156,6 +228,75 @@ my $pagina = new CGI;
   }
 #fine angolari
 
+#funzione che controlla se il campo è vuoto
+sub not_vuoto($){
+  my $stringa = shift;
+  if( $stringa =~ /^$/){#se la stringa è così composta ok
+    return 1;
+  }
+  else{#se non lo è
+    return 0;
+  }
+}
+
+#fine vuoto
+#funzione che restituisce 1 se trova occorenze di caratteri non alfabetici
+sub not_alpha($){
+  my $stringa = shift;
+  if( $stringa =~ /^([A-Za-z]+)( [A-Za-z]+)*$/){#se la stringa è così composta ok
+    return 0;
+  }
+  else{#se non lo è
+    if ( $stringa =~ /^([A-Za-zèùàòé][ a-zA-Z'èùàòé]*)+$/){#se è nella forma xxx'xxx
+      return 0;
+    }
+    else{
+      return 1;
+    }
+  }
+}
+#fine non alfabetici
+
+#funzione che controlla se username è in forma corretta
+sub not_numbchar($){
+    my $stringa = shift;
+    if( $stringa =~ /^([A-Za-z\d]+)$/){#se la stringa è così composta ok
+      return 0;
+    }
+    else{
+      return 1;
+    }
+}
+#fine controllo username
+
+#funzione che restituisce 1 se la mail non è nel formato xxx@xxx.xxx
+sub control_mail($){
+    my $mail = shift;
+    if ($mail =~/^([\w\-\+\.]+)\@([\w\-\+\.]+)\.([\w\-\+\.]+)$/){
+      return 0;
+    }
+    else{
+      if ($mail =~/^$/){#mail è opzionale quindi può essere vuoto
+          return 0;
+      }
+      else{
+        return 1;
+      }
+    }
+}
+#fine control email
+
+#funzione che restituisce uno se la stringa non è composta da soli numeri
+sub  control_numb($){
+    my $numb = shift;
+    if ($numb =~/^(\d)+$/){
+      return 0;
+    }
+    else{
+      return 1;
+    }
+} 
+#fine numeri
 #funzione che stampa la prima parte di html
   sub stampa_prima{
     my $stringa = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
