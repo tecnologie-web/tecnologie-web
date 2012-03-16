@@ -97,8 +97,21 @@ indent='yes'/>
                               <xsl:attribute name="name">etichetta</xsl:attribute>
                               <xsl:attribute name="value"><xsl:value-of select="v:etichetta"/></xsl:attribute>
                            </xsl:element>
-                           <label for="quantita">Quantità</label>
-                           <input type="text" id="quantita" name="quantita" value="" size="1" />
+                           <xsl:variable name="quantita">
+                              {generate-id()}
+                           </xsl:variable>
+                           <xsl:element name="label">
+                              <xsl:attribute name="for"><xsl:value-of select="v:etichetta"/></xsl:attribute>
+                              Quantità
+                           </xsl:element>
+                           <xsl:element name="input">
+                              <xsl:attribute name="type">text</xsl:attribute>
+                              <xsl:attribute name="id"><xsl:value-of select="v:etichetta"/></xsl:attribute>
+                              <xsl:attribute name="name">quantita</xsl:attribute>
+                              <xsl:attribute name="value"></xsl:attribute>
+                              <xsl:attribute name="size">1</xsl:attribute>
+                           </xsl:element>
+
                            <input class="prenota" type="submit" value="Prenota" />
                         </fieldset>
                         </form>
