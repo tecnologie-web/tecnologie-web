@@ -101,7 +101,7 @@
    
    <xsd:complexType name="Tprenotazioni">
       <xsd:sequence>
-         <xsd:element name="commissione" type="Tcommissione" maxOccurs="unbounded" />          
+         <xsd:element name="commissione" type="Tcommissione" minOccurs="0" maxOccurs="unbounded" />          
       </xsd:sequence>
    </xsd:complexType>
    
