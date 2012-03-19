@@ -110,16 +110,59 @@ my $pagina = new CGI;
       push(@err_tel,2);
       $num_err++;
     }
-    if(!($cryptPass eq $cryptControlPass))
-    {
+    if(!($cryptPass eq $cryptControlPass)){
       push(@err_pass,4);
       $num_err++;
     }
-
+    
+    #if username è già presente num err ++
+    if (&isPresente($username)){
+      push(@err_usr,5);
+      $num_err++;
+    }
     #fine campi corretti
     
     
   if ($num_err == 0){print "DATI CORRETTI";
+    #definisco file xml
+    my $file = 'db.xml';
+
+    #creazione oggetto parser
+    my $parser = XML::LibXML->new();
+
+    #apertura file e lettura input
+    my $doc = $parser->parse_file($file);
+
+    #estrazione elemento radice
+    my $radice= $doc->getDocumentElement;
+    my @iscritti = $radice->getElementsByTagName('iscritti');
+
+    #definizione elemento da inserire
+    my $nuovo_elemento = 
+    "
+      <utente>
+        <username>$username</username>
+       <password>$password</password>
+       <nome>$nome</nome>
+       <cognome>$cognome</cognome>
+       <email>$email</email>
+       <telefono>$telefono</telefono>
+      </utente>
+      ";
+
+    #controllo e creazione di un nuovo nodo
+    my $frammento = $parser->parse_balanced_chunk($nuovo_elemento);
+    #appendo il nuovo appena creato
+    $iscritti[0]->appendChild($frammento);
+
+    #definisco il file xml su cui scrivere e lo apro
+    my $fileDestinazione = "db.xml";
+    open(OUT, ">$fileDestinazione") or die("Non riesco ad aprire il file in scrittura");
+    #scrivo effettivamente sul file
+    print OUT $doc->toString;
+    #chiudo file
+    close (OUT);
+
     #redirect
   }
   #se num_err == 0 allora vado alla pagina successiva
@@ -189,6 +232,7 @@ my $pagina = new CGI;
       #     corrispondono           #
       # 5 : già presente            #
       # 6 : campo vuoto             #
+      ###############################
       my $errore = shift;
       if ($errore == 1){
         return "il campo non deve contenere < o >";
@@ -480,4 +524,39 @@ sub stampa_intera{
 	</body>
 </html>');
   
+}
+
+#funzione che controlla se lo username passato è presente nel db
+sub isPresente($){
+  my $usr = shift;
+  
+  #vado a leggere il file xml
+   my $db = "db.xml";
+   my $path ='//utente';#vino[etichetta="'.$input{vino}.'"]';
+   my $parser = XML::LibXML->new();
+   my $doc = $parser->parse_file($db);
+   my $file_content = "";
+   open(INPUT,$db);
+   while(<INPUT>) 
+   {
+      $file_content = $file_content.$_;
+   }
+   $file_content =~ s/<dati .+>(.*)<iscritti>/<dati>\1<iscritti>/s;
+   my $doc = $parser->parse_string($file_content);
+   my $radice = $doc->getDocumentElement();
+   
+   
+   my @usrs = $radice->findnodes($path);
+   my @username=$usrs[0]->getElementsByTagName('username');
+   my @supporto;
+   my $lung = @usrs;
+   #print $lung;
+   for (my $i = 0; $i < $lung ; $i++){
+     my @elemento = $usrs[$i]->getElementsByTagName('username');
+     my $zio = $elemento[0]->textContent;
+     if ($zio eq $usr){
+      return 1;
+     }
+   }
+   return 0;
 }
