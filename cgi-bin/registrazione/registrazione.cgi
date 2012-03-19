@@ -169,7 +169,8 @@ my $nuovo_elemento =
      <cognome>$cognome</cognome>
      <email>$email</email>
      <telefono>$telefono</telefono>
-    </utente>";
+    </utente>
+    ";
 
 
 

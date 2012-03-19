@@ -125,7 +125,7 @@ my $pagina = new CGI;
     
   if ($num_err == 0){print "DATI CORRETTI";
     #definisco file xml
-    my $file = 'db.xml';
+    my $file = '../data/db.xml';
 
     #creazione oggetto parser
     my $parser = XML::LibXML->new();
@@ -142,7 +142,7 @@ my $pagina = new CGI;
     "
       <utente>
         <username>$username</username>
-       <password>$password</password>
+       <password>".$cryptPass."</password>
        <nome>$nome</nome>
        <cognome>$cognome</cognome>
        <email>$email</email>
@@ -156,7 +156,7 @@ my $pagina = new CGI;
     $iscritti[0]->appendChild($frammento);
 
     #definisco il file xml su cui scrivere e lo apro
-    my $fileDestinazione = "db.xml";
+    my $fileDestinazione = "../data/db.xml";
     open(OUT, ">$fileDestinazione") or die("Non riesco ad aprire il file in scrittura");
     #scrivo effettivamente sul file
     print OUT $doc->toString;
@@ -171,7 +171,7 @@ my $pagina = new CGI;
     
     print ('<div id="content">
 				<h2>Form di registrazione al sitowertyuiosdfghj</h2>	
-				<form id="user" method="post" action="reg2.cgi" onsubmit="return registration();">
+				<form id="user" method="post" action="registrazione.cgi" onsubmit="return registration();">
 					<fieldset id="site">
 						<legend>Dati accesso al sito</legend>
 						<p>
@@ -453,7 +453,7 @@ sub stampa_intera{
 			</div>  <!--navigation-->
 			<div id="content">
 				<h2>Form di registrazione al sito</h2>	
-				<form id="user" method="post" action="reg2.cgi" onsubmit="return registration();>
+				<form id="user" method="post" action="registrazione.cgi" onsubmit="return registration();>
 					<fieldset id="site">
 						<legend>Dati accesso al sito</legend>
 						<p>
@@ -531,7 +531,7 @@ sub isPresente($){
   my $usr = shift;
   
   #vado a leggere il file xml
-   my $db = "db.xml";
+   my $db = "../data/db.xml";
    my $path ='//utente';#vino[etichetta="'.$input{vino}.'"]';
    my $parser = XML::LibXML->new();
    my $doc = $parser->parse_file($db);
