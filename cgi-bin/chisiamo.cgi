@@ -4,10 +4,12 @@ use CGI;
 use CGI::Carp qw(fatalsToBrowser);
 use strict;
 
+require "funzioni/static.cgi";
+
 my $page = new CGI;
 my $title = "Chi Siamo";
 my $keywords = "cantina, Benato, descrizione, storia, contatti, orari, vini";
 my $descr = "Storia della cantina Benato, i nostri orari di apertura e chiusura, i contatti per telefonarci o scriverci";
 &intestazione($page,$title,$keywords,$descr);
 &header($page);
-&path($page,....);
+#&path($page,....);
