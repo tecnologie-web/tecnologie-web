@@ -110,6 +110,60 @@ print $page->start_div({id=>"navigation"});
 print $page->end_ul;
 print $page->end_div;
 }
+sub navigation_log($)
+{
+my $page =shift;
+my $current=shift;
+print $page->a({class=>"nav_help",href=>"#content"},"");
+print $page->start_div({id=>"navigation"});
+                 print $page->start_ul();
+                  if($current eq "homepage")
+                     {
+                     print $page->li({class=>"homepage",id=>"here"},"Homepage");
+                     }
+                  else
+                     {
+                     print $page->li({class=>"homepage"},
+                               $page->a({tabindex=>"1",accesskey=>"h",href=>"index.html"},
+                               '<span xml:lang="en">Homepage</span>')
+                              );
+                     }
+                  if($current eq "catalogo")
+                     {
+                     print $page->li({class=>"catalogo",id=>"here"},"Catalogo Vini");
+                     }
+                  else
+                     {
+                     print $page->li({class=>"catalogo"},
+                                    $page->a({tabindex=>"2",accesskey=>"c",href=>"chi_siamo.html"},
+                                    "Catalogo")
+                              );
+                     }
+                  if($current eq "chisiamo")
+                     {
+                     print $page->li({class=>"chisiamo",id=>"here"},"Chi Siamo");
+                     }
+                  else
+                     {
+                     print $page->li({class=>"chisiamo"},
+                                    $page->a({tabindex=>"3",accesskey=>"s",href=>"chi_siamo.html"},
+                                    "Chi Siamo")
+                              );
+                     }
+                   if($current eq "logout")
+                     {
+                     print $page->li({class=>"logout",id=>"here"},'<span xml:lang="en">Logout</span>');
+                     }
+                  else
+                     {
+                      print $page->li({class=>"logout"},
+                                    $page->a({tabindex=>"4",accesskey=>"o",href=>"logout.cgi"},
+                                             '<span xml:lang="en">Logout</span>')
+                                 );      
+                     }  
+               $page->end_ul;
+               $page->end_div;
+}
 sub footer($)
 {
 my $page=shift;

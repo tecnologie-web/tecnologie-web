@@ -188,6 +188,9 @@ span.firstLetter  {
 #navigation ul li.login {
 	background-image: url('../../images/menu/login.png');
 }
+#navigation ul li.logout {
+	background-image: url('../../images/menu/logout.png');
+}
 
 /*CONTENT*/
 #content {
