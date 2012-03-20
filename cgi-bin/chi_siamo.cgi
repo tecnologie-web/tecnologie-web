@@ -15,7 +15,7 @@ my $descr = "Storia della cantina Benato, i nostri orari di apertura e chiusura,
 &path($page,'<span xml:lang="en">Homepage</span> &#187; Chi Siamo');
 &start_container($page);
 # if not sessione
-   &navigation_notlog($page);
+   &navigation_notlog($page,"chisiamo");
 # if sessione
 #   &navigation_log($page);
 
