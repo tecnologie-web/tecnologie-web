@@ -3,28 +3,6 @@ function focusOnSearchEtichetta() {
 }
 
 var checkBox_array;
-//var searchText_array;
-
-//String.prototype.startsWith = function(str) 
-//{return (this.match("^"+str)==str)}
-
-//String.prototype.trim = function(){return 
-//(this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, ""))}
-
-//function nameSearch() {
-//onFormLoad(theForm);
-////var x = document.getElementById("etichetta").value
-////alert(nameToSearch.length);
-//filter();
-//return true;
-//}
-//function noEnter() {
-//if (event.keyCode == 13) 
-//return false;
-//else
-//return true;
-//}
-
 
 function onFormLoad(theForm) {
 	checkBox_array = [];
@@ -37,34 +15,6 @@ function onFormLoad(theForm) {
 	}
 	checkBox_array = temp;
 }
-
-
-//function verifyString(myString, prefix) 
-//{
-////Remove any white space at the left of the string.
-//myString = myString.trimStart();
-
-////Set to lower case.
-//myString = myString.toLowerCase();
-
-////Determine if the string starts with the specified prefix.
-//var hasPrefix = myString.startsWith(prefix.toString());
-//if (hasPrefix === true)
-//{
-////alert("The string \"" + myString + "\" starts with \"" + prefix + "\""); 
-//return true;
-//}
-//else
-//{
-////alert("The string \"" + myString + " does not start with \"" + prefix + "\""); 
-//return false;
-//}
-//}
-
-//function startsWith(str, prefix) 
-//{
-//return (str.match("^"+prefix)==prefix);
-//}
 
 function filter(){
 //	per ogni per ogni checkbox controllo tutti i div e se trovo
@@ -83,10 +33,7 @@ function filter(){
 			var nameMatch = false;
 			for(t=0; t<dd_array.length; t++){
 //				se è una ricerca anche per nome allora fa questo blocco if
-//				var temp1 = new String(document.getElementById("etichetta").value);
-//				var stringToSearch = temp.trim();
 				if(stringToSearch != "" && !nameMatch){
-//					flag = flag * startsWith(dd_array[t].innerHTLM, stringToSearch);
 					var temp2 = dd_array[t].innerHTML;
 					var str = temp2.trim();
 					var pos = str.indexOf(stringToSearch);
@@ -114,98 +61,103 @@ function filter(){
 
 }
 
-
-
-
-function registration() {
+function validateRegistration() {
 
 	var flag = true;
 
 	if(document.getElementById('username').value == ""){
-		alert("username vuoto");
+		document.getElementById('errorUsername').innerHTML = "Campo Username vuoto";
 		flag =false;
 	}else{
-		if(document.getElementById('username').value.match(/[A-Za-z0-9]+/))
+		if(document.getElementById('username').value.match(/[A-Za-z0-9]+/)){
 			var username = document.getElementById('username').value;
-		else {
+			document.getElementById('errorUsername').innerHTML = "";
+		}else {
 			flag=false;
-//			document.getElementById('errorUsername_r').style.borderColor="red";
+			document.getElementById('errorUsername').innerHTML = "Inserire solo caratteri";
 		}
 	}
 
 
 
 	if(document.getElementById('password').value == ""){
-		alert("password vuota");
+		document.getElementById('errorPassword').innerHTML = "Campo Password vuoto";
 		flag =false;
 	}else{
-		if(document.getElementById('password').value.match(/\w+/))
+		if(document.getElementById('password').value.match(/\w+/)){
 			var password = document.getElementById('password').value;
-		else {
+			document.getElementById('errorPassword').innerHTML = "";
+		}else {
 			flag=false;
-//			document.getElementById('errorPassword_r').style.borderColor="red";
+			document.getElementById('errorPassword').innerHTML = "Caratteri non validi";
 		}
 	}
 
 	if(document.getElementById('confirm_password').value == ""){
-		alert("conferma password vuota");
+		document.getElementById('errorCPassword').innerHTML = "Campo Conferma Password vuoto";
 		flag =false;
 	}else{
-		if(document.getElementById('confirm_password').value.match(/\w+/))
+		if(document.getElementById('confirm_password').value.match(/\w+/)){
 			var confirmPassword = document.getElementById('confirm_password').value;
-		else {
+			document.getElementById('errorCPassword').innerHTML = "";
+		}else {
 			flag=false;
-//			document.getElementById('errorConfirm_password').style.borderColor="red";
+			document.getElementById('errorCPassword').innerHTML = "Caratteri non validi";
 		}
 	}
 
 	if(document.getElementById('nome').value == ""){
-		alert("campo nome vuoto");
+		document.getElementById('errorName').innerHTML = "Campo Nome vuoto";
 		flag =false;
 	}else{
-		if(document.getElementById('nome').value.match(/^[A-Za-z]+/))
+		if(document.getElementById('nome').value.match(/^[A-Za-z]+/)){
 			var nome = document.getElementById('nome').value;
-		else {
+			document.getElementById('errorName').innerHTML = "";
+		}else {
 			flag=false;
-//			document.getElementById('errorConfirm_password').style.borderColor="red";
+			document.getElementById('errorName').innerHTML = "Inserire solo caratteri";
 		}
 	}
 
 	if(document.getElementById('cognome').value == ""){
-		alert("campo cognome vuoto");
+		document.getElementById('errorSurname').innerHTML = "Campo Cognome vuoto";
 		flag =false;
 	}else{
-		if(document.getElementById('cognome').value.match(/^[A-Za-z]+/))
+		if(document.getElementById('cognome').value.match(/^[A-Za-z]+/)){
 			var cognome = document.getElementById('cognome').value;
-		else {
+			document.getElementById('errorSurname').innerHTML = "";
+		}else {
 			flag=false;
-//			document.getElementById('errorConfirm_password').style.borderColor="red";
+			document.getElementById('errorSurname').innerHTML = "Inserire solo caratteri";
 		}
 	}
 
 	if(document.getElementById('email').value == ""){
-		alert("campo email vuoto");
+		document.getElementById('errorEmail').innerHTML = "Campo Email vuoto";
 		flag =false;
 	}else{
 
-		if(document.getElementById('email').value.match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/))
+		if(document.getElementById('email').value.match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)){
 			var email = document.getElementById('email').value;
-		else {
-			alert("formato email sbagliato");
+			document.getElementById('errorEmail').innerHTML = "";
+		}else {
+//			alert("formato email sbagliato");
 			flag=false;
-//			document.getElementById('errorConfirm_password').style.borderColor="red";
+			document.getElementById('errorEmail').innerHTML = "Formato email sbagliato";
 		}
 	}
 
 	if(document.getElementById('telefono').value == ""){
-		alert("campo telefono vuoto");
+		document.getElementById('errorPhone').innerHTML = "Campo Telefono vuoto";
 		flag =false;
 	}else{
 		var telefono = document.getElementById('telefono').value;
 		var pos = telefono.search(/[0-9]/);
 		if(pos != 0){
-			alert("inserire solo numeri");
+			document.getElementById('errorPhone').innerHTML = "Inserire solo numeri";
 			flag = false;
+		}else{
+			document.getElementById('errorPhone').innerHTML = "";
 		}
 	}
 
@@ -219,9 +171,8 @@ function registration() {
 			return true;
 		}
 		else {
-//			document.getElementById('errorPassword_r').style.borderColor="red";
-//			document.getElementById('errorConfirm_password').style.borderColor="red";
-			alert("uno o più campi sbagliati");
+			document.getElementById('errorPassword').innerHTML = "Campi non uguali";
+			document.getElementById('errorCPassword').innerHTML = "Campi non uguali";
 			return false;
 		}
 
