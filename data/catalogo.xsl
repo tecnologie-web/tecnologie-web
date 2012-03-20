@@ -89,9 +89,8 @@ indent='yes'/>
 						<div class="pr_container">
                      <div class="pr_head">
                         <h3><xsl:value-of select="v:etichetta"/></h3>
-                        <form class="form_prenota" method="post" action="cgi-bin/prenota.cgi">
+                        <form class="form_prenota" method="post" action="prenota.cgi">
                         <fieldset>
-                           <input type="hidden" name="etichetta" value=''/>
                            <xsl:element name="input">
                               <xsl:attribute name="type">hidden</xsl:attribute>
                               <xsl:attribute name="name">etichetta</xsl:attribute>
