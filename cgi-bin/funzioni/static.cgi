@@ -150,6 +150,17 @@ print $page->start_div({id=>"navigation"});
                                     "Chi Siamo")
                               );
                      }
+                   if($current eq "areapersonale")
+                     {
+                     print $page->li({class=>"areapersonale",id=>"here"},"Area Personale");
+                     }
+                  else
+                     {
+                      print $page->li({class=>"areapersonale"},
+                                    $page->a({tabindex=>"4",accesskey=>"a",href=>"areapersonale.cgi"},
+                                             "Area Personale")
+                                 );      
+                     }  
                    if($current eq "logout")
                      {
                      print $page->li({class=>"logout",id=>"here"},'<span xml:lang="en">Logout</span>');
@@ -157,7 +168,7 @@ print $page->start_div({id=>"navigation"});
                   else
                      {
                       print $page->li({class=>"logout"},
-                                    $page->a({tabindex=>"4",accesskey=>"o",href=>"logout.cgi"},
+                                    $page->a({tabindex=>"5",accesskey=>"o",href=>"logout.cgi"},
                                              '<span xml:lang="en">Logout</span>')
                                  );      
                      }  
