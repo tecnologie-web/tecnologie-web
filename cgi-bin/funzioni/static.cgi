@@ -161,8 +161,8 @@ print $page->start_div({id=>"navigation"});
                                              '<span xml:lang="en">Logout</span>')
                                  );      
                      }  
-               $page->end_ul;
-               $page->end_div;
+print $page->end_ul;
+print $page->end_div;
 }
 sub footer($)
 {
