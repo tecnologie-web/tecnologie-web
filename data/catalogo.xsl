@@ -32,11 +32,11 @@ indent='yes'/>
 			<a class="nav_help" href="#content"></a>
 			<div id="navigation">
 				<ul>
-					<li class="homepage"> <a tabindex="1" accesskey="h" href="index.html"><span xml:lang="en">Homepage</span></a> </li>
+					<li class="homepage"> <a tabindex="1" accesskey="h" href="index.cgi"><span xml:lang="en">Homepage</span></a> </li>
 					<li class="catalogo" id="here">Catalogo Vini</li>
-					<li class="chisiamo"> <a tabindex="2" accesskey="s" href="chi_siamo.html">Chi Siamo</a> </li>
-					<li class="registrati"> <a tabindex="3" accesskey="r" href="registrati.html">Registrati</a> </li>
-					<li class="login"> <a tabindex="4" accesskey="l" href="login.html"><span xml:lang="en">Login</span></a> </li>
+					<li class="chisiamo"> <a tabindex="2" accesskey="s" href="chi_siamo.cgi">Chi Siamo</a> </li>
+					<li class="registrati"> <a tabindex="3" accesskey="r" href="registrati.cgi">Registrati</a> </li>
+					<li class="login"> <a tabindex="4" accesskey="l" href="login.cgi"><span xml:lang="en">Login</span></a> </li>
 				</ul>
 			</div>  <!--navigation-->
 			<div id="content">
