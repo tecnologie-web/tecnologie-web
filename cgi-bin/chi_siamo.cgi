@@ -2,6 +2,7 @@
 use XML::LibXML;
 use CGI;
 use CGI::Carp qw(fatalsToBrowser);
+use CGI::Session ( '-ip_match' );
 use strict;
 
 require "funzioni/static.cgi";
@@ -14,11 +15,13 @@ my $descr = "Storia della cantina Benato, i nostri orari di apertura e chiusura,
 &header($page);
 &path($page,'<span xml:lang="en">Homepage</span> &#187; Chi Siamo');
 &start_container($page);
-# if not sessione
+$session = CGI::Session->load(); #---->carico la sessione
+if($session->is_expired || $session->is_empty) { #---->controllo se la sessione è scaduta o non contiene dati
    &navigation_notlog($page,"chisiamo");
-# if sessione
-#   &navigation_log($page);
-
+}
+else {#----->la sessione è stata caricata correttamente
+   &navigation_log($page,"chisiamo");
+}
 print '
 <div id="content">
             <h2><a name="top"></a>Chi siamo</h2>
