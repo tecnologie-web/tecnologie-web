@@ -274,49 +274,49 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
    		<cliente>Riki</cliente>
    		<ordine>Cabernet Frank del Veneto</ordine>
    		<quantita>6</quantita>
-   		<data>2012-03-20</data>
+   		<data>2012-03-19</data>
    		<evaso>false</evaso>
    	</commissione>
    	<commissione>
    		<cliente>Riki</cliente>
    		<ordine>Cabernet Sauvignon del veneto</ordine>
    		<quantita>6</quantita>
-   		<data>2012-03-20</data>
+   		<data>2012-03-19</data>
    		<evaso>false</evaso>
    	</commissione>
    	<commissione>
    		<cliente>Ale</cliente>
    		<ordine>Cabernet Frank del Veneto</ordine>
    		<quantita>6</quantita>
-   		<data>2012-03-20</data>
+   		<data>2012-03-18</data>
    		<evaso>false</evaso>
    	</commissione>
    	<commissione>
    		<cliente>Ale</cliente>
    		<ordine>Colli Euganei Fior d&apos;Arancio D.O.C.G</ordine>
    		<quantita>6</quantita>
-   		<data>2012-03-20</data>
+   		<data>2012-03-17</data>
    		<evaso>false</evaso>
    	</commissione>
    	<commissione>
    		<cliente>Catte</cliente>
    		<ordine>Pinot Bianco del veneto</ordine>
    		<quantita>6</quantita>
-   		<data>2012-03-20</data>
+   		<data>2012-03-16</data>
    		<evaso>false</evaso>
    	</commissione>
    	<commissione>
    		<cliente>Ale</cliente>
    		<ordine>Pinot Bianco del veneto</ordine>
    		<quantita>6</quantita>
-   		<data>2012-03-20</data>
+   		<data>2012-03-15</data>
    		<evaso>false</evaso>
    	</commissione>
    	<commissione>
    		<cliente>Catte</cliente>
    		<ordine>Prosecco frizzante D.O.C.G.</ordine>
    		<quantita>6</quantita>
-   		<data>2012-03-20</data>
+   		<data>2012-03-14</data>
    		<evaso>false</evaso>
    	</commissione>
    </prenotazioni>
