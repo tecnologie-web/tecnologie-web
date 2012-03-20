@@ -1,0 +1,12 @@
+#user fieldset {
+	border-radius: 3px;
+	border: 1px solid gray;
+	margin-bottom: 20px;
+}
+#user label {
+	display: inline-block;
+	width: 200px;
+}
+#user p.buttons {
+	display: none;
+}

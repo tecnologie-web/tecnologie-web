@@ -1,0 +1,168 @@
+/*FORM RICERCA NEL PRODUCT CONTAINER*/
+#search fieldset {
+	border: 1px solid #b3b3b3;
+	border-radius: 3px;
+	padding: 1em;
+	background: #f6f5f2 url('../../images/noise.png') repeat;
+	margin-bottom: 2em;
+}
+#search legend {
+	font-size: 0.9em;
+}
+#search p {
+	margin-bottom: 1em;
+}
+#search label {
+	float: left;
+}
+#search label#etich {
+	position: relative;
+	top: 5px;
+}
+#search span {
+	display: block;
+	margin-left: 10em;
+}
+#search input#etichetta {
+	border-radius: 20px;
+	background: #fff url('../../images/magnify.png') no-repeat 5px 4px;
+	padding: 0.3em;
+	padding-left: 2em;
+	font-size: 0.9em;
+	margin: 0;
+	outline: none;
+	border: 1px solid #999;
+	box-shadow: 0 4px 4px -4px #808080 inset, 0 -4px 4px -4px #808080 inset;
+}
+#search input#etichetta:focus {
+	box-shadow: 0 0 5px 0 #0062cc;
+	border: 1px solid #0062cc;
+}
+#search label.check {
+	float: none;
+	margin-right: 0.5em;
+}
+#search input[type="checkbox"] {
+	margin-right: 5em;
+}
+
+/*CONTAINER PER IL CATALOGO VINI*/
+.pr_container {
+	border: 1px solid #b3b3b3;
+	border-radius: 3px;
+	padding: 1em;
+	background: #f6f5f2 url('../../images/noise.png') repeat;
+	margin-bottom: 2em;
+}
+.pr_container .pr_head {
+	padding-bottom: 1em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 2em;
+}
+.pr_container h3 {
+	font-size: 1.3em;
+	color: #51090a;
+}
+
+/*FORM PRENOTAZIONE NEL PRODUCT CONTAINER*/
+.pr_container .form_prenota {
+	position: relative;
+	top: -27px;
+	right: 0;
+	float: right;
+	padding: 0;
+	margin: 0;
+}
+.pr_container .form_prenota fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+.pr_container .form_prenota label {
+	font-size: 0.8em;
+}
+.pr_container .form_prenota input {
+	display: inline;
+	margin: 0;
+	margin-left: 1em;
+	background-color: #fff;
+	border-radius: 2px;
+	outline: none;
+	border: 1px solid #999;
+	box-shadow: 0 4px 4px -4px #808080 inset, 0 -4px 4px -4px #808080 inset;
+	font-size: 1em;
+	padding: 0.4em;
+}
+.pr_container .form_prenota input:focus {
+	box-shadow: 0 0 5px 0 #0062cc;
+	border: 1px solid #0062cc;
+}
+.pr_container .form_prenota .prenota {
+	box-shadow: 0 0 0 0 inset;
+	background-color: #4D90FE;
+	border: 1px solid #3079ED;
+	border-radius: 2px;
+	padding: 0.4em 1.5em;
+	font-size: 0.9em;
+	color: #fff;
+	-webkit-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+	-moz-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+	-o-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.pr_container .form_prenota #prenota:hover, .pr_container .form_prenota #prenota:focus {
+	background-color: #357ae8;
+	border: 1px solid #2f5bb7;
+}
+.pr_container .form_prenota #prenota:active {
+	box-shadow: 1px 1px 5px #444 inset;
+}
+
+/*DESCRIZIONE VINO NEL PRODUCT CONTAINER*/
+.pr_container img {
+	float: left;
+	border-radius: 3px;
+	box-shadow: 0 0 3px 0 #444;
+	margin-right: 1em;
+}
+.pr_container .pr_body {
+	margin-left: 20%;
+}
+.pr_container dl {
+	margin-bottom: 2em;
+}
+.pr_container dt {
+	margin-right: 1em;
+	font-weight: bold;
+	float: left;
+	margin-right: 0.5em;
+}
+.pr_container dd {
+	margin-bottom: 1em;
+}
+
+/*VISUALIZZAZIONE COMPLETA VINO SINGOLO*/
+
+div#cont_descr {
+	margin-left: 35%;
+}
+img#vino {
+	float: left;
+	width: 35%;
+}
+#cont_descr dl {
+	margin-bottom: 3em;
+}
+#cont_descr dt {
+	font-weight: bold;
+/*	margin-bottom: 0.3em;*/
+	font-size: 1.2em;
+	float: left;
+	margin-right: 0.5em;
+}
+#cont_descr dd {
+	position: relative;
+	top: 2px;
+	margin-bottom: 1em;
+	line-height: 1.5em;
+}

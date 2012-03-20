@@ -1,0 +1,18 @@
+.pr_cont h3 {
+	font-size: 12pt;
+	clear: both;
+}
+.pr_cont img {
+	float: left;
+	width: 80px;
+	margin-bottom: 2em;
+}
+.pr_cont dt {
+	margin-right: 1em;
+	font-weight: bold;
+	float: left;
+	margin-right: 0.5em;
+}
+.pr_cont dd {
+	margin-bottom: 0.5em;
+}
