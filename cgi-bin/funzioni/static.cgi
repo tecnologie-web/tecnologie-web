@@ -31,7 +31,7 @@ sub path($)
 my $pagina = shift;
 my $path = shift;
 print $pagina->div({id=>"path"},
-                  "Ti trovi in :",
+                  "Ti trovi in:",
                   $path            
                   )
 }
