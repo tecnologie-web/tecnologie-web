@@ -59,7 +59,7 @@ print $page->start_div({id=>"navigation"});
                   else
                      {
                      print $page->li({class=>"homepage"},
-                               $page->a({tabindex=>"1",accesskey=>"h",href=>"index.html"},
+                               $page->a({tabindex=>"1",accesskey=>"h",href=>"index.cgi"},
                                '<span xml:lang="en">Homepage</span>')
                               );
                      }
@@ -70,7 +70,7 @@ print $page->start_div({id=>"navigation"});
                   else
                      {
                      print $page->li({class=>"catalogo"},
-                                    $page->a({tabindex=>"2",accesskey=>"c",href=>"chi_siamo.html"},
+                                    $page->a({tabindex=>"2",accesskey=>"c",href=>"chi_siamo.cgi"},
                                     "Catalogo")
                               );
                      }
@@ -81,7 +81,7 @@ print $page->start_div({id=>"navigation"});
                   else
                      {
                      print $page->li({class=>"chisiamo"},
-                                    $page->a({tabindex=>"3",accesskey=>"s",href=>"chi_siamo.html"},
+                                    $page->a({tabindex=>"3",accesskey=>"s",href=>"chi_siamo.cgi"},
                                     "Chi Siamo")
                               );
                      }
@@ -92,7 +92,7 @@ print $page->start_div({id=>"navigation"});
                   else
                      {
                      print $page->li({class=>"registrati"},
-                              $page->a({tabindex=>"4",accesskey=>"r",href=>"registrati.html"},
+                              $page->a({tabindex=>"4",accesskey=>"r",href=>"registrati.cgi"},
                                        "Registrati")
                               );
                      }
@@ -103,7 +103,7 @@ print $page->start_div({id=>"navigation"});
                   else
                      {
                       print $page->li({class=>"login"},
-                                    $page->a({tabindex=>"4",accesskey=>"l",href=>"login.html"},
+                                    $page->a({tabindex=>"4",accesskey=>"l",href=>"login.cgi"},
                                              '<span xml:lang="en">Login</span>')
                                  );      
                      }  
@@ -124,7 +124,7 @@ print $page->start_div({id=>"navigation"});
                   else
                      {
                      print $page->li({class=>"homepage"},
-                               $page->a({tabindex=>"1",accesskey=>"h",href=>"index.html"},
+                               $page->a({tabindex=>"1",accesskey=>"h",href=>"index.cgi"},
                                '<span xml:lang="en">Homepage</span>')
                               );
                      }
@@ -135,7 +135,7 @@ print $page->start_div({id=>"navigation"});
                   else
                      {
                      print $page->li({class=>"catalogo"},
-                                    $page->a({tabindex=>"2",accesskey=>"c",href=>"chi_siamo.html"},
+                                    $page->a({tabindex=>"2",accesskey=>"c",href=>"catalogo.cgi"},
                                     "Catalogo")
                               );
                      }
@@ -146,7 +146,7 @@ print $page->start_div({id=>"navigation"});
                   else
                      {
                      print $page->li({class=>"chisiamo"},
-                                    $page->a({tabindex=>"3",accesskey=>"s",href=>"chi_siamo.html"},
+                                    $page->a({tabindex=>"3",accesskey=>"s",href=>"chi_siamo.cgi"},
                                     "Chi Siamo")
                               );
                      }
