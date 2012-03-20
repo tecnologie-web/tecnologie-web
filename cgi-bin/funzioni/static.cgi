@@ -70,7 +70,7 @@ print $page->start_div({id=>"navigation"});
                   else
                      {
                      print $page->li({class=>"catalogo"},
-                                    $page->a({tabindex=>"2",accesskey=>"c",href=>"chi_siamo.cgi"},
+                                    $page->a({tabindex=>"2",accesskey=>"c",href=>"catalogo.cgi"},
                                     "Catalogo")
                               );
                      }
