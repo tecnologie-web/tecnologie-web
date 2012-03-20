@@ -72,26 +72,31 @@ function filter(){
 	onFormLoad(document.getElementById("search"));
 
 	var div_array = document.getElementsByClassName("pr_container");
+	var temp = document.getElementById("etichetta").value;
+	var stringToSearch = temp.trim();
 //	per ogni <div> cerco i sui <dd>
 	for(i=0; i<div_array.length; i++){
 		var flag = true;
 		var dd_array = div_array[i].getElementsByTagName("dd");
 //		per ogni checkbox controllo tutti i <dd>
 		for(j=0; j<checkBox_array.length; j++){
+			var nameMatch = false;
 			for(t=0; t<dd_array.length; t++){
 //				se è una ricerca anche per nome allora fa questo blocco if
 //				var temp1 = new String(document.getElementById("etichetta").value);
 //				var stringToSearch = temp.trim();
-//				if(document.getElementById("etichetta").value != ""){
-//				flag = flag * startsWith(dd_array[t].innerHTLM,document.getElementById("etichetta").value);
-//				var str = dd_array[t].innerHTML;
-//				var pos = str.indexOf(document.getElementById("etichetta").value);
-//				if(pos == 0)
-//					flag = flag * true;
-//				else
-//					flag = flag * false;
-//
-//				}
+				if(stringToSearch != "" && !nameMatch){
+//					flag = flag * startsWith(dd_array[t].innerHTLM, stringToSearch);
+					var temp2 = dd_array[t].innerHTML;
+					var str = temp2.trim();
+					var pos = str.indexOf(stringToSearch);
+					if(pos == 0)
+						flag = flag * true;
+					else
+						flag = flag * false;
+
+					nameMatch = true;
+				}
 //				se ce match tra il valore della checkbox e il valore dell tag
 //				allora controllo se la checkbox è true o false
 				if(checkBox_array[j].value == dd_array[t].innerHTML){
