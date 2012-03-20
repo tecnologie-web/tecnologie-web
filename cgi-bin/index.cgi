@@ -7,15 +7,15 @@ use strict;
 require "funzioni/static.cgi";
 
 my $page = new CGI;
-my $title = "Chi Siamo";
-my $keywords = "cantina, Benato, descrizione, storia, contatti, orari, vini";
-my $descr = "Storia della cantina Benato, i nostri orari di apertura e chiusura, i contatti per telefonarci o scriverci";
+my $title = "Homepage";
+my $keywords = "cantina Benato, cantina, Benato, vini, vini bianchi, vini rossi, vini rosati, Colli Euganei, bottiglie, prenotazione";
+my $descr = "Cantina Benato, premiata cantina dal 1960, propone un catalogo dei propri vini tipici dei Colli Euganei. Registratevi al sito e potrete godere del beneficio di prenotare le vostre bottiglie preferite";
 &intestazione($page,$title,$keywords,$descr);
 &header($page);
-&path($page,'<span xml:lang="en">Homepage</span> &#187; Chi Siamo');
+&path($page,'<span xml:lang="en">Homepage</span>');
 &start_container($page);
 # if not sessione
-   &navigation_notlog($page,"chisiamo");
+   &navigation_notlog($page,"homepage");
 # if sessione
 #   &navigation_log($page);
 
