@@ -54,8 +54,11 @@ function filter(){
 
 		if(flag){
 			div_array[i].style.display='block';
+//			div_array[i].getAttribute("class") = "showedProduct";
 		}else{
 			div_array[i].style.display='none';
+//			div_array[i].getAttribute("class") = "hiddenProduct"
+
 		}
 	}
 
@@ -69,7 +72,7 @@ function validateRegistration() {
 		document.getElementById('errorUsername').innerHTML = "Campo Username vuoto";
 		flag =false;
 	}else{
-		if(document.getElementById('username').value.match(/[A-Za-z0-9]+/)){
+		if(document.getElementById('username').value.match(/^[A-Za-z0-9]+/)){
 			var username = document.getElementById('username').value;
 			document.getElementById('errorUsername').innerHTML = "";
 		}else {
@@ -132,16 +135,11 @@ function validateRegistration() {
 		}
 	}
 
-	if(document.getElementById('email').value == ""){
-		document.getElementById('errorEmail').innerHTML = "Campo Email vuoto";
-		flag =false;
-	}else{
-
+	if(document.getElementById('email').value != ""){
 		if(document.getElementById('email').value.match(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/)){
 			var email = document.getElementById('email').value;
 			document.getElementById('errorEmail').innerHTML = "";
 		}else {
-//			alert("formato email sbagliato");
 			flag=false;
 			document.getElementById('errorEmail').innerHTML = "Formato email sbagliato";
 		}
