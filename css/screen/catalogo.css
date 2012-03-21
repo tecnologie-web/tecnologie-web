@@ -53,6 +53,10 @@
 	padding: 1em;
 	background: #f6f5f2 url('../../images/noise.png') repeat;
 	margin-bottom: 2em;
+	display: block;
+}
+.pr_container_hidden {
+	display: none;
 }
 .pr_container .pr_head {
 	padding-bottom: 1em;
