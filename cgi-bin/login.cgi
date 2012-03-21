@@ -27,29 +27,55 @@ if ($prima_volta == 1){
    &path($pagina,'<span xml:lang="en">Homepage</span> &#187; Login');
    &start_container($pagina);
    &navigation_notlog($pagina,"login");
-   print '
-   <div id="content">
-            <h2>Login al sito</h2>
-            <form id="user" method="post" action="login.cgi">
-               <fieldset>
-                  <legend>I tuoi dati d&apos;accesso</legend>
-                  <p>
-                     <label for="username">Il tuo username</label> 
-                     <input id="username" type="text" name="username" size="30" /> 
-                  </p>
-                  <p>
-                     <label for="password">La tua password</label>
-                     <input id="password" type="password" name="password" size="30" />
-              <input id="spedito" name="spedito" type="hidden" value ="1" />
-                  </p>
-               </fieldset>
-               <p class="buttons">
-                  <input type="reset" value="Cancella" />
-                  <input type="submit" value="Entra" />
-               </p>
-            </form>                          
-         </div>  <!--content-->
-   ';
+  
+   my $etichetta ="Login al sito";
+   my $legend ="I tuoi dati d&apos;accesso";
+   my $etichetta_usr ="Il tuo username";
+   my $etichetta_pass = "La tua password";
+  
+   print $pagina->div({id=>"content"},
+                      $pagina->h2($etichetta),
+                      $pagina->start_form(
+                              -id=>"user", 
+                              -method=>"post",
+                              -action=>"login.cgi"),
+                      $pagina->fieldset(
+                                        $pagina->legend($legend),
+                                        $pagina->p(
+                                                   $pagina->label(
+                                                                  {for=>"usename"},$etichetta_usr),
+                                                   $pagina->input({id=>"username",
+                                                                   type=>"text",
+                                                                   name=>"username",
+                                                                   size=>"30"})               
+                                                  ),
+                                        $pagina->p(
+                                                  $pagina->label(
+                                                                  {for=>"password"},$etichetta_pass),
+                                                   $pagina->input({id=>"password",
+                                                                   type=>"text",
+                                                                   name=>"password",
+                                                                   size=>"30"}),
+                                                   $pagina->input({id=>"spedito",
+                                                                   type=>"hidden",
+                                                                   name=>"spedito",
+                                                                   value=>"1"}),
+                                                  ),
+                                          
+                                        ),
+                                        $pagina->p({class=>"buttons"},
+                                                    $pagina->input(
+                                                                   {type=>"reset",
+                                                                    value=>"Cancella"}
+                                                                  ),
+                                                    $pagina->input(
+                                                                   {type=>"submit",
+                                                                    value=>"Entra"}
+                                                                  ),
+                                                  ),
+                                                  
+   ); 
+
    &end_container($pagina);
    &footer($pagina);
 }  
@@ -64,7 +90,7 @@ else{
     print "utente presente";
   }
   else{
-    print "utente non presente"
+    print "utente non presente";
   }
   
 #devo effettuare i controlli
