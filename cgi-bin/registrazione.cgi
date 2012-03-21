@@ -170,7 +170,7 @@ my $pagina = new CGI;
     print (&stampa_prima);
     
     print ('<div id="content">
-				<h2>Form di registrazione al sitowertyuiosdfghj</h2>	
+				<h2>Form di registrazione al sito</h2>	
 				<form id="user" method="post" action="registrazione.cgi" onsubmit="return registration();">
 					<fieldset id="site">
 						<legend>Dati accesso al sito</legend>
@@ -553,8 +553,8 @@ sub isPresente($){
    #print $lung;
    for (my $i = 0; $i < $lung ; $i++){
      my @elemento = $usrs[$i]->getElementsByTagName('username');
-     my $zio = $elemento[0]->textContent;
-     if ($zio eq $usr){
+     my $el = $elemento[0]->textContent;
+     if ($el eq $usr){
       return 1;
      }
    }
