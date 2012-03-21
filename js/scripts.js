@@ -174,23 +174,4 @@ function validateRegistration() {
 		}
 
 	}
-//	}
-
-//	function verifyDateFormat(DateString, DateFormat) {
-//	var match;
-//	var tmpDate;
-//	var validFormat = false;
-
-//	match = DateString.match(/^(\d?\d)\D(\d?\d)\D(\d{4}|\d{2})$/);
-
-//	if (match != null) {
-//	if (DateFormat == "en") {
-//	tmpDate = new Date(match[3], match[1] - 1, match[2]);
-//	validFormat = ((tmpDate.getMonth()==match[1]-1) && (tmpDate.getDate()==match[2]));
-//	} else if (DateFormat == "it"){
-//	tmpDate = new Date(match[3], match[2] - 1, match[1]);
-//	validFormat = ((tmpDate.getMonth()==match[2]-1) && (tmpDate.getDate()==match[1]));
-//	}
-//	}
-//	return validFormat;
 }
