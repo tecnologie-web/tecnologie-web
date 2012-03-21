@@ -136,8 +136,9 @@ indent='yes'/>
                         </xsl:element>
                      </div>
                      <div class="clear"></div>
+                     <a class="internal_nav" href="#top">Torna su &#9650;</a>
                   </div> <!--product container-->
-                  <a class="internal_nav" href="#top">Torna su &#9650;</a>
+                  
                </xsl:for-each> 
          </div>  <!--content-->
       </div>  <!--container-->
