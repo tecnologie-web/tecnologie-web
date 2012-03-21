@@ -54,10 +54,10 @@ function filter(){
 
 		if(flag){
 			div_array[i].style.display='block';
-//			div_array[i].getAttribute("class") = "showedProduct";
+//			div_array[i].setAttribute("class",'pr_container');
 		}else{
 			div_array[i].style.display='none';
-//			div_array[i].getAttribute("class") = "hiddenProduct"
+//			div_array[i].setAttribute("class",'pr_container_hidden');
 
 		}
 	}
@@ -72,7 +72,7 @@ function validateRegistration() {
 		document.getElementById('errorUsername').innerHTML = "Campo Username vuoto";
 		flag =false;
 	}else{
-		if(document.getElementById('username').value.match(/^[A-Za-z0-9]+/)){
+		if(document.getElementById('username').value.match(/[A-Za-z0-9]+$/)){
 			var username = document.getElementById('username').value;
 			document.getElementById('errorUsername').innerHTML = "";
 		}else {
@@ -113,7 +113,7 @@ function validateRegistration() {
 		document.getElementById('errorName').innerHTML = "Campo Nome vuoto";
 		flag =false;
 	}else{
-		if(document.getElementById('nome').value.match(/^[A-Za-z]+/)){
+		if(document.getElementById('nome').value.match(/[A-Za-z]+$/)){
 			var nome = document.getElementById('nome').value;
 			document.getElementById('errorName').innerHTML = "";
 		}else {
@@ -126,7 +126,7 @@ function validateRegistration() {
 		document.getElementById('errorSurname').innerHTML = "Campo Cognome vuoto";
 		flag =false;
 	}else{
-		if(document.getElementById('cognome').value.match(/^[A-Za-z]+/)){
+		if(document.getElementById('cognome').value.match(/[A-Za-z]+$/)){
 			var cognome = document.getElementById('cognome').value;
 			document.getElementById('errorSurname').innerHTML = "";
 		}else {
@@ -149,13 +149,12 @@ function validateRegistration() {
 		document.getElementById('errorPhone').innerHTML = "Campo Telefono vuoto";
 		flag =false;
 	}else{
-		var telefono = document.getElementById('telefono').value;
-		var pos = telefono.search(/[0-9]/);
-		if(pos != 0){
-			document.getElementById('errorPhone').innerHTML = "Inserire solo numeri";
-			flag = false;
-		}else{
+		if(document.getElementById('telefono').value.match(/[0-9]+$/)){
+			var telefono = document.getElementById('telefono').value;
 			document.getElementById('errorPhone').innerHTML = "";
+		}else {
+			flag=false;
+			document.getElementById('errorPhone').innerHTML = "Inserire solo numeri";
 		}
 	}
 
@@ -169,8 +168,8 @@ function validateRegistration() {
 			return true;
 		}
 		else {
-			document.getElementById('errorPassword').innerHTML = "Campi non uguali";
-			document.getElementById('errorCPassword').innerHTML = "Campi non uguali";
+			document.getElementById('errorPassword').innerHTML = "I campi non coincidono";
+			document.getElementById('errorCPassword').innerHTML = "I campi non coincidono";
 			return false;
 		}
 
