@@ -23,26 +23,26 @@ function filter(){
 
 	var div_array = document.getElementsByClassName("pr_container");
 	var temp = document.getElementById("etichetta").value;
-	var stringToSearch = temp.trim();
+	var stringToSearch = temp.trim().toUpperCase();
 //	per ogni <div> cerco i sui <dd>
 	for(i=0; i<div_array.length; i++){
 		var flag = true;
 		var dd_array = div_array[i].getElementsByTagName("dd");
 //		per ogni checkbox controllo tutti i <dd>
 		for(j=0; j<checkBox_array.length; j++){
-			var nameMatch = false;
+			var isNameMatch = false;
 			for(t=0; t<dd_array.length; t++){
 //				se è una ricerca anche per nome allora fa questo blocco if
-				if(stringToSearch != "" && !nameMatch){
+				if(stringToSearch != "" && !isNameMatch){
 					var temp2 = dd_array[t].innerHTML;
-					var str = temp2.trim();
+					var str = temp2.trim().toUpperCase();
 					var pos = str.indexOf(stringToSearch);
-					if(pos == 0)
+					if(pos != -1)
 						flag = flag * true;
 					else
 						flag = flag * false;
 
-					nameMatch = true;
+					isNameMatch = true;
 				}
 //				se ce match tra il valore della checkbox e il valore dell tag
 //				allora controllo se la checkbox è true o false
