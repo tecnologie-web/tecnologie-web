@@ -21,7 +21,7 @@ function filter(){
 //	che uno dei dd hai il valore da non mostrare allora non lo mostro.
 	onFormLoad(document.getElementById("search"));
 
-	var div_array = document.getElementsByClassName("pr_container");
+	var div_array = document.getElementsByClassName("pr_container_wrapper");
 	var temp = document.getElementById("etichetta").value;
 	var stringToSearch = temp.trim().toUpperCase();
 //	per ogni <div> cerco i sui <dd>
