@@ -63,6 +63,47 @@ function filter(){
 	}
 
 }
+function validateLogin() {
+
+	var flag = true;
+
+	if(document.getElementById('username').value == ""){
+		document.getElementById('errorLog').innerHTML = "Campo Username vuoto";
+		flag =false;
+	}else{
+		if(document.getElementById('username').value.match(/[A-Za-z0-9]+$/)){
+			var username = document.getElementById('username').value;
+			document.getElementById('errorLog').innerHTML = "";
+		}else {
+			flag=false;
+			document.getElementById('errorLog').innerHTML = "Inserire solo caratteri";
+		}
+	}
+
+
+
+	if(document.getElementById('password').value == ""){
+		document.getElementById('errorLog').innerHTML = "Campo Password vuoto";
+		flag = false;
+	}else{
+		if(document.getElementById('password').value.match(/\w+/)){
+			var password = document.getElementById('password').value;
+			document.getElementById('errorLog').innerHTML = "";
+		}else {
+			flag = false;
+			document.getElementById('errorLog').innerHTML = "Caratteri non validi";
+		}
+	}
+
+	if(flag) {
+		document.getElementById('errorLog').innerHTML = "";
+		return true;
+	}
+	else {
+		document.getElementById('errorLog').innerHTML = "I campi non coincidono";
+		return false;
+	}
+}
 
 function validateRegistration() {
 

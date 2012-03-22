@@ -8,6 +8,7 @@
 		<meta name="keywords" content=".." />
 		<link href="css/screen/main.css" rel="stylesheet" media="screen" type="text/css" />
 		<link href="css/print/main.css" rel="stylesheet" media="print" type="text/css" />
+		<script type="text/css" src="../js/scripts.js"></script>
 		<title>Homepage ~ Cantina Benato</title>
 	</head>
 	
@@ -34,7 +35,7 @@
 			</div>  <!--navigation-->
 			<div id="content">
 				<h2>Login al sito</h2>
-				<form id="user" method="post" action="cgi-bin/login.cgi">
+				<form id="user" method="post" action="cgi-bin/login.cgi" onsubmit="return validateLogin();">
 					<fieldset>
 						<legend>I tuoi dati d&apos;accesso</legend>
 						<p>
@@ -46,9 +47,10 @@
 							<input id="password" type="password" name="password" size="30" />
 						</p>
 					</fieldset>
+					<span id="errorLog"></span>
 					<p class="buttons">
 						<input type="reset" value="Cancella" />
-						<input type="submit" value="Entra" />
+						<input type="submit" value="Entra"/>
 					</p>
 				</form>									
 			</div>  <!--content-->

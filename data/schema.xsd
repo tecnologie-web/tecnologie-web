@@ -70,24 +70,24 @@
    
    <xsd:simpleType name="Ttipologia">
       <xsd:restriction base="xsd:string">
-         <xsd:enumeration value="bianco"/>
-         <xsd:enumeration value="rosso"/>
-         <xsd:enumeration value="rosato"/>
+         <xsd:enumeration value="Bianco"/>
+         <xsd:enumeration value="Rosso"/>
+         <xsd:enumeration value="Rosato"/>
       </xsd:restriction>
    </xsd:simpleType>
    
    <xsd:simpleType name="Tcategoria">
       <xsd:restriction base="xsd:string">
-         <xsd:enumeration value="dolce"/>
-         <xsd:enumeration value="secco"/>
+         <xsd:enumeration value="Dolce"/>
+         <xsd:enumeration value="Secco"/>
       </xsd:restriction>
    </xsd:simpleType>
    
    <xsd:simpleType name="Tstato">
       <xsd:restriction base="xsd:string">
-         <xsd:enumeration value="fermo"/>
-         <xsd:enumeration value="frizzante"/>
-         <xsd:enumeration value="spumante"/>
+         <xsd:enumeration value="Fermo"/>
+         <xsd:enumeration value="Frizzante"/>
+         <xsd:enumeration value="Spumante"/>
       </xsd:restriction>
    </xsd:simpleType>
    
