@@ -53,7 +53,7 @@ if ($prima_volta == 1){
                                                   $pagina->label(
                                                                   {for=>"password"},$etichetta_pass),
                                                    $pagina->input({id=>"password",
-                                                                   type=>"text",
+                                                                   type=>"password",
                                                                    name=>"password",
                                                                    size=>"30"}),
                                                    $pagina->input({id=>"spedito",
