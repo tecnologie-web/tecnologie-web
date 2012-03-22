@@ -15,8 +15,8 @@ my $descr = "Storia della cantina Benato, i nostri orari di apertura e chiusura,
 &header($page);
 &path($page,'<span xml:lang="en">Homepage</span> &#187; Chi Siamo');
 &start_container($page);
-$session = CGI::Session->load(); #---->carico la sessione
-if($session->is_expired || $session->is_empty) { #---->controllo se la sessione è scaduta o non contiene dati
+my $session = CGI::Session->load(); #---->carico la sessione
+if($session->is_expired or $session->is_empty) { #---->controllo se la sessione è scaduta o non contiene dati
    &navigation_notlog($page,"chisiamo");
 }
 else {#----->la sessione è stata caricata correttamente
