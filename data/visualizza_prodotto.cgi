@@ -1,11 +1,9 @@
 #!/usr/bin/perl
    use CGI;
    use CGI::Carp qw/fatalsToBrowser warningsToBrowser/;
-   use CGI::Session;
    use XML::LibXML;
    use utf8;
    require "funzioni/static.cgi";
-   my $session=CGI::Session->load();
    my $db = "../data/db.xml";
    my $parser = XML::LibXML->new();
    my $doc = $parser->parse_file($db);
@@ -62,14 +60,7 @@
    &header($page);
    &path($page,'<span xml:lang="en">Homepage </span> &#187; Catalogo Vini &#187; Vista Dettagliata Prodotto');
    &start_container($page);
-   if($session->is_empty or $session->is_expired)
-      {
-      &navigation_notlog($page,"catalogo");
-      }
-   else
-      {
-      &navigation_log($page,"catalogo");
-      }
+   &navigation_notlog($page,"catalogo");
    print $page->div({id=>"content"},
                     $page->h2($etichetta[0]->textContent),
                     $page->img({id=>"vino",src=>$immagine[0]->textContent,alt=>""}),
