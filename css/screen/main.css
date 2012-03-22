@@ -1,7 +1,6 @@
 /*Importa da Google Fonts il font 'Alex Brush'*/
 @import url(http://fonts.googleapis.com/css?family=Alex+Brush);
 /*Importo altri fogli di stile*/
-@import url("homepage.css");
 @import url("chisiamo.css");
 @import url("catalogo.css");
 @import url("form_user.css");

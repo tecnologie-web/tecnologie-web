@@ -31,7 +31,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
    <prodotti>
       <vino>
          <etichetta>Colli Euganei Fior d&apos;Arancio D.O.C.G.</etichetta>
-         <immagine>../images/prodotti/fiordarancio.jpg</immagine>
+         <immagine>../images/prodotti/fiordarancio.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Dolce</categoria>
          <stato>Spumante</stato>  
@@ -52,7 +52,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Moscato del Veneto</etichetta>
-         <immagine>../images/prodotti/moscato.jpg</immagine>
+         <immagine>../images/prodotti/moscato.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Dolce</categoria>
          <stato>Spumante</stato>
@@ -73,7 +73,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Rosato</etichetta>
-         <immagine>../images/prodotti/rosato.jpg</immagine>
+         <immagine>../images/prodotti/rosato.png</immagine>
          <tipologia>Rosato</tipologia>
          <categoria>Dolce</categoria>
          <stato>Spumante</stato>
@@ -94,7 +94,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Marzemino</etichetta>
-         <immagine>../images/prodotti/marzemino.jpg</immagine>
+         <immagine>../images/prodotti/marzemino.png</immagine>
          <tipologia>Rosso</tipologia>
          <categoria>Dolce</categoria>
          <stato>Spumante</stato>
@@ -115,7 +115,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Prosecco spumante extra dry D.O.C.G.</etichetta>
-         <immagine>../images/prodotti/proseccodry.jpg</immagine>
+         <immagine>../images/prodotti/proseccodry.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Secco</categoria>
          <stato>Spumante</stato>
@@ -136,7 +136,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Prosecco frizzante D.O.C.G.</etichetta>
-         <immagine>../images/prodotti/prosecco.jpg</immagine>
+         <immagine>../images/prodotti/prosecco.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Secco</categoria>
          <stato>Frizzante</stato>
@@ -157,7 +157,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Colli Euganei Serprino D.O.C.</etichetta>
-         <immagine>../images/prodotti/seprino.jpg</immagine>
+         <immagine>../images/prodotti/seprino.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Secco</categoria>
          <stato>Frizzante</stato>
@@ -178,7 +178,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Sauvignon del veneto</etichetta>
-         <immagine>../images/prodotti/sauvignon.jpg</immagine>
+         <immagine>../images/prodotti/sauvignon.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Secco</categoria>
          <stato>Fermo</stato>
@@ -199,7 +199,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Pinot Bianco del veneto</etichetta>
-         <immagine>../images/prodotti/pinotbianco.jpg</immagine>
+         <immagine>../images/prodotti/pinotbianco.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Secco</categoria>
          <stato>Fermo</stato>
@@ -220,7 +220,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Cabernet Sauvignon del veneto</etichetta>
-         <immagine>../images/prodotti/cabernet.jpg</immagine>
+         <immagine>../images/prodotti/cabernet.png</immagine>
          <tipologia>Rosso</tipologia>
          <categoria>Secco</categoria>
          <stato>Fermo</stato>
@@ -241,7 +241,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Cabernet Frank del Veneto</etichetta>
-         <immagine>../images/prodotti/cabernetfrank.jpg</immagine>
+         <immagine>../images/prodotti/cabernetfrank.png</immagine>
          <tipologia>Rosso</tipologia>
          <categoria>Secco</categoria>
          <stato>Fermo</stato>
