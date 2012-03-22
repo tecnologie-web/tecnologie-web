@@ -48,7 +48,7 @@
 							<li class="chisiamo">
 								<a tabindex="2" accesskey="s" href="chi_siamo.cgi">Chi Siamo</a>
 							</li>
-							<li class="registrati">
+							<li class="areapersonale">
 								<a tabindex="3" accesskey="r" href="areapersonale.cgi">Area Personale</a>
 							</li>
 							<li class="login">
