@@ -96,3 +96,4 @@ print '
 
 &end_container($page);
 &footer($page);
+print $page->end_html;

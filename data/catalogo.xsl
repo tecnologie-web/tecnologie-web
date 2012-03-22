@@ -49,11 +49,11 @@
 								<a tabindex="2" accesskey="s" href="chi_siamo.cgi">Chi Siamo</a>
 							</li>
 							<li class="registrati">
-								<a tabindex="3" accesskey="r" href="registrati.cgi">Registrati</a>
+								<a tabindex="3" accesskey="r" href="areapersonale.cgi">Area Personale</a>
 							</li>
 							<li class="login">
-								<a tabindex="4" accesskey="l" href="login.cgi">
-									<span xml:lang="en">Login</span>
+								<a tabindex="4" accesskey="l" href="logout.cgi">
+									<span xml:lang="en">Logout</span>
 								</a>
 							</li>
 						</ul>

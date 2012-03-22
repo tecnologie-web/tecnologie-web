@@ -55,10 +55,10 @@ indent='yes'/>
 			<div id="content">
 				<h2>
 					<a name="top"></a>
-					I nostri migliori vini
+					I vini consigliati dalla nostra cantina
 				</h2>
 	
-				<xsl:for-each select="v:dati/v:prodotti/v:vino[position()&lt;5]">
+				<xsl:for-each select="v:dati/v:prodotti/v:vino[position()&lt;4]">
 					<xsl:sort select="v:etichetta" />
 						<div class="pr_container">
 							<div class="pr_head">
@@ -107,6 +107,8 @@ indent='yes'/>
 							</div>
 							<div class="clear"></div>
 						</div> <!--product container -->
+						
+						<a class="internal_nav" href="#top">Torna su &#9650;</a>
 	
 				</xsl:for-each>
 			</div>  <!--content -->
