@@ -189,7 +189,7 @@ if($session->is_empty or $session->is_expired)
       #my $url = "login.cgi";
       #print "Location: $url\n\n";
       #redirect
-      print $page->header(-location=>"login.cgi");
+      #print $page->header(-location=>"login.cgi");
     }
    }
    
@@ -205,7 +205,7 @@ else
 }
 &end_container($page);
 &footer($page);
-
+print $page->end_html;
 
 
 
@@ -238,6 +238,11 @@ sub printP($){
    my $messaggio;
    if ($num_err == 0){
       $messaggio = "Registrazione riuscita! Entra subito al <a href=\"login.cgi\">Login</a>";
+      $username = "";
+      $nome = "";
+      $cognome = "";
+      $email = "";
+      $telefono ="";
    }
    elsif ($num_err > 0){
       $messaggio = "Registrazione non riuscita! ";
