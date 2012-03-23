@@ -46,7 +46,11 @@ function filter(){
 				}
 //				se ce match tra il valore della checkbox e il valore dell tag
 //				allora controllo se la checkbox è true o false
-				if(checkBox_array[j].value.trim() == dd_array[t].innerHTML.trim()){
+				var temp3 = checkBox_array[j].value;
+				var checkBoxValue = temp3.trim().toUpperCase();
+				var temp4 = dd_array[t].innerHTML;
+				var ddValue = temp4.trim().toUpperCase();
+				if(checkBoxValue == ddValue){
 					flag = flag * checkBox_array[j].checked;
 				}
 			}
