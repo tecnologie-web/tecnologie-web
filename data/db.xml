@@ -5,7 +5,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
    <iscritti>
 		<utente>
 			<username>Riki</username>
-			<password>password</password>
+			<password>pabKBYt8bh73A</password>
 			<nome>Riccardo</nome>
 			<cognome>De Stefani</cognome>
 			<email>riccardo.destefani@gmail.com</email>
@@ -13,7 +13,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
 		</utente>
 		<utente>
 			<username>Ale</username>
-			<password>password</password>
+			<password>pabKBYt8bh73A</password>
 			<nome>Alessandro</nome>
 			<cognome>Cornaglia</cognome>
 			<email>ale.corny@gmail.com</email>
@@ -21,7 +21,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
 		</utente>
 		<utente>
 			<username>Catte</username>
-			<password>password</password>
+			<password>pabKBYt8bh73A</password>
 			<nome>Giacomo</nome>
 			<cognome>Cattelan</cognome>
 			<email>giacomo.cattelan@gmail.com</email>
