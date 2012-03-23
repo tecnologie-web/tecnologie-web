@@ -27,7 +27,6 @@ indent='yes'/>
 		<div id="path">
 			Ti trovi in:
 			<span xml:lang="en">Homepage</span>
-			&#187; Catalogo Vini
 		</div>  <!--path -->
 		<div id="container">
 			<a class="nav_help" href="#content"></a>
@@ -69,7 +68,7 @@ indent='yes'/>
 							<xsl:element name="img">
 								<xsl:attribute name="src"><xsl:value-of
 									select="v:immagine" /></xsl:attribute>
-								<xsl:attribute name="alt"></xsl:attribute>
+								<xsl:attribute name="alt">Bottiglia di <xsl:value-of select="v:etichetta"/></xsl:attribute>
 								<xsl:attribute name="width">135px</xsl:attribute>
 							</xsl:element>
 							<div class="pr_body">
@@ -99,11 +98,6 @@ indent='yes'/>
 										<xsl:value-of select="v:prezzo" />
 									</dd>
 								</dl>
-								<xsl:element name="a">
-									<xsl:attribute name="href">visualizza_prodotto.cgi?vino=<xsl:value-of
-										select="v:etichetta" /></xsl:attribute>
-									Vedi tutte le caratteristiche
-								</xsl:element>
 							</div>
 							<div class="clear"></div>
 						</div> <!--product container -->

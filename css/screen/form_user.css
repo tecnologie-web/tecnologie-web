@@ -1,4 +1,8 @@
 /*FORM REGISTRAZIONE E LOGIN E MODIFICA DATI UTENTE*/
+#result {
+	font-size: 1.4em;
+	text-align: center;
+}
 #user {
 	margin: 2em 0;
 	border: 1px solid #b3b3b3;
@@ -31,9 +35,16 @@
 #user fieldset p {
 	margin: 1.1em 0;
 }
+#user fieldset p#hint {
+	font-style: italic;
+	font-size: 0.8em;
+	color: #4c4c4c;
+	margin-top: 1.5em;
+	float: right;
+}
 #user label {
 	display: inline-block;
-	width: 30%;
+	width: 22%;
 	padding-top: 0.3em;
 }
 #user input {

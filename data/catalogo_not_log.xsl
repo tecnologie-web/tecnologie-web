@@ -73,6 +73,7 @@
 										<input name="etichetta" id="etichetta" type="text" size="30"
 											onchange="filter()" />
 									</span>
+									<span id="hint">Digita il nome del vino (o parte di esso) che desideri cercare e premi INVIO</span>
 								</p>
 								<p>
 									<label>per tipologia:</label>
@@ -91,11 +92,11 @@
 								<p>
 									<label>per categoria:</label>
 									<span>
-										<label class="check" for="dolci">Vini Dolci</label>
-										<input type="checkbox" id="dolci" name="dolci" value="Vino Dolce"
-											checked="checked" onclick="filter()" />
 										<label class="check" for="secchi">Vini Secchi</label>
 										<input type="checkbox" id="secchi" name="secchi" value="Vino Secco"
+											checked="checked" onclick="filter()" />
+										<label class="check" for="dolci">Vini Dolci</label>
+										<input type="checkbox" id="dolci" name="dolci" value="Vino Dolce"
 											checked="checked" onclick="filter()" />
 									</span>
 								</p>
@@ -127,7 +128,7 @@
 									<xsl:element name="img">
 										<xsl:attribute name="src"><xsl:value-of
 											select="v:immagine" /></xsl:attribute>
-										<xsl:attribute name="alt"></xsl:attribute>
+										<xsl:attribute name="alt">Bottiglia di <xsl:value-of select="v:etichetta"/></xsl:attribute>
 										<xsl:attribute name="width">135px</xsl:attribute>
 									</xsl:element>
 									<div class="pr_body">

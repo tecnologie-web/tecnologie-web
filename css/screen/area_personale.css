@@ -1,20 +1,3 @@
-/*NAVIGATION AREA CLIENTE*/
-#nav_cliente {
-	list-style-type: none;
-}
-#nav_cliente li {
-	display: inline;
-	padding: 0.7em 1em;
-	background: #f6f5f2 url('../../images/noise.png') repeat;
-	border: 1px solid #b3b3b3;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-}
-#nav_cliente li#here {
-	border-bottom: 1px solid #f6f5f2;
-}
-
-
 /*DIV CONTENITORE DATI CLIENTE*/
 #data_cliente {
 	margin-top: 10px;
@@ -28,6 +11,12 @@
 }
 
 /*LISTA ORDINI CLIENTE*/
+#data_cliente h3 {
+	padding-bottom: 1em;
+	padding-left: 1em;
+	border-bottom: 1px solid #b3b3b3;
+	margin-right: 3em;
+}
 #data_cliente ul {
 	list-style-type: none;
 	margin: 1em;
@@ -35,6 +24,7 @@
 #data_cliente ul li {
 	background-color: trasparent;
 	padding: 0.5em;
+	padding-left: 2em;
 	border-radius: 2px;
 	margin-bottom: 1em;
 }
@@ -44,4 +34,10 @@
 #data_cliente ul li span {
 	margin: 0 1em;
 	font-size: 0.8em;
+}
+#data_cliente p {
+	margin-left: 2em;
+	margin-top: 2em;
+	font-weight: bold;
+	text-align: center;
 }
