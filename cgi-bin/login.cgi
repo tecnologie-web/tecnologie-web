@@ -19,7 +19,7 @@ if ( $spedito == 1){  #se ho ricevuto i dati porto prima volta a 0
 }
 
 if ($prima_volta == 1){
-   my $title = "Chi Siamo";
+   my $title = "Login";
    my $keywords = "cantina, Benato, cantina Benato, login, prenotazione, vini, vini in bottiglia";
    my $descr = "Login utente al sito della cantina Benato, per poter prenotare online i nostri vini in bottiglia";
    &intestazione($pagina,$title,$keywords,$descr);
@@ -43,7 +43,7 @@ if ($prima_volta == 1){
                                         $pagina->legend($legend),
                                         $pagina->p(
                                                    $pagina->label(
-                                                                  {for=>"usename"},$etichetta_usr),
+                                                                  {for=>"username"},$etichetta_usr),
                                                    $pagina->input({id=>"username",
                                                                    type=>"text",
                                                                    name=>"username",
@@ -73,11 +73,13 @@ if ($prima_volta == 1){
                                                                     value=>"Entra"}
                                                                   ),
                                                   ),
+                      $pagina->end_form,
                                                   
    ); 
 
    &end_container($pagina);
    &footer($pagina);
+   print $pagina->end_html;
 }  
 else{
   my $username = $pagina->param('username');

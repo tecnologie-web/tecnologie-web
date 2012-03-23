@@ -114,9 +114,11 @@ sub navigation_log($)
 {
 my $page =shift;
 my $current=shift;
+my $utente=shift;
 print $page->a({class=>"nav_help",href=>"#content"},"");
 print $page->start_div({id=>"navigation"});
-                 print $page->start_ul();
+                  print $page->p({id=>"utente"},"Benvenuto $utente!");
+                  print $page->start_ul();
                   if($current eq "homepage")
                      {
                      print $page->li({class=>"homepage",id=>"here"},"Homepage");

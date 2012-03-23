@@ -58,7 +58,7 @@
    my @temperatura=$vini[0]->getElementsByTagName('temperatura');
    my @prezzo=$vini[0]->getElementsByTagName('prezzo');
    my $page = new CGI;
-   &intestazione($page,"Vista dettaglata prodotto",$string,"descrizione");
+   &intestazione($page,"Vista dettagliata prodotto",$string,"descrizione");
    &header($page);
    &path($page,'<span xml:lang="en">Homepage </span> &#187; Catalogo Vini &#187; Vista Dettagliata Prodotto');
    &start_container($page);
@@ -113,4 +113,4 @@
                );
    &end_container($page);
    &footer($page);
-   $page->end_html;
+   print $page->end_html;

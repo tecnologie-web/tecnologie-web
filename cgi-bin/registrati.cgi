@@ -29,7 +29,7 @@ if($session->is_empty or $session->is_expired)
    my $etichetta_nome = "Il tuo nome";
    my $etichetta_cognome = "Il tuo cognome";
    my $etichetta_telefono ="Il tuo telefono";
-   my $etichetta_obbligatori = "(I campi segnati con (*) sono opzionali)";
+   my $etichetta_obbligatori = "I campi segnati con * sono opzionali";
    &navigation_notlog($page,"registrati"); 
    
    print $page->div({id=>"content"},
@@ -44,7 +44,7 @@ if($session->is_empty or $session->is_expired)
                                     $page->legend($legend),
                                     $page->p(
                                              $page->label(
-                                                          {for=>"usename"},
+                                                          {for=>"username"},
                                                           $etichetta_usr
                                                           ),
                                              $page->input({id=>"username",
@@ -123,7 +123,7 @@ if($session->is_empty or $session->is_expired)
                                      $page->p(
                                              $page->label(
                                                           {for=>"email"},
-                                                          'La tua <span xml:lang="en">email (*)</span>'
+                                                          'La tua <span xml:lang="en">email *</span>'
                                                           ),
                                              $page->input({id=>"email",
                                                            type=>"text",
@@ -151,6 +151,7 @@ if($session->is_empty or $session->is_expired)
                                                          ),
                                              ),
                                     $page->p(
+                                             {id=>"hint"},
                                              $etichetta_obbligatori
                                             ),
                                     ),
@@ -164,6 +165,7 @@ if($session->is_empty or $session->is_expired)
                                                              value=>"Invia"}
                                                             ),
                                             ),
+                                    $page->end_form,
                       );
 }
 else
@@ -177,3 +179,4 @@ else
 }
 &end_container($page);
 &footer($page);
+print $page->end_html;
