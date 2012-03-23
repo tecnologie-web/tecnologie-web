@@ -29,13 +29,65 @@ if ($prima_volta == 1){
    &start_container($pagina);
    &navigation_notlog($pagina,"login");
   
-   my $etichetta ="Login al sito";
-   my $legend ="I tuoi dati d&apos;accesso";
-   my $etichetta_usr ="Il tuo username";
-   my $etichetta_pass = "La tua password";
+   
   
-   print $pagina->div({id=>"content"},
+   &printP(-1);
+
+   #&end_container($pagina);
+   #&footer($pagina);
+   #print $pagina->end_html;
+}  
+else{
+  my $username = $pagina->param('username');
+  my $password = $pagina->param('password');
+  my $chiave = "ciao";
+  my $cryptPass = crypt($chiave,$password);
+  #recupero i dati presenti nel database e li confronto con quelli inseriti
+  if (&isPresente($username,$cryptPass) == 1){
+      my $session = new CGI::Session();
+      $session->param("usr",$username);
+      print $session->header(-location=>'areapersonale.cgi');
+  }
+  else
+   { #utente non presente
+     my $title = "Login";
+     my $keywords = "cantina, Benato, cantina Benato, login, prenotazione, vini, vini in bottiglia";
+     my $descr = "Login utente al sito della cantina Benato, per poter prenotare online i nostri vini in bottiglia";
+     &intestazione($pagina,$title,$keywords,$descr);
+     &header($pagina);
+     &path($pagina,'<span xml:lang="en">Homepage</span> &#187; Login');
+     &start_container($pagina);
+     &navigation_notlog($pagina,"login");
+     &printP(1);
+
+   }
+  
+#devo effettuare i controlli
+}
+
+&end_container($pagina);
+&footer($pagina);
+print $pagina->end_html;
+
+sub printP($){
+    my $errore = shift;
+    
+    my $etichetta ="Login al sito";
+    my $legend ="I tuoi dati d&apos;accesso";
+    my $etichetta_usr ="Il tuo username";
+    my $etichetta_pass = "La tua password";
+  
+    my $messaggio ="";
+    if ($errore == 1){
+      $messaggio = "utente non presente";
+    } 
+    
+    print $pagina->div({id=>"content"},
                       $pagina->h2($etichetta),
+                      $pagina->h3(
+                                  {id=>"result"},
+                                  $messaggio
+                                  ),
                       $pagina->start_form(
                               -id=>"user", 
                               -method=>"post",
@@ -77,29 +129,6 @@ if ($prima_volta == 1){
                       $pagina->end_form,
                                                   
    ); 
-
-   &end_container($pagina);
-   &footer($pagina);
-   print $pagina->end_html;
-}  
-else{
-  my $username = $pagina->param('username');
-  my $password = $pagina->param('password');
-  my $chiave = "ciao";
-  my $cryptPass = crypt($chiave,$password);
-  #recupero i dati presenti nel database e li confronto con quelli inseriti
-  if (&isPresente($username,$cryptPass) == 1){
-      my $session = new CGI::Session();
-      $session->param("usr",$username);
-      print $session->header(-location=>'areapersonale.cgi');
-  }
-  else
-   {
-   print "Content-type: text/html\n\n";
-   print "utente non presente";
-   }
-  
-#devo effettuare i controlli
 }
 
 sub isPresente($){
