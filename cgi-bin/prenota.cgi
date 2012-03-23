@@ -2,6 +2,7 @@
 use XML::LibXML;
 use CGI;
 use CGI::Carp qw(fatalsToBrowser);
+use CGI::Session;
 use POSIX qw/strftime/;
 use strict;
 
@@ -30,7 +31,7 @@ else {#----->la sessione è stata caricata correttamente
     #ricavo dati da form
     my $etichetta = $pagina->param('etichetta');
     my $quantita = $pagina->param('quantita');
-    my $utente = $session->param('username');
+    my $utente = $session->param('usr');
     my $data = strftime('%Y-%m-%d',localtime);
 
     #definizione elemento da inserire
@@ -57,7 +58,10 @@ else {#----->la sessione è stata caricata correttamente
     print OUT $doc->toString;
     #chiudo file
     close (OUT);
-
+    
+    #avviso catalogo.cgi che la registrazione è andata a buon fine
+    my $registrato = 1;
+    $session->param("registrazione",$registrato);
 	#redirect
 	my $url = "catalogo.cgi";
 	print "Location: $url\n\n";
