@@ -6,7 +6,7 @@ use strict;
 
 require "funzioni/static.cgi";
 
-#print "Content-type: text/html\n\n";
+print "Content-type: text/html\n\n";
 
 #creo oggetto CGI
 my $pagina = new CGI;
@@ -86,10 +86,10 @@ else{
   my $password = $pagina->param('password');
   my $chiave = "ciao";
   my $cryptPass = crypt($chiave,$password);
-  
   #recupero i dati presenti nel database e li confronto con quelli inseriti
   if (&isPresente($username,$cryptPass) == 1){
     print "utente presente";
+
   }
   else{
     print "utente non presente";
@@ -103,7 +103,7 @@ sub isPresente($){
   my $pass = shift;
   #vado a leggere il file xml
    my $db = "../data/db.xml";
-   my $path ='//utente';
+   my $path ='//utente[username ="'.$usr.'" and password="'.$pass.'"]';
    my $parser = XML::LibXML->new();
    my $doc = $parser->parse_file($db);
    my $file_content = "";
@@ -115,22 +115,21 @@ sub isPresente($){
    $file_content =~ s/<dati .+>(.*)<iscritti>/<dati>\1<iscritti>/s;
    my $doc = $parser->parse_string($file_content);
    my $radice = $doc->getDocumentElement();
-   
-   my @usrs = $radice->findnodes($path);
+   return $radice->exists($path);
    #my @username=$usrs[0]->getElementsByTagName('username');
    #my @supporto;
-   my $lung = @usrs;
+   #my $lung = @usrs;
    #print $lung;
-   for (my $i = 0; $i < $lung ; $i++){
+   #for (my $i = 0; $i < $lung ; $i++){
      #my @elemento = $usrs[$i]->getElementsByTagName('username');
-     my @elemento;
-     push (@elemento,$usrs[$i]->getElementsByTagName('username'));
-     push (@elemento,$usrs[$i]->getElementsByTagName('password'));
-     my $i_usr = $elemento[0]->textContent;
-     my $i_pass = $elemento[1]->textContent;  
-     if (($i_usr eq $usr) && ($pass eq $i_pass)){
-      return 1;
-     }
-   }
-   return 0;
+   #  my @elemento;
+   #  push (@elemento,$usrs[$i]->getElementsByTagName('username'));
+   #  push (@elemento,$usrs[$i]->getElementsByTagName('password'));
+   #  my $i_usr = $elemento[0]->textContent;
+   #  my $i_pass = $elemento[1]->textContent;  
+   #  if (($i_usr eq $usr) && ($pass eq $i_pass)){
+   #   return 1;
+   #  }
+   #}
+   #return 0;
 }
