@@ -71,7 +71,7 @@
 									<label id="etich" for="etichetta">per etichetta:</label>
 									<span>
 										<input name="etichetta" id="etichetta" type="text" size="30"
-											onchange="filter()" />
+											onchange="filter();" />
 									</span>
 									<span id="hint">Digita il nome del vino (o parte di esso) che desideri cercare e premi INVIO</span>
 								</p>
@@ -80,13 +80,13 @@
 									<span>
 										<label class="check" for="bianchi">Vini Bianchi</label>
 										<input type="checkbox" id="bianchi" name="bianchi"
-											value="Vino Bianco" checked="checked" onclick="filter()" />
+											value="Vino Bianco" checked="checked" onclick="filter();" />
 										<label class="check" for="rossi">Vini Rossi</label>
 										<input type="checkbox" id="rossi" name="rossi" value="Vino Rosso"
-											checked="checked" onclick="filter()" />
+											checked="checked" onclick="filter();" />
 										<label class="check" for="rosati">Vini Rosati</label>
 										<input type="checkbox" id="rosati" name="rosati" value="Vino Rosato"
-											checked="checked" onclick="filter()" />
+											checked="checked" onclick="filter();" />
 									</span>
 								</p>
 								<p>
@@ -164,23 +164,19 @@
 											</dd>
 											<dt>Tipologia:</dt>
 											<dd>
-												Vino
-												<xsl:value-of select="v:tipologia" />
+												Vino <xsl:value-of select="v:tipologia" />
 											</dd>
 											<dt>Categoria:</dt>
 											<dd>
-												Vino
-												<xsl:value-of select="v:categoria" />
+												Vino <xsl:value-of select="v:categoria" />
 											</dd>
 											<dt>Stato:</dt>
 											<dd>
-												Vino
-												<xsl:value-of select="v:stato" />
+												Vino <xsl:value-of select="v:stato" />
 											</dd>
 											<dt>Prezzo unitario:</dt>
 											<dd>
-												Euro
-												<xsl:value-of select="v:prezzo" />
+												Euro <xsl:value-of select="v:prezzo" />
 											</dd>
 										</dl>
 										<xsl:element name="a">
