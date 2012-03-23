@@ -2,11 +2,12 @@
 use XML::LibXML;
 use CGI;
 use CGI::Carp qw(fatalsToBrowser);
+use CGI::Session ('-ip_match');
 use strict;
 
 require "funzioni/static.cgi";
 
-print "Content-type: text/html\n\n";
+
 
 #creo oggetto CGI
 my $pagina = new CGI;
@@ -88,12 +89,15 @@ else{
   my $cryptPass = crypt($chiave,$password);
   #recupero i dati presenti nel database e li confronto con quelli inseriti
   if (&isPresente($username,$cryptPass) == 1){
-    print "utente presente";
-
+      my $session = new CGI::Session();
+      $session->param("usr",$username);
+      print $session->header(-location=>'areapersonale.cgi');
   }
-  else{
-    print "utente non presente";
-  }
+  else
+   {
+   print "Content-type: text/html\n\n";
+   print "utente non presente";
+   }
   
 #devo effettuare i controlli
 }
