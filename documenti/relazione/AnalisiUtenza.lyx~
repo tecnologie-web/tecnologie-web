@@ -72,7 +72,10 @@ Una volta che il gruppo ha scelto il tema su cui sviluppare l'intero progetto
 \end_layout
 
 \begin_layout Standard
-I risultati dell'analisi indicano che i tipi di utenti che ci aspettiamo
+Ci si aspetta che un utente che interagisce con il sito web sia alla ricerca
+ di informazioni su prodotti enologici della Cantina Benato o sulla cantina
+ stessa oppure sia intenzionato a prenotare dei quantitativi di vino.
+ I risultati dell'analisi indicano che i tipi di utenti che ci aspettiamo
  che interagiscano con il sito web siano 
 \bar under
 xxx
@@ -81,7 +84,25 @@ xxx
 \end_layout
 
 \begin_layout Itemize
+Singoli privati:
+\begin_inset Newline newline
+\end_inset
 
+che possono dividersi in:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Anziani
+\end_layout
+
+\begin_layout Itemize
+Media età con o senza disabilità
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Ristoranti o simili
 \end_layout
 
 \end_body
