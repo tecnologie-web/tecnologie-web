@@ -104,10 +104,43 @@ Durante tutta la fase di sviluppo si è cercato di perseguire la massima
 \end_layout
 
 \begin_layout Standard
+
+\lang italian
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang italian
 \begin_inset Graphics
 	filename /home/ale/Scrivania/tecWeb/tecnologie-web/images/LogoFull.png
-	lyxscale 30
+	lyxscale 20
 	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang italian
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang italian
+Logo ufficiale Cantina Benato
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
