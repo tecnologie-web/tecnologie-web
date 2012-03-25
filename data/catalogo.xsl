@@ -51,7 +51,7 @@
 							<li class="areapersonale">
 								<a tabindex="3" accesskey="a" href="areapersonale.cgi">Area Personale</a>
 							</li>
-							<li class="login">
+							<li class="logout">
 								<a tabindex="4" accesskey="l" href="logout.cgi">
 									<span xml:lang="en">Logout</span>
 								</a>
