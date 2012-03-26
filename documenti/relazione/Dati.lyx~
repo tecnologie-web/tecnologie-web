@@ -69,7 +69,7 @@ XML
 
 \begin_layout Standard
 Come richiesto dalle specifiche del progetto si è implementato una forma
- di database utilizzando un file XML in qualle contiene tre tipi principali
+ di database utilizzando un file XML il qualle contiene tre tipi principali
  di dati: Prodotti, Utenti e Prenotazioni.
  Lo scopo dell'XML è di memorizzazare i dati come gli utenti iscritti al
  sito, i prodotti disponibili e le prenotazioni che tali utenti hanno effettuato.
