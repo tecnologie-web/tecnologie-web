@@ -94,7 +94,11 @@ begin{center}
 
 \begin_layout Standard
 \begin_inset Graphics
+<<<<<<< HEAD
+	filename /media/Data/Jassadar informatico/Tecnologie Web/progetto-TecWeb/tecnologie-web/documenti/relazione/img/logo_unipd.png
+=======
 	filename /home/acornagl/Scrivania/RepositoryTecWeb/tecnologie-web/documenti/relazione/img/logo_unipd.png
+>>>>>>> 6094a48f3318a50c1158c2f18d8160e113c1edc1
 	lyxscale 20
 	scale 40
 
@@ -404,9 +408,6 @@ end{itemize}
 
 		
 \backslash
-<<<<<<< HEAD
-textbf{Anno Accademico} & 2011 - 2012
-=======
 textbf{Anno Accademico} & 2011 - 2012 
 \backslash
 
@@ -429,7 +430,9 @@ textbf{ } &
 
 		
 \backslash
-textbf{Indirizzo web del sito} & studenti.math.unipd.it/tecweb/~ xxx 
+textbf{Indirizzo web del sito} & 
+\backslash
+url{studenti.math.unipd.it/tecweb/~xxx}
 \backslash
 
 \backslash
@@ -467,7 +470,6 @@ textbf{Email gruppo} & progetto-tecweb@googlegroups.com
 
 \backslash
 
->>>>>>> 6094a48f3318a50c1158c2f18d8160e113c1edc1
 \end_layout
 
 \begin_layout Plain Layout
