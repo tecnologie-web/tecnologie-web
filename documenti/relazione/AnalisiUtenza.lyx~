@@ -76,7 +76,11 @@ Ci si aspetta che un utente che interagisce con il sito web sia alla ricerca
  di informazioni su prodotti enologici della Cantina Benato o sulla cantina
  stessa oppure sia intenzionato a prenotare dei quantitativi di vino.
  I risultati dell'analisi indicano che i tipi di utenti che ci aspettiamo
- che interagiscano con il sito web siano i seguenti:
+ che interagiscano con il sito web siano 
+\bar under
+xxx
+\bar default
+:
 \end_layout
 
 \begin_layout Itemize

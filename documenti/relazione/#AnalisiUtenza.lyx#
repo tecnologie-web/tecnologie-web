@@ -76,7 +76,11 @@ Ci si aspetta che un utente che interagisce con il sito web sia alla ricerca
  di informazioni su prodotti enologici della Cantina Benato o sulla cantina
  stessa oppure sia intenzionato a prenotare dei quantitativi di vino.
  I risultati dell'analisi indicano che i tipi di utenti che ci aspettiamo
- che interagiscano con il sito web siano i seguenti:
+ che interagiscano con il sito web siano 
+\bar under
+xxx
+\bar default
+:
 \end_layout
 
 \begin_layout Itemize
@@ -113,8 +117,7 @@ Un'altra classe di utenza sono le aziende come ristoranti, trattorie o qualunque
  Essendo delle aziende si presupone che abbiano al loro interno del personale
  capace di navigare ed effettuare delle operazioni di prenotazione all'interno
  del sito.
- Quall'ora esso non si vero, comunque il sito è stato pensato per rendere
- l'interazione col'utente la più semplice possibile.
+ quall'ora esso non si vero, comunque il sito è stato pensato
 \end_layout
 
 \end_body

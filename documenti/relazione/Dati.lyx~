@@ -68,9 +68,9 @@ XML
 \end_layout
 
 \begin_layout Standard
-Come richiesto dalle specifiche del progetto si è implementato un database
- utilizzando un file XML in qualle contiene tre tipi principali di dati:
- Prodotti, Utenti e Prenotazioni.
+Come richiesto dalle specifiche del progetto si è implementato una forma
+ di database utilizzando un file XML in qualle contiene tre tipi principali
+ di dati: Prodotti, Utenti e Prenotazioni.
  Lo scopo dell'XML è di memorizzazare i dati come gli utenti iscritti al
  sito, i prodotti disponibili e le prenotazioni che tali utenti hanno effettuato.
  La struttura del XML si può riassumere nel seguente diagramma:
@@ -155,7 +155,7 @@ I fogli di stile XSLT sono stati applicati per stampare i Prodotti che si
  browser la conversione da XSLT a HTML viene fatta lato server tramite le
  pagine catalogo.cgi e index.cgi .
  La presenza di menù diversificati tra utenti loggati e non ci ha costretto
- a creare due trasformate diverse che verranno applicati in base alla sessione
+ a creare due trasformate diverse che verranno applicate in base alla sessione
  che è attiva al momento (come utente loggato oppure no).
 \end_layout
 
