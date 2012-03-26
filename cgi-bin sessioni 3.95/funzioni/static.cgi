@@ -13,7 +13,8 @@ print  $pagina->header(-charset=>"UTF-8"),
                                     'description'=>$description,
                                     'keyword'=>$key},
                            -style=>[{-src=>'../css/screen/main.css',-media=>'screen'},{-src=>'../css/print/main.css',-media=>'print'}],
-                           -lang => it
+                           -script=>{-language=>'text/javascript', -src=>'../js/scripts.js'},
+                           -lang => 'it'
                            )
 }
 sub header($)
