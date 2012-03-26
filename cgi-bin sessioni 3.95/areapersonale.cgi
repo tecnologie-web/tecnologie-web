@@ -62,7 +62,7 @@ else {#----->la sessione è stata caricata correttamente
       if($lung==0)
          {
             print $page->li({id=>"attention"},
-                           "Non hai ancora effettuato prenotazioni! Consulta il nostro ",
+                           "Non hai ancora effettuato prenotazioni!<br /><br /> Consulta il nostro ",
                            $page->a({href=>"catalogo.cgi"},"catalogo vini"));
          }
       else
