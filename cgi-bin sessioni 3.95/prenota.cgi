@@ -33,8 +33,20 @@ else {#----->la sessione è stata caricata correttamente
     #ricavo dati da form
     my $etichetta = $pagina->param('etichetta');
     my $quantita = $pagina->param('quantita');
-    my $utente = $session->param('usr');
+    my $utente = $session->param("usr");
+    #print $utente;print "cucucucucucucu";
     my $data = strftime('%Y-%m-%d',localtime);
+
+    #controllo per verificare che quantità sia un intero > 0
+    my $ok = 0;
+    if ($quantita =~/^([123456789]+)([\d]*)$/){
+       $ok = 1;
+    }
+    if ($ok == 0){
+          print "Location: catalogo.cgi#$etichetta\n\n";
+          exit;
+    }
+    #fine controllo
 
     #definizione elemento da inserire
     my $nuovo_elemento = 
