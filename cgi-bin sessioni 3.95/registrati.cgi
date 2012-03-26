@@ -255,13 +255,14 @@ sub printP($){
                     $page->start_form(
                               -id=>"user", 
                               -method=>"post",
-                              -action=>"registrati.cgi"
+                              -action=>"registrati.cgi",
+                              -onsubmit=>"return validateRegistration();",
                           ),
                     $page->fieldset({id=>"site"},
                                     $page->legend($legend),
                                     $page->p(
                                              $page->label(
-                                                          {for=>"usename"},
+                                                          {for=>"username"},
                                                           $etichetta_usr
                                                           ),
                                              $page->input({id=>"username",
