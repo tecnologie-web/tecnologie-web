@@ -1,5 +1,5 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf320
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh13320\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
@@ -9,6 +9,7 @@
 \
 La struttura di layout del sito \'e8 stata realizzata applicando una semplice rivisitazione del classico template di layout a tre pannelli.\
 La sezione di header, posta in alto nella pagina, \'e8 destinata a contenere il logo e l'intestazione dell'azienda per cui sviluppiamo il sito.\
+La sezione di path, appena sotto alla sezione header, mostra il percorso preciso della pagina corrente.\
 La sezione di footer, posta nella parte bassa della pagina, contiene solo i nomi dei progettisti e i link alle validazioni html, css e accessibilit\'e0.\
 Nella sezione centrale di contenuto della pagina un blocco div wrapper racchiude due parti, il blocco di navigazione che presenta la lista dei link necessari alla navigazione del nostro sito, e il blocco di contenuto, con il contenuto vero e proprio. \
 Il blocco usato come wrapper (avente id "container") occupa l'85% della pagina in larghezza, lasciando ugual margine a sinistra e a destra.  \
@@ -20,13 +21,42 @@ Successivamente\'a0sono state aggiunte regole css 3 con lo scopo di rendere l'in
 Se un text-shadow non viene visto interpretato dal browser accadr\'e0 quindi che il testo risulter\'e0 ancora visibile e leggibile, ma senza ombreggiatura. \
 Se una transition viene ignorata l'animazione prodotta del browser si mostrer\'e0 scattosa e non fluida, ma ancora non compromettendo l'esperienza di navigazione del nostro sito da parte dell'utente.\
 Talvolta le regole css 3 sono impiegate in punti leggermente pi\'f9 critici: \'e8 il caso ad esempio dei background che fanno uso di gradienti di sfondo. In questi casi e`stato previsto un fallback al fine di garantire il degrado elegante, aggiungendo una doppia della regola "background": la prima in ordine di scrittura imposta una sfondo solido usando css 2.1, la seconda sovrascrive la prima impostando lo sfondo con uso del gradiente. Cos\'ec facendo i browser che non sanno interpretare un gradiente lasceranno applicata la prima regola di background a sfondo solido, mentre i browser aggiornati sapranno applicare il gradiente.\
-Altro esempio simile \
+Altro esempio simile \'e8 il caso del colore del testo in rgba piuttosto che nel solito spazio rgb. Anche in questo caso la regola color:rgba(..) \'e8 preceduta dal corrispondente fallback che imposta il colore in rgb, secondo il ragionamento seguito nel caso dei gradienti.\
+Il layout \'e8 stato impostato in maniera fluida, esprimendo le dimensione degli elementi e dei contenitori perlopi\'f9 in percentuali quando possibile, altrimenti in em. Solo alcune immagini come il logo dell'azienda sono impostate a pixel, poich\'e8 la si ritiene talmente importante da non rimpicciolirla. Anche la dimensione del testo \'e8 stata fissata in em, adattandosi alle preferenze dell'utente.\
+Grazie a questa struttura fluida il layout si rimpicciolisce e ingrandisce dinamicamente e coerentemente al resize della finestra del browser, ovviamente fino ad un determinato punto critico. In questa ottica per\'f2, non \'e8 stato ritenuto necessario definire un layout per dispositivi mobili, vista anche la classe d'utenza del sito; si \'e8 preferito invece privilegiare la realizzazione di un layout dedicato alla stampa, molto pi\'f9 utile visto il tema centrare del sito.\
 \
 \
-\
- o i colori dei testi in rgba, queste regole sono state corredate di una regola css 2.1 di fallback:\
 
-\f1 background: #hex
-\f0  precede la regola 
-\f1 background: linear-gradient()
-\f0 , in modo che se il browser dovesse ignorare la seconda, avra` gia` applicato la prima, non mostrando il gradiente bensi` il colore pieno. Accessibilita` e usabilita` quindi non vengono compromesse, degrada solo l'esperienza utente.}
+\b Accessibilit\'e0:\
+\
+
+\b0 Per quanto riguarda l'accessibilit\'e0 del sito, le pagine sono state sottoposte al test automatico Cynthia di contentquality.com, tuttavia un controllo esaustivo non pu\'f2 essere fatto da un validatore automatico, ma deve essere accompagnato dal buon senso umano dei progettisti col fine di eliminare falsi positivi o falsi negativi del test. \
+La costruzione stessa del codice html \'e8 stata realizzata tenendo conto delle regole generali di accessibilit\'e0:\
+- Uso di xhtml strict, validando le pagine finali al validatore del w3c.\
+- La struttura, la presentazione e il comportamento sono completamente separati, grazie ad un codice html semantico, css in fogli di stile esterni, funzioni javascript in un file esterno.\
+- Inserimento nelle pagine dei link "torna su" per ritornare in alto nella stessa pagina.\
+- Inserimento di un link nascosto visivamente ma presente, che permette ai lettori di schermo di far saltare il menu di navigazione.\
+- Mantenimento coerente della presentazione visiva dei link visitati e non.\
+- Link del menu di navigazione corredati di accesskey e tab index. Inoltre il link che punterebbe alla pagina in cui siamo viene disabilitato onde evitare link circolari.\
+- Uso del path per mostrare all'utente dove si trova in ogni momento, al fine di favorire l'orientamento.\
+- Realizzazione di tabelle accessibili, come nella pagina "chisiamo", corredando i table header di "id", "abbr", e "scope". Ogni cella quindi ha il suo attributo "headers" con cui riferirsi alle intestazioni.\
+- Form divisi in vari fieldset per agevolare il compilamento dell'utente e facilitare la vista della form.\
+- Controllo dei colori con il software reperibile al sito colororacle.org, che mostra come vengono viste le pagine del nostro sito dagli utenti affetti da daltonismo, e con WCAG contrast analyzer di Mozilla Firefox.\
+- Test su degradi del sito effettuati con Web Developer Tool di Mozilla Firefox, simulando la disabilitazione di immagini, stili css e javascript.\
+- Test di navigazione su browser non visuali come Lynx\
+- Test di lettura dello schermo con Fangs di Mozilla Firefox.\
+- Predisposizione di un layout css dedicato alla stampa\
+\
+\
+
+\b Test sui browser:\
+\
+
+\b0 Il sito \'e8 stato sviluppato perlopi\'f9 utilizzando Apple Safari 5.1, Mozilla Firefox 10, Google Chromium 17 e Google Chrome 16. \
+Tuttavia sono stati svolti test di compatibilit\'e0 e visualizzazione grazie a Microsoft Internet Explorer 9, il quale permette a sua volta di visualizzare le pagine come si stesse utilizzando Internet Explorer 8 o 7.\
+Internet Explorer 6 e` stato invece completamente ignorato, considerando la ormai nulla diffusione di questo browser.\
+Il risultato con la versione 9 di Internet Explorer e` molto soddisfacente, mostrando il sito pressoch\'e8 come in Chrome o Firefox aggiornati, mentre nelle versioni precedenti del browser di Microsoft si nota un degrado grafico, che per\'f2 non intacca usabilit\'e0 e accessibilit\'e0.\
+Anche Opera 11 \'e8 stato usato per effettuare test, con risultati ottimi.
+\b \
+\
+}
