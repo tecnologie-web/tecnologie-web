@@ -85,7 +85,7 @@ sub printP($){
   
     my $messaggio ="";
     if ($errore == 1){
-      $messaggio = "utente non presente";
+      $messaggio = "Login errato! Controlla username e/o password";
     } 
     
     print $pagina->div({id=>"content"},
