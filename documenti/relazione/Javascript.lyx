@@ -79,5 +79,14 @@ La ricerca prende i diversi parametri e mostra solo i prodotti che soddisfano
  e stato tralasciando l'etichetta di tale prodotto.
 \end_layout
 
+\begin_layout Standard
+Si è deciso di utilizzare javascript anche per rilevare se il browser che
+ l'utente sta utilizzando supporta certi metodi.
+ Quall'ora il browser non li supporti vengono nascoste certe funzionalità(es.
+ non è possibile effetturare la ricerca dei prodotti se il browser scelto
+ è Internet Explorer nelle versioni inferiori alla 9).
+ 
+\end_layout
+
 \end_body
 \end_document
