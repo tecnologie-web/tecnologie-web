@@ -255,8 +255,7 @@ sub printP($){
                     $page->start_form(
                               -id=>"user", 
                               -method=>"post",
-                              -action=>"registrati.cgi",
-                              -onsubmit=>"return validateRegistration();",
+                              -action=>"registrati.cgi"
                           ),
                     $page->fieldset({id=>"site"},
                                     $page->legend($legend),
@@ -391,8 +390,7 @@ sub printP($){
                                                             ),
                                              $page->input(
                                                             {type=>"submit",
-                                                             value=>"Invia",
-                                                            onclick=>"return validateRegistration();"}
+                                                             value=>"Invia"}
                                                             ),
                                             ),
                                     $page->end_form,
