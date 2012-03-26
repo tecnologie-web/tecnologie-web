@@ -23,7 +23,7 @@
       $session->delete();
       $cookies{'CGISESSID'}->expires('-1h');
       print "Set-Cookie: $cookies{'CGISESSID'}\n";
-      my $url = "login.cgi";
+      my $url = "index.cgi";
       system("rm temp_session/cgisess_".$c);
       print "Location: $url\n\n";
       }

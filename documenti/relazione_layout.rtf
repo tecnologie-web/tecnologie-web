@@ -1,21 +1,30 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf320
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
 {\colortbl;\red255\green255\blue255;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh13320\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
 \f0\b\fs24 \cf0 Layout del sito:
 \b0 \
 \
-La struttura di layout del sito e` stata realizzata applicando una semplice rivisitazione del classico template di layout a tre pannelli.\
-La differenza con l'originale sta nell'aver aggiunto un div wrapper che racchiude il div navigation e il div content, per non riempire in larghezza la pagina ma lasciando dello spazio di sfondo vuoto esternamente al wrapper.\
-La presentazione del layout e` stata implementata con css puro, utilizzando regole css 2.1 e css 3. Le fondamenta del layout sono state realizzate con regole css 2.1 in modo da assicurare compatibiita` e robustezza, successivamente\'a0son state aggiunte regole css 3 con lo scopo di rendere l'interfaccia piu` gradevole e proporre un'esperienza utente migliore. Tuttavia queste ultime sono pensate in modo tale che nel caso in cui un browser non supporti css 3 il layout subisca un degrado elegante senza compromettere accessibilita` e usabilita`. \
-Se un 
-\f1 text-shadow
-\f0  non viene visto interpreato dal browser accadra` che il testo sara` ancora visibile e leggibile, ma senza ombra. Se una 
-\f1 transition
-\f0  viene ignorata l'animazione sara` scattosa e non fluida, ma senza causare problemi.\
-Invece in caso di regole css 3 in punti piu` critici come ad esempio i gradient di sfondo o i colori dei testi in rgba, queste regole sono state corredate di una regola css 2.1 di fallback:\
+La struttura di layout del sito \'e8 stata realizzata applicando una semplice rivisitazione del classico template di layout a tre pannelli.\
+La sezione di header, posta in alto nella pagina, \'e8 destinata a contenere il logo e l'intestazione dell'azienda per cui sviluppiamo il sito.\
+La sezione di footer, posta nella parte bassa della pagina, contiene solo i nomi dei progettisti e i link alle validazioni html, css e accessibilit\'e0.\
+Nella sezione centrale di contenuto della pagina un blocco div wrapper racchiude due parti, il blocco di navigazione che presenta la lista dei link necessari alla navigazione del nostro sito, e il blocco di contenuto, con il contenuto vero e proprio. \
+Il blocco usato come wrapper (avente id "container") occupa l'85% della pagina in larghezza, lasciando ugual margine a sinistra e a destra.  \
+Il blocco dei link di navigazione (avente id "navigation") flotta a sinistra grazie alla propriet\'e0 float:left e mantiene una larghezza del 20%, mentre il blocco con i contenuti (avente id "content") mantiene un margine sinistro del 22%, onde evitare che il contenuto, una volta riempito lo spazio adiacente il blocco di navigazione, si disponga al di sotto di quest'ultimo.\
+\
+La parte presentazionale del layout e` stata implementata con css puro, utilizzando regole css 2.1 e css 3. \
+Le fondamenta del layout sono state realizzate con regole css 2.1 in modo da assicurare compatibiit\'e0 e robustezza, visto che layout definiti in css3 come ad esempio le griglie non sono ancora supportate.\
+Successivamente\'a0sono state aggiunte regole css 3 con lo scopo di rendere l'intera interfaccia piu` gradevole e proporre un'esperienza utente migliore. Tuttavia queste regole css 3 sono pensate e impiegate in modo tale che, nel caso in cui un browser non supporti queste css 3, il layout subisca un degrado elegante senza compromettere accessibilit\'e0 e usabilit\'e0.\
+Se un text-shadow non viene visto interpretato dal browser accadr\'e0 quindi che il testo risulter\'e0 ancora visibile e leggibile, ma senza ombreggiatura. \
+Se una transition viene ignorata l'animazione prodotta del browser si mostrer\'e0 scattosa e non fluida, ma ancora non compromettendo l'esperienza di navigazione del nostro sito da parte dell'utente.\
+Talvolta le regole css 3 sono impiegate in punti leggermente pi\'f9 critici: \'e8 il caso ad esempio dei background che fanno uso di gradienti di sfondo. In questi casi e`stato previsto un fallback al fine di garantire il degrado elegante, aggiungendo una doppia della regola "background": la prima in ordine di scrittura imposta una sfondo solido usando css 2.1, la seconda sovrascrive la prima impostando lo sfondo con uso del gradiente. Cos\'ec facendo i browser che non sanno interpretare un gradiente lasceranno applicata la prima regola di background a sfondo solido, mentre i browser aggiornati sapranno applicare il gradiente.\
+Altro esempio simile \
+\
+\
+\
+ o i colori dei testi in rgba, queste regole sono state corredate di una regola css 2.1 di fallback:\
 
 \f1 background: #hex
 \f0  precede la regola 
