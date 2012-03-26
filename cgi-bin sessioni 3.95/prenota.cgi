@@ -6,7 +6,9 @@ use CGI::Session;
 use CGI::Cookie;
 use POSIX qw/strftime/;
 use strict;
+use Fcntl qw(:flock SEEK_END); # import LOCK_* and SEEK_END constants
 
+require "funzioni/static.cgi";
 
 #creo oggetto CGI
 my $pagina = new CGI;
@@ -33,7 +35,6 @@ else {#----->la sessione è stata caricata correttamente
     #ricavo dati da form
     my $etichetta = $pagina->param('etichetta');
     my $quantita = $pagina->param('quantita');
-    my $posizione_vino = $pagina->param('posizione');
     my $utente = $session->param("usr");
     #print $utente;print "cucucucucucucu";
     my $data = strftime('%Y-%m-%d',localtime);
@@ -44,7 +45,7 @@ else {#----->la sessione è stata caricata correttamente
        $ok = 1;
     }
     if ($ok == 0){
-          print "Location: catalogo.cgi#$posizione_vino\n\n";
+          print "Location: catalogo.cgi#$etichetta\n\n";
           exit;
     }
     #fine controllo
@@ -67,12 +68,19 @@ else {#----->la sessione è stata caricata correttamente
     $prenotazioni[0]->appendChild($frammento);
 
     #definisco il file xml su cui scrivere e lo apro
+  
     my $fileDestinazione = "../data/db.xml";
+  #blocco file
+  flock($fileDestinazione,LOCK_EX);
     open(OUT, ">$fileDestinazione") or die("Non riesco ad aprire il file in scrittura");
+
     #scrivo effettivamente sul file
     print OUT $doc->toString;
     #chiudo file
+  
     close (OUT);
+  #sblocco file
+  flock($fileDestinazione, LOCK_UN);
     
     #avviso catalogo.cgi che la registrazione è andata a buon fine
     my $registrato = 1;

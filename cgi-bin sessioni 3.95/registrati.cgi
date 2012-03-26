@@ -4,7 +4,7 @@ use CGI;
 use CGI::Carp qw(fatalsToBrowser);
 use CGI::Cookie;
 use strict;
-
+use Fcntl qw(:flock SEEK_END); # import LOCK_* and SEEK_END constants
 
 require "funzioni/static.cgi";
 require "funzioni/controlli.cgi";
@@ -157,6 +157,8 @@ if(not($cookies{'CGISESSID'}))
       #apertura file e lettura input
       my $doc = $parser->parse_file($file);
 
+    
+
       #estrazione elemento radice
       my $radice= $doc->getDocumentElement;
       my @iscritti = $radice->getElementsByTagName('iscritti');
@@ -181,9 +183,16 @@ if(not($cookies{'CGISESSID'}))
 
       #definisco il file xml su cui scrivere e lo apro
       my $fileDestinazione = "../data/db.xml";
+
       open(OUT, ">$fileDestinazione") or die("Non riesco ad aprire il file in scrittura");
+      
+  #blocco file
+  flock($fileDestinazione,LOCK_EX);
       #scrivo effettivamente sul file
       print OUT $doc->toString;
+      
+  #sblocco file
+  flock($fileDestinazione, LOCK_UN);
       #chiudo file
       close (OUT);
       
@@ -262,7 +271,7 @@ sub printP($){
                                     $page->legend($legend),
                                     $page->p(
                                              $page->label(
-                                                          {for=>"username"},
+                                                          {for=>"usename"},
                                                           $etichetta_usr
                                                           ),
                                              $page->input({id=>"username",
@@ -380,7 +389,7 @@ sub printP($){
                                                           },"$e_tel"
                                                          ),
                                              ),
-                                    $page->p({id=>"hint"},
+                                    $page->p(
                                              $etichetta_obbligatori
                                             ),
                                     ),
@@ -398,5 +407,3 @@ sub printP($){
                       );
     
 }
-
-
