@@ -123,9 +123,7 @@
 									<div class="pr_head">
 										<h3>
 											<xsl:element name="a">
-												<xsl:attribute name="name">
-													<xsl:value-of select="v:etichetta" />
-												</xsl:attribute>
+												<xsl:attribute name="name">v<xsl:value-of select="position()" /></xsl:attribute>
 											</xsl:element>
 											<xsl:value-of select="v:etichetta" />
 										</h3>
@@ -133,19 +131,21 @@
 											<fieldset>
 												<xsl:element name="input">
 													<xsl:attribute name="type">hidden</xsl:attribute>
+													<xsl:attribute name="name">posizione</xsl:attribute>
+													<xsl:attribute name="value">v<xsl:value-of select="position()"/></xsl:attribute>
+												</xsl:element>
+												<xsl:element name="input">
+													<xsl:attribute name="type">hidden</xsl:attribute>
 													<xsl:attribute name="name">etichetta</xsl:attribute>
 													<xsl:attribute name="value"><xsl:value-of
 														select="v:etichetta" /></xsl:attribute>
 												</xsl:element>
 												<xsl:element name="label">
-													<xsl:attribute name="for"><xsl:value-of
-														select="position()" /></xsl:attribute>
-													Quantità
+													<xsl:attribute name="for">l<xsl:value-of select="position()" /></xsl:attribute>Quantità
 												</xsl:element>
 												<xsl:element name="input">
 													<xsl:attribute name="type">text</xsl:attribute>
-													<xsl:attribute name="id"><xsl:value-of
-														select="position()" /></xsl:attribute>
+													<xsl:attribute name="id">l<xsl:value-of select="position()" /></xsl:attribute>
 													<xsl:attribute name="name">quantita</xsl:attribute>
 													<xsl:attribute name="value"></xsl:attribute>
 													<xsl:attribute name="size">1</xsl:attribute>

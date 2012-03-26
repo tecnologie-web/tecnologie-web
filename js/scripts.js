@@ -1,5 +1,8 @@
 function focusOnSearchEtichetta() {
-	document.getElementById('etich').focus();
+	var url = window.location.href;
+	if( !(url.indexOf('#' + 'v') != -1) ) {
+		document.getElementById('etich').focus();	
+	}
 }
 
 var checkBox_array;
@@ -22,7 +25,6 @@ function filter(){
 	onFormLoad(document.getElementById("search"));
 
 	var div_array = document.getElementsByClassName("pr_container_wrapper");
-//	var div_array = document.getElementsByName("pr_container_wrapper");
 	var temp = document.getElementById("etichetta").value;
 	var stringToSearch = temp.trim().toUpperCase();
 //	per ogni <div> cerco i sui <dd>
@@ -47,11 +49,7 @@ function filter(){
 				}
 //				se ce match tra il valore della checkbox e il valore dell tag
 //				allora controllo se la checkbox è true o false
-				var temp3 = checkBox_array[j].value;
-				var checkBoxValue = temp3.trim().toUpperCase();
-				var temp4 = dd_array[t].innerHTML;
-				var ddValue = temp4.trim().toUpperCase();
-				if(checkBoxValue == ddValue){
+				if(checkBox_array[j].value.trim() == dd_array[t].innerHTML.trim()){
 					flag = flag * checkBox_array[j].checked;
 				}
 			}

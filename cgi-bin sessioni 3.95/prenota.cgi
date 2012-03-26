@@ -33,6 +33,7 @@ else {#----->la sessione è stata caricata correttamente
     #ricavo dati da form
     my $etichetta = $pagina->param('etichetta');
     my $quantita = $pagina->param('quantita');
+    my $posizione_vino = $pagina->param('posizione');
     my $utente = $session->param("usr");
     #print $utente;print "cucucucucucucu";
     my $data = strftime('%Y-%m-%d',localtime);
@@ -43,7 +44,7 @@ else {#----->la sessione è stata caricata correttamente
        $ok = 1;
     }
     if ($ok == 0){
-          print "Location: catalogo.cgi#$etichetta\n\n";
+          print "Location: catalogo.cgi#$posizione_vino\n\n";
           exit;
     }
     #fine controllo
