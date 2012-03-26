@@ -3,7 +3,6 @@
 	margin-top: 10px;
 	border: 1px solid #b3b3b3;
 	border-radius: 3px;
-	border-top-left-radius: 0;
 	padding: 1em;
 	background: #f6f5f2 url('../../images/noise.png') repeat;
 	margin-bottom: 2em;
@@ -17,10 +16,30 @@
 	border-bottom: 1px solid #b3b3b3;
 	margin-right: 3em;
 }
+#data_cliente li {
+	border-bottom: 1px solid #b3b3b3;
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+}
 #data_cliente ul {
 	list-style-type: none;
 	margin: 1em;
 }
+#data_cliente dt {
+	font-weight: bold;
+	float: left;
+	margin-right: 0.5em;
+}
+#data_cliente dd {
+	position: relative;
+	top: 1px;
+	margin-bottom: 0.5em;
+}
+#data_cliente li#attention {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+/*
 #data_cliente ul li {
 	background-color: trasparent;
 	padding: 0.5em;
@@ -28,9 +47,7 @@
 	border-radius: 2px;
 	margin-bottom: 1em;
 }
-#data_cliente ul li#attention {
-	font-weight: bold;
-}
+
 #data_cliente ul li span {
 	margin: 0 1em;
 	font-size: 0.8em;
@@ -40,4 +57,4 @@
 	margin-top: 2em;
 	font-weight: bold;
 	text-align: center;
-}
+}*/

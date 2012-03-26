@@ -189,6 +189,9 @@ span.firstLetter  {
 #navigation ul li.registrati {
 	background-image: url('../../images/menu/registrati.png');
 }
+#navigation ul li.areapersonale {
+	background-image: url('../../images/menu/areapersonale.png');
+}
 #navigation ul li.login {
 	background-image: url('../../images/menu/login.png');
 }
@@ -210,6 +213,11 @@ span.firstLetter  {
 	border-bottom: 1px solid #e6e6e6;
 	margin-right: 4em;
 	margin-bottom: 1.8em;
+}
+h3#result {
+	color: #3c0809;
+	font-size: 1.4em;
+	font-style: italic;
 }
 
 /*FOOTER*/

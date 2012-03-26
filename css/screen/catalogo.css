@@ -131,7 +131,7 @@
 /*DESCRIZIONE VINO NEL PRODUCT CONTAINER*/
 .pr_container img {
 	float: left;
-	border-radius: 3px;
+	border-radius: 2px;
 	box-shadow: 0 0 3px 0 #444;
 	margin-right: 1em;
 }
@@ -154,11 +154,13 @@
 /*VISUALIZZAZIONE COMPLETA VINO SINGOLO*/
 
 div#cont_descr {
-	margin-left: 36%;
+	margin-left: 37%;
 }
 img#vino {
 	float: left;
 	width: 35%;
+	box-shadow: 0 0 3px 0 #444;
+	border-radius: 2px;
 }
 #cont_descr dl {
 	margin-bottom: 3em;
