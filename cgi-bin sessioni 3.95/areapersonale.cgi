@@ -61,7 +61,6 @@ else {#----->la sessione è stata caricata correttamente
       print $page->start_ul;
       if($lung==0)
          {
-            print $page->p($path);
             print $page->li({id=>"attention"},
                            "Non hai ancora effettuato prenotazioni! Consulta il nostro ",
                            $page->a({href=>"catalogo.cgi"},"catalogo vini"));

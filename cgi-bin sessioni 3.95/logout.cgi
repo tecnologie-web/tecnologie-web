@@ -4,7 +4,6 @@
 #  Con utilizzo dei cookie
 #  aggiornato al 25/03/2012
    
-   
    use CGI::Carp qw/fatalsToBrowser warningsToBrowser/;
    use CGI::Session;
    use CGI::Cookie;
@@ -25,6 +24,7 @@
       $cookies{'CGISESSID'}->expires('-1h');
       print "Set-Cookie: $cookies{'CGISESSID'}\n";
       my $url = "login.cgi";
+      system("rm temp_session/cgisess_".$c);
       print "Location: $url\n\n";
       }
   
