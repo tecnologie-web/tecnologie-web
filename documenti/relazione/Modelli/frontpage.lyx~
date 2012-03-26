@@ -426,9 +426,7 @@ textbf{ } &
 
 		
 \backslash
-textbf{Indirizzo web del sito} & studenti.math.unipd.it/tecweb/
-\backslash
-tilde xxx 
+textbf{Indirizzo web del sito} & studenti.math.unipd.it/tecweb/~ xxx 
 \backslash
 
 \backslash
