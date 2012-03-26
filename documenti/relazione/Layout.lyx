@@ -63,5 +63,89 @@
 Layout
 \end_layout
 
+\begin_layout Standard
+La struttura di layout del sito è stata realizzata applicando una semplice
+ rivisitazione del classico template di layout a tre pannelli.
+ La sezione di header, posta in alto nella pagina, è destinata a contenere
+ il logo e l'intestazione dell'azienda per cui sviluppiamo il sito.
+ La sezione di path, appena sotto alla sezione header, mostra il percorso
+ preciso della pagina corrente.
+ 
+\end_layout
+
+\begin_layout Standard
+La sezione di footer, posta nella parte bassa della pagina, contiene solo
+ i nomi dei progettisti e i link alle validazioni html, CSS e accessibilità.
+ Nella sezione centrale di contenuto della pagina un blocco div wrapper
+ racchiude due parti, il blocco di navigazione che presenta la lista dei
+ link necessari alla navigazione del nostro sito, e il blocco di contenuto,
+ con il contenuto vero e proprio.
+ Il blocco usato come wrapper (avente id "container") occupa l'85% della
+ pagina in larghezza, lasciando ugual margine a sinistra e a destra.
+ Il blocco dei link di navigazione (avente id "navigation") flotta a sinistra
+ grazie alla proprietà float:left e mantiene una larghezza del 20%, mentre
+ il blocco con i contenuti (avente id "content") mantiene un margine sinistro
+ del 22%, onde evitare che il contenuto, una volta riempito lo spazio adiacente
+ il blocco di navigazione, si disponga al di sotto di quest'ultimo.
+\end_layout
+
+\begin_layout Standard
+La parte presentazionale del layout è stata implementata con CSS puro, utilizzan
+do regole CSS 2.1 e CSS 3.
+ Le fondamenta del layout sono state realizzate con regole CSS 2.1 in modo
+ da assicurare compatibiità e robustezza, visto che layout definiti in CSS3
+ come ad esempio le griglie non sono ancora supportate.
+ Successivamente sono state aggiunte regole CSS 3 con lo scopo di rendere
+ l'intera interfaccia piu` gradevole e proporre un'esperienza utente migliore.
+ 
+\end_layout
+
+\begin_layout Standard
+Tuttavia queste regole CSS 3 sono pensate e impiegate in modo tale che,
+ nel caso in cui un browser non supporti queste CSS 3, il layout subisca
+ un degrado elegante senza compromettere accessibilità e usabilità.
+ Se un text-shadow non viene visto interpretato dal browser accadrà quindi
+ che il testo risulterà ancora visibile e leggibile, ma senza ombreggiatura.
+ Se una transition viene ignorata l'animazione prodotta del browser si mostrerà
+ scattosa e non fluida, ma ancora non compromettendo l'esperienza di navigazione
+ del nostro sito da parte dell'utente.
+ Talvolta le regole CSS 3 sono impiegate in punti leggermente più critici:
+ è il caso ad esempio dei background che fanno uso di gradienti di sfondo.
+ In questi casi è stato previsto un fallback al fine di garantire il degrado
+ elegante, aggiungendo una doppia della regola "background": la prima in
+ ordine di scrittura imposta una sfondo solido usando CSS 2.1, la seconda
+ sovrascrive la prima impostando lo sfondo con uso del gradiente.
+ Così facendo i browser che non sanno interpretare un gradiente lasceranno
+ applicata la prima regola di background a sfondo solido, mentre i browser
+ aggiornati sapranno applicare il gradiente.
+ 
+\end_layout
+
+\begin_layout Standard
+Altro esempio simile è il caso del colore del testo in RGBA piuttosto che
+ nel solito spazio RGB.
+ Anche in questo caso la regola color:RGBA(..) è preceduta dal corrispondente
+ fallback che imposta il colore in RGB, secondo il ragionamento seguito
+ nel caso dei gradienti.
+ Il layout è stato impostato in maniera fluida, esprimendo le dimensione
+ degli elementi e dei contenitori perlopiù in percentuali quando possibile,
+ altrimenti in em.
+ Solo alcune immagini come il logo dell'azienda sono impostate a pixel,
+ poichè la si ritiene talmente importante da non rimpicciolirla.
+ 
+\end_layout
+
+\begin_layout Standard
+Anche la dimensione del testo è stata fissata in em, adattandosi alle preferenze
+ dell'utente.
+ Grazie a questa struttura fluida il layout si rimpicciolisce e ingrandisce
+ dinamicamente e coerentemente al resize della finestra del browser, ovviamente
+ fino ad un determinato punto critico.
+ In questa ottica però, non è stato ritenuto necessario definire un layout
+ per dispositivi mobili, vista anche la classe d'utenza del sito; si è preferito
+ invece privilegiare la realizzazione di un layout dedicato alla stampa,
+ molto più utile visto il tema centrare del sito.
+\end_layout
+
 \end_body
 \end_document
