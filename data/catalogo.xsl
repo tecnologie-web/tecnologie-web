@@ -122,6 +122,11 @@
 								<div class="pr_container">
 									<div class="pr_head">
 										<h3>
+											<xsl:element name="a">
+												<xsl:attribute name="name">
+													<xsl:value-of select="v:etichetta" />
+												</xsl:attribute>
+											</xsl:element>
 											<xsl:value-of select="v:etichetta" />
 										</h3>
 										<form class="form_prenota" method="post" action="prenota.cgi">
