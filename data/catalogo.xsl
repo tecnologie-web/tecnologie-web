@@ -118,7 +118,7 @@
 						</form>
 						<xsl:for-each select="v:dati/v:prodotti/v:vino">
 							<xsl:sort select="v:etichetta" />
-							<div class="pr_container_wrapper">
+							<div class="pr_container_wrapper" name="pr_container_wrapper">
 								<div class="pr_container">
 									<div class="pr_head">
 										<h3>
