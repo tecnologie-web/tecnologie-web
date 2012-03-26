@@ -379,6 +379,13 @@ end{itemize}
 
 \begin_layout Plain Layout
 
+		
+\backslash
+textbf{Anno Accademico} & 2011 - 2012
+\end_layout
+
+\begin_layout Plain Layout
+
 	
 \backslash
 end{longtable}
