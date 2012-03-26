@@ -391,7 +391,8 @@ sub printP($){
                                                             ),
                                              $page->input(
                                                             {type=>"submit",
-                                                             value=>"Invia"}
+                                                             value=>"Invia",
+                                                            onclick=>"return validateRegistration();"}
                                                             ),
                                             ),
                                     $page->end_form,
