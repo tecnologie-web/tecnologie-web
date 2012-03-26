@@ -59,8 +59,104 @@
 
 \begin_body
 
+\begin_layout Section
+Dati
+\end_layout
+
+\begin_layout Subsection
+XML
+\end_layout
+
+\begin_layout Standard
+Come richiesto dalle specifiche del progetto si è implementato un database
+ utilizzando un file XML in qualle contiene tre tipi principali di dati:
+ Prodotti, Utenti e Prenotazioni.
+ Lo scopo dell'XML è di memorizzazare i dati come gli utenti iscritti al
+ sito, i prodotti disponibili e le prenotazioni che tali utenti hanno effettuato.
+ La struttura del XML si può riassumere nel seguente diagramma:
+\end_layout
+
 \begin_layout Standard
 
+\lang italian
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang italian
+\begin_inset Graphics
+	filename img/diagramma1.png
+	lyxscale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang italian
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang italian
+Logo ufficiale Cantina Benato
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dallo schema soprastante si può osservare che tra gli Utenti e i Prodotti
+ c'è una relazione “molti a molti” che si traduce nell'entita Prenotazioni
+ che è uno storico delle prenotazioni evase o no.
+\end_layout
+
+\begin_layout Standard
+Essendo la gestione dell'integrità referenziale non ottimizzata nel XMLSchema
+ si è deciso di demandare al server il controllo di coerenza tra i vincoli
+ di chiave primaria e chiave esterna.
+\end_layout
+
+\begin_layout Subsection
+XMLSchema:
+\end_layout
+
+\begin_layout Standard
+Dato i tipi di dati che si volevano rappresentare nel file XML c'era la
+ possibilità di applicare molti tipi di modelli di schemi XML; di conseguenza
+ si è optato per il modello di schema XML con la maggior estendibilità cioè
+ il modello “Tende alla Veneziana”.
+\end_layout
+
+\begin_layout Subsection
+Trasformazione(XSLT):
+\end_layout
+
+\begin_layout Standard
+I fogli di stile XSLT sono stati applicati per stampare i Prodotti che si
+ vuole presentare alle nostre utenze; questa decisione è stata presa poiché
+ i Prodotti sono già stati precaricati nell'XML, non variano in base all'utente
+ che li visualizza e non è stato previsto l'inserimento di altri vini.
+ Per rendere i fogli di trasformazione compatibili con tutti i possibili
+ browser la conversione da XSLT a HTML viene fatta lato server tramite le
+ pagine catalogo.cgi e index.cgi .
+ La presenza di menù diversificati tra utenti loggati e non ci ha costretto
+ a creare due trasformate diverse che verranno applicati in base alla sessione
+ che è attiva al momento (come utente loggato oppure no).
 \end_layout
 
 \end_body
