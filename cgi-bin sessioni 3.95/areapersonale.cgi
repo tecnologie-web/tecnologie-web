@@ -51,7 +51,7 @@ else {#----->la sessione è stata caricata correttamente
    &start_container($page);
    &navigation_log($page,"areapersonale");
       print $page->start_div({id=>"content"});
-      print $page->h2("Area personale cliente: Prenotazioni effetuate.");
+      print $page->h2("Area personale cliente: Prenotazioni effetuate");
       if($session->param("registrazione"))
          {
          print $page->h3("Prenotazione Avvenuta con successo!");
