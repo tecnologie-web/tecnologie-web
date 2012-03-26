@@ -94,7 +94,8 @@ begin{center}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/ale/Scrivania/provaRelTec/img/logo_unipd.png
+	filename /home/acornagl/Scrivania/RepositoryTecWeb/tecnologie-web/documenti/relazione/img/logo_unipd.png
+	lyxscale 20
 	scale 40
 
 \end_inset
@@ -292,7 +293,7 @@ Large Informazioni sul documento}
 
 	
 \backslash
-begin{longtable}{ l | p{5cm} }
+begin{longtable}{ l | p{7cm} }
 \end_layout
 
 \begin_layout Plain Layout
@@ -300,6 +301,17 @@ begin{longtable}{ l | p{5cm} }
 		
 \backslash
 textbf{Nome documento} & Relazione sito Cantina Benato 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{ } & 
 \backslash
 
 \backslash
@@ -323,6 +335,17 @@ textbf{Scopo documento} & Illustrare la progettazione e la realizzazione
 		
 \backslash
 textbf{Data documento} & 27/03/2012 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{ } & 
 \backslash
 
 \backslash
@@ -381,7 +404,68 @@ end{itemize}
 
 		
 \backslash
-textbf{Anno Accademico} & 2011 - 2012
+textbf{Anno Accademico} & 2011 - 2012 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{ } & 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Indirizzo web del sito} & studenti.math.unipd.it/tecweb/ 
+\backslash
+~ xxx 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Utenti precaricati} & xxx - password 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Email referente} & giacomo.cattelan@gmail.com 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Email gruppo} & progetto-tecweb@googlegroups.com 
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout

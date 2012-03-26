@@ -31,7 +31,7 @@
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_amsmath 1
 \use_esint 1
 \use_mhchem 1
@@ -46,6 +46,9 @@
 \shortcut idx
 \color #008000
 \end_index
+\topmargin 1cm
+\rightmargin 3cm
+\bottommargin -1cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -113,7 +116,7 @@ LatexCommand tableofcontents
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Capitolo1.lyx"
+filename "Abstract.lyx"
 
 \end_inset
 
@@ -130,7 +133,7 @@ filename "Capitolo1.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Capitolo1.lyx"
+filename "AnalisiUtenza.lyx"
 
 \end_inset
 
