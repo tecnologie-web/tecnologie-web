@@ -380,7 +380,7 @@ sub printP($){
                                                           },"$e_tel"
                                                          ),
                                              ),
-                                    $page->p(
+                                    $page->p({id=>"hint"},
                                              $etichetta_obbligatori
                                             ),
                                     ),
