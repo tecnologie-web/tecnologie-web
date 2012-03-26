@@ -3,21 +3,23 @@ use XML::LibXML;
 use CGI;
 use CGI::Carp qw(fatalsToBrowser);
 use CGI::Session;
+use CGI::Cookie;
 use POSIX qw/strftime/;
 use strict;
 
 
 #creo oggetto CGI
 my $pagina = new CGI;
-my $session = CGI::Session->load(); #---->carico la sessione
-if($session->is_expired or $session->is_empty) { #---->controllo se la sessione è scaduta o non contiene dati
-	print "Content-type: text/html\n\n";
-    print "Non sei loggato non puoi prenotare";
+my %cookies=CGI::Cookie->fetch;
+if(not($cookies{'CGISESSID'})) { #---->controllo se la sessione è scaduta o non contiene dati
+	my $url = "login.cgi";
+	print "Location: $url\n\n";
 }
 else {#----->la sessione è stata caricata correttamente
     #definisco file xml
     my $file = '../data/db.xml';
-
+    my $c=$cookies{'CGISESSID'}->value;
+    my $session = CGI::Session->new("driver:File",$c,{Directory=>"temp_session"}); #---->carico la sessione
     #creazione oggetto parser
     my $parser = XML::LibXML->new();
 
@@ -63,7 +65,7 @@ else {#----->la sessione è stata caricata correttamente
     my $registrato = 1;
     $session->param("registrazione",$registrato);
 	#redirect
-	my $url = "catalogo.cgi";
+	my $url = "areapersonale.cgi";
 	print "Location: $url\n\n";
 
 	exit;

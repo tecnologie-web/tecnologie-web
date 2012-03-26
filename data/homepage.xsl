@@ -41,10 +41,10 @@ indent='yes'/>
 					<li class="chisiamo">
 						<a tabindex="2" accesskey="s" href="chi_siamo.cgi">Chi Siamo</a>
 					</li>
-					<li class="registrati">
+					<li class="areapersonale">
 						<a tabindex="3" accesskey="a" href="areapersonale.cgi">Area Personale</a>
 					</li>
-					<li class="login">
+					<li class="logout">
 						<a tabindex="4" accesskey="l" href="logout.cgi">
 							<span xml:lang="en">Logout</span>
 						</a>
@@ -79,23 +79,19 @@ indent='yes'/>
 									</dd>
 									<dt>Tipologia:</dt>
 									<dd>
-										Vino
-										<xsl:value-of select="v:tipologia" />
+										Vino <xsl:value-of select="v:tipologia" />
 									</dd>
 									<dt>Categoria:</dt>
 									<dd>
-										Vino
-										<xsl:value-of select="v:categoria" />
+										Vino <xsl:value-of select="v:categoria" />
 									</dd>
 									<dt>Stato:</dt>
 									<dd>
-										Vino
-										<xsl:value-of select="v:stato" />
+										Vino <xsl:value-of select="v:stato" />
 									</dd>
 									<dt>Prezzo unitario:</dt>
 									<dd>
-										Euro
-										<xsl:value-of select="v:prezzo" />
+										Euro <xsl:value-of select="v:prezzo" />
 									</dd>
 								</dl>
 							</div>

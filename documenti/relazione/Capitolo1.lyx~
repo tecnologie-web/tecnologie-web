@@ -1,0 +1,113 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Abstract
+\end_layout
+
+\begin_layout Standard
+Il progetto sviluppato si propone lo scopo di fornire un sito web per la
+ cantina Benato, cantina vinicola realmente esistente e situata a 
+\bar under
+xxx
+\bar default
+.
+\begin_inset Graphics
+	filename /home/ale/Scrivania/tecWeb/tecnologie-web/images/LogoFull.png
+	scale 10
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tale sito web consente all'azienda di publicizzare sulla rete i propri prodotti,
+ ed ai suoi clienti di effettuare prenotazioni online una volta che si siano
+ registrati.
+\end_layout
+
+\begin_layout Standard
+Nascendo da una necessità concreta l'intero progetto cerca di attenersi
+ quanto più strettamente alla realtà, e di soddisfare le esigenze dei vari
+ tipi di utilizzatori.
+ Ci si aspetta che un utente che interagisce con il sito sia interessato
+ ad ottenere informazioni sulla cantina e sui prodotti, oppure che voglia
+ effettuare una prenotazione.
+ Un ordine può essere effettuato solamente da utenti registrati ed autenticati,
+ i quali hanno la possibilità di consultare lo storico personale delle ordinazio
+ni.
+\end_layout
+
+\begin_layout Standard
+In seguito all'analisi dell'utenza, riportata successivamente, si è scelto
+ di concentrarsi maggiormente sulla versione stampabile del sito rispetto
+ alla versione mobile.
+\end_layout
+
+\begin_layout Standard
+Durante tutta la fase di sviluppo si è cercato di perseguire la massima
+ accessibilità del sito si prestatandovi grande attenzione ed effettuando
+ ricerche specifiche sul web.
+\end_layout
+
+\end_body
+\end_document

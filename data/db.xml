@@ -52,7 +52,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Moscato del Veneto</etichetta>
-         <immagine>../images/prodotti/moscato.png</immagine>
+         <immagine>../images/prodotti/moscato_spumante.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Dolce</categoria>
          <stato>Spumante</stato>
@@ -115,7 +115,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Prosecco spumante extra dry D.O.C.G.</etichetta>
-         <immagine>../images/prodotti/proseccodry.png</immagine>
+         <immagine>../images/prodotti/prosecco.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Secco</categoria>
          <stato>Spumante</stato>
@@ -136,7 +136,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Prosecco frizzante D.O.C.G.</etichetta>
-         <immagine>../images/prodotti/prosecco.png</immagine>
+         <immagine>../images/prodotti/prosecco_spumante.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Secco</categoria>
          <stato>Frizzante</stato>
@@ -157,7 +157,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
       </vino>
       <vino>
          <etichetta>Colli Euganei Serprino D.O.C.</etichetta>
-         <immagine>../images/prodotti/seprino.png</immagine>
+         <immagine>../images/prodotti/serprino.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Secco</categoria>
          <stato>Frizzante</stato>
@@ -219,12 +219,12 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <prezzo valuta="euro">4</prezzo>
       </vino>
       <vino>
-         <etichetta>Cabernet Sauvignon del veneto</etichetta>
-         <immagine>../images/prodotti/cabernet.png</immagine>
+         <etichetta>Barbera del Veneto</etichetta>
+         <immagine>../images/prodotti/barbera.png</immagine>
          <tipologia>Rosso</tipologia>
          <categoria>Secco</categoria>
          <stato>Fermo</stato>
-         <uve>100% Sauvignon del veneto</uve>
+         <uve>100% Barbera del veneto</uve>
          <provenienza>Vo&apos;</provenienza>
          <produzione>100 q per ettaro</produzione>
          <altitudine misura="metri">50</altitudine>   
@@ -240,12 +240,12 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <prezzo valuta="euro">3.70</prezzo>
       </vino>
       <vino>
-         <etichetta>Cabernet Frank del Veneto</etichetta>
-         <immagine>../images/prodotti/cabernetfrank.png</immagine>
+         <etichetta>Cabernet Franc del Veneto</etichetta>
+         <immagine>../images/prodotti/cabernet_franc.png</immagine>
          <tipologia>Rosso</tipologia>
          <categoria>Secco</categoria>
          <stato>Fermo</stato>
-         <uve>100% Frank del veneto</uve>
+         <uve>100% Franc del veneto</uve>
          <provenienza>Vo&apos;</provenienza>
          <produzione>90 q per ettaro</produzione>
          <altitudine misura="metri">40</altitudine>
