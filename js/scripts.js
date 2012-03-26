@@ -1,5 +1,9 @@
 function focusOnSearchEtichetta() {
 	var url = window.location.href;
+	if(!document.getElementsByClassName){
+		document.getElementById("search").style.display ='none';
+	}
+	
 	if( !(url.indexOf('#' + 'v') != -1) ) {
 		document.getElementById('etich').focus();	
 	}
@@ -64,7 +68,6 @@ function filter(){
 
 		}
 	}
-
 }
 function validateLogin() {
 
