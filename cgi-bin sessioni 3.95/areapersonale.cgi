@@ -12,9 +12,6 @@ use CGI::Cookie;
 require "funzioni/trasformazioni_xml.cgi";
 require "funzioni/static.cgi";
 use strict;
-
-
-
 #creo oggetto CGI
 my $page = new CGI;
 my %cookies=CGI::Cookie->fetch;

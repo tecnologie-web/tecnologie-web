@@ -53,9 +53,7 @@ if(not($cookies{'CGISESSID'}))
   my $prima_volta = 1;  #valore di default 
   if ( $spedito == 1){  #se ho ricevuto i dati porto prima volta a 0
       $prima_volta = 0;
-  }
-#  if ($prima_volta == 0){print "ma riciao";}  
-   
+  } 
    &navigation_notlog($page,"registrati"); 
    if ($prima_volta == 1){
     &printP($page,-1);#passo num_err= -1
@@ -147,7 +145,7 @@ if(not($cookies{'CGISESSID'}))
      &printP($page,$num_err,$e_usr,$e_nome,$e_cogn,$e_mail,$e_tel,$e_pass,$username,$nome,$cognome,$email,$telefono);
      
      
-    if ($num_err == 0){#print "DATI CORRETTI";
+    if ($num_err == 0){
       #definisco file xml
       my $file = '../data/db.xml';
 
@@ -195,11 +193,6 @@ if(not($cookies{'CGISESSID'}))
   flock($fileDestinazione, LOCK_UN);
       #chiudo file
       close (OUT);
-      
-      #my $url = "login.cgi";
-      #print "Location: $url\n\n";
-      #redirect
-      #print $page->header(-location=>"login.cgi");
     }
    }
    &end_container($page);

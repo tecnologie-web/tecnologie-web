@@ -36,7 +36,6 @@ else {#----->la sessione è stata caricata correttamente
     my $etichetta = $pagina->param('etichetta');
     my $quantita = $pagina->param('quantita');
     my $utente = $session->param("usr");
-    #print $utente;print "cucucucucucucu";
     my $data = strftime('%Y-%m-%d',localtime);
 
     #controllo per verificare che quantità sia un intero > 0

@@ -9,7 +9,6 @@
    my %cookies=CGI::Cookie->fetch;
    my $db = "../data/db.xml";
    my $parser = XML::LibXML->new();
-   my $doc = $parser->parse_file($db);
    my $doc = $parser->parse_string(&togli_ns($db));
    
    my $radice = $doc->getDocumentElement();

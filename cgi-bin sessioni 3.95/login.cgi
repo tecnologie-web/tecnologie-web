@@ -8,7 +8,6 @@ use XML::LibXML;
 use CGI;
 use CGI::Carp qw(fatalsToBrowser);
 use CGI::Session;
-#use CGI::Cookie;
 use strict;
 
 require "funzioni/static.cgi";
@@ -38,10 +37,6 @@ if ($prima_volta == 1){
    
   
    &printP(-1);
-
-   #&end_container($pagina);
-   #&footer($pagina);
-   #print $pagina->end_html;
 }  
 else{
   my $username = $pagina->param('username');
@@ -155,20 +150,4 @@ sub isPresente($){
    my $doc = $parser->parse_string($file_content);
    my $radice = $doc->getDocumentElement();
    return $radice->exists($path);
-   #my @username=$usrs[0]->getElementsByTagName('username');
-   #my @supporto;
-   #my $lung = @usrs;
-   #print $lung;
-   #for (my $i = 0; $i < $lung ; $i++){
-     #my @elemento = $usrs[$i]->getElementsByTagName('username');
-   #  my @elemento;
-   #  push (@elemento,$usrs[$i]->getElementsByTagName('username'));
-   #  push (@elemento,$usrs[$i]->getElementsByTagName('password'));
-   #  my $i_usr = $elemento[0]->textContent;
-   #  my $i_pass = $elemento[1]->textContent;  
-   #  if (($i_usr eq $usr) && ($pass eq $i_pass)){
-   #   return 1;
-   #  }
-   #}
-   #return 0;
 }

@@ -132,7 +132,6 @@
      my $db = "../data/db.xml";
      my $path ='//utente';#vino[etichetta="'.$input{vino}.'"]';
      my $parser = XML::LibXML->new();
-     my $doc = $parser->parse_file($db);
      my $file_content = "";
      open(INPUT,$db);
      while(<INPUT>) 
