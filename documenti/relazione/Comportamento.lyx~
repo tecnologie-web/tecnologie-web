@@ -209,7 +209,75 @@ Il metodo get si è reso utile per la visualizzazione dettagliata del singolo
 Il metodo post invece è stato utilizzato in ogni pagina in cui un utente
  ha la possibilità di interagire con il sito inserendo dati o inviado richieste
  al server.
- La tecnica scelta è stata utile nelle pagine in cui 
+ La tecnica scelta è stata utile per assicurare l'usabilità nelle pagine
+ in cui un utente inserisce dei dati da inviare al server, perchè così facendo
+ è possibile segnalare specificatamente gli errori di immissione e mantenere
+ i dati corretti.
+ È possibile osservare il comportamento appena descritto nei file 
+\emph on
+login.cgi
+\emph default
+ e 
+\emph on
+registrati.cgi
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Le sessioni sono state usate per mantenere e controllare lo stato di un
+ utente loggato, e su questo il gruppo ha dovuto superare il problema determinat
+o dal fatto che la release installata nel server del laboratorio si è dimostrata
+ meno recente di quella che si è usata nelle prove locali.
+ Per ovviare a questo problema si sono dovute applicare le sessioni come
+ richiesto dalla release 
+\emph on
+3.95
+\emph default
+; l'uso delle sessioni in questa maniera richiede che venga passato l'id
+ di una sessione da una pagina all'altra.
+ Questo modo di agire è applicabile in tre diversi modi, tramite: get, post
+ o cookie.
+ Il metodo risultato più elegante e sicuro è risultato essere il metodo
+ dei cookie, tralasciando il rischio che un utente possa disabilitare localmente
+ l'uso dei coockie, perchè stando allo studio di analisi dell'utenza si
+ presuppone che la maggior parte dei nostri utenti
+\emph on
+ 
+\emph default
+non abbia conoscenze sufficienti per far ciò.
+\end_layout
+
+\begin_layout Subsection
+Scelte implementative
+\end_layout
+
+\begin_layout Standard
+Per garantire l'usabilità e una buona esperienza di navigazione del nostro
+ sito, si sono rese necessarie alcune scelte.
+ 
+\end_layout
+
+\begin_layout Standard
+Si è scelto di reindirizzare un utente alla propria pagina personale una
+ volta che effettua correttamente un ordine, dove è visibile la buona riuscita
+ dell'operazione e l'insieme delle varie ordinazioni non ancora evase.
+ La scelta è dovuta al fatto che la tecnologia che ci consente di stampare
+ la pagina 
+\emph on
+catalogo.cgi
+\emph default
+ non ci consente di stampare un messaggio che avvisi l'utente che la sua
+ ordinazione è stata ricevuta correttamente.
+\end_layout
+
+\begin_layout Standard
+Anche quando un utente effettua il login questo viene reindirizzato alla
+ propria pagina personale
+\end_layout
+
+\begin_layout Subsection
+Sicurezza e controlli
 \end_layout
 
 \end_body

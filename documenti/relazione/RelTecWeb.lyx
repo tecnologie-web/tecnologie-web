@@ -229,7 +229,7 @@ filename "Test.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Competenze.lyx"
+filename "Meriti.lyx"
 
 \end_inset
 

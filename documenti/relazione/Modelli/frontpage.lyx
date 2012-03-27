@@ -94,7 +94,7 @@ begin{center}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /media/Data/Jassadar informatico/Tecnologie Web/progetto-TecWeb/tecnologie-web/documenti/relazione/img/logo_unipd.png
+	filename /home/acornagl/Scrivania/RepositoryTecWeb/tecnologie-web/documenti/relazione/img/logo_unipd.png
 	lyxscale 20
 	scale 40
 
@@ -428,7 +428,9 @@ textbf{ } &
 \backslash
 textbf{Indirizzo web del sito} & 
 \backslash
-url{studenti.math.unipd.it/tecweb/~xxx}
+url{tecnologie-web.studenti.math.unipd.it/tecweb/
+\backslash
+textasciitilde rdestefa}
 \backslash
 
 \backslash
@@ -439,7 +441,29 @@ url{studenti.math.unipd.it/tecweb/~xxx}
 
 		
 \backslash
-textbf{Utenti precaricati} & xxx - password 
+textbf{Utenti precaricati} & "esame" - "password" (utente senza ordinazioni)
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{ } & "esame2" - "password" (utente con ordinazioni)
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{ } & 
 \backslash
 
 \backslash

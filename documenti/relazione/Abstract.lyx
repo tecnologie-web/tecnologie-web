@@ -65,11 +65,8 @@ Abstract
 
 \begin_layout Standard
 Il progetto sviluppato si propone lo scopo di fornire un sito web per la
- cantina Benato, cantina vinicola realmente esistente e situata a 
-\bar under
-xxx
-\bar default
-.
+ cantina Benato, cantina vinicola realmente esistente e situata a Boccon
+ di Vo', in provincia di Padova.
 \end_layout
 
 \begin_layout Standard
@@ -117,7 +114,7 @@ status open
 
 \lang italian
 \begin_inset Graphics
-	filename /media/Data/Jassadar informatico/Tecnologie Web/progetto-TecWeb/tecnologie-web/images/LogoFull.png
+	filename /home/acornagl/Scrivania/RepositoryTecWeb/tecnologie-web/images/LogoFull.png
 	lyxscale 20
 	scale 50
 
