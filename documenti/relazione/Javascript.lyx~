@@ -88,11 +88,5 @@ Si è deciso di utilizzare javascript anche per rilevare se il browser che
  
 \end_layout
 
-\begin_layout Standard
-Comunque si sono utilizzati dei metodi standard e si è seguita una struttura
- consigliata dalla W3C riguardo a metodi e modalità di accesso all DOM HTML
- del documento.
-\end_layout
-
 \end_body
 \end_document
