@@ -61,7 +61,7 @@ print $page->start_div({id=>"navigation"});
                      {
                      print $page->li({class=>"homepage"},
                                $page->a({tabindex=>"1",accesskey=>"h",href=>"index.cgi"},
-                               '<span xml:lang="en">Homepage</span>')
+                               '<span xml:lang="en">Homepage</span><span class="acckey">(h)</span>')
                               );
                      }
                   if($current eq "catalogo")
@@ -72,7 +72,7 @@ print $page->start_div({id=>"navigation"});
                      {
                      print $page->li({class=>"catalogo"},
                                     $page->a({tabindex=>"2",accesskey=>"c",href=>"catalogo.cgi"},
-                                    "Catalogo")
+                                    "Catalogo<span class=\"acckey\">(c)</span>")
                               );
                      }
                   if($current eq "chisiamo")
@@ -83,7 +83,7 @@ print $page->start_div({id=>"navigation"});
                      {
                      print $page->li({class=>"chisiamo"},
                                     $page->a({tabindex=>"3",accesskey=>"s",href=>"chi_siamo.cgi"},
-                                    "Chi Siamo")
+                                    "Chi Siamo<span class=\"acckey\">(s)</span>")
                               );
                      }
                   if($current eq "registrati")
@@ -94,7 +94,7 @@ print $page->start_div({id=>"navigation"});
                      {
                      print $page->li({class=>"registrati"},
                               $page->a({tabindex=>"4",accesskey=>"r",href=>"registrati.cgi"},
-                                       "Registrati")
+                                       "Registrati<span class=\"acckey\">(r)</span>")
                               );
                      }
                    if($current eq "login")
@@ -105,7 +105,7 @@ print $page->start_div({id=>"navigation"});
                      {
                       print $page->li({class=>"login"},
                                     $page->a({tabindex=>"4",accesskey=>"l",href=>"login.cgi"},
-                                             '<span xml:lang="en">Login</span>')
+                                             '<span xml:lang="en">Login</span><span class="acckey">(l)</span>')
                                  );      
                      }  
 print $page->end_ul;
@@ -126,7 +126,7 @@ print $page->start_div({id=>"navigation"});
                      {
                      print $page->li({class=>"homepage"},
                                $page->a({tabindex=>"1",accesskey=>"h",href=>"index.cgi"},
-                               '<span xml:lang="en">Homepage</span>')
+                               '<span xml:lang="en">Homepage</span><span class="acckey">(h)</span>')
                               );
                      }
                   if($current eq "catalogo")
@@ -137,7 +137,7 @@ print $page->start_div({id=>"navigation"});
                      {
                      print $page->li({class=>"catalogo"},
                                     $page->a({tabindex=>"2",accesskey=>"c",href=>"catalogo.cgi"},
-                                    "Catalogo")
+                                    "Catalogo<span class=\"acckey\">(c)</span>")
                               );
                      }
                   if($current eq "chisiamo")
@@ -148,7 +148,7 @@ print $page->start_div({id=>"navigation"});
                      {
                      print $page->li({class=>"chisiamo"},
                                     $page->a({tabindex=>"3",accesskey=>"s",href=>"chi_siamo.cgi"},
-                                    "Chi Siamo")
+                                    "Chi Siamo<span class=\"acckey\">(s)</span>")
                               );
                      }
                    if($current eq "areapersonale")
@@ -159,7 +159,7 @@ print $page->start_div({id=>"navigation"});
                      {
                       print $page->li({class=>"areapersonale"},
                                     $page->a({tabindex=>"4",accesskey=>"a",href=>"areapersonale.cgi"},
-                                             "Area Personale")
+                                             "Area Personale<span class=\"acckey\">(a)</span>")
                                  );      
                      }  
                    if($current eq "logout")
@@ -170,7 +170,7 @@ print $page->start_div({id=>"navigation"});
                      {
                       print $page->li({class=>"logout"},
                                     $page->a({tabindex=>"5",accesskey=>"o",href=>"logout.cgi"},
-                                             '<span xml:lang="en">Logout</span>')
+                                             '<span xml:lang="en">Logout</span><span class="acckey">(l)</span>')
                                  );      
                      }  
 print $page->end_ul;

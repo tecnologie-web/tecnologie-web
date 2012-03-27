@@ -41,19 +41,19 @@
 						<ul>
 							<li class="homepage">
 								<a tabindex="1" accesskey="h" href="index.cgi">
-									<span xml:lang="en">Homepage</span>
+									<span xml:lang="en">Homepage</span><span class="acckey">(h)</span>
 								</a>
 							</li>
 							<li class="catalogo" id="here">Catalogo Vini</li>
 							<li class="chisiamo">
-								<a tabindex="2" accesskey="s" href="chi_siamo.cgi">Chi Siamo</a>
+								<a tabindex="2" accesskey="s" href="chi_siamo.cgi">Chi Siamo<span class="acckey">(s)</span></a>
 							</li>
 							<li class="registrati">
-								<a tabindex="3" accesskey="r" href="registrati.cgi">Registrati</a>
+								<a tabindex="3" accesskey="r" href="registrati.cgi">Registrati<span class="acckey">(r)</span></a>
 							</li>
 							<li class="login">
 								<a tabindex="4" accesskey="l" href="login.cgi">
-									<span xml:lang="en">Login</span>
+									<span xml:lang="en">Login</span><span class="acckey">(l)</span>
 								</a>
 							</li>
 						</ul>

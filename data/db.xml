@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<dati xmlns="http://www.cantinabenato.it"
-xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
-xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<dati xmlns="http://www.cantinabenato.it" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
    <iscritti>
 		<utente>
 			<username>Riki</username>
@@ -43,25 +41,34 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
 			<email>username@dominio.com</email>
 			<telefono>1234567890</telefono>
 		</utente>
-	</iscritti>
+	
+        <utente>
+          <username>esame2</username>
+         <password>pabKBYt8bh73A</password>
+         <nome>Nome</nome>
+         <cognome>Cognome</cognome>
+         <email>username@dominio.com</email>
+         <telefono>1234567890</telefono>
+        </utente>
+        </iscritti>
    <prodotti>
       <vino>
-         <etichetta>Colli Euganei Fior d&apos;Arancio D.O.C.G.</etichetta>
+         <etichetta>Colli Euganei Fior d'Arancio D.O.C.G.</etichetta>
          <immagine>../images/prodotti/fiordarancio.png</immagine>
          <tipologia>Bianco</tipologia>
          <categoria>Dolce</categoria>
          <stato>Spumante</stato>  
          <uve>100% Moscato giallo</uve>
-         <provenienza>Boccon e Vo&apos;</provenienza> 
+         <provenienza>Boccon e Vo'</provenienza> 
          <produzione>120 q per ettaro</produzione>
          <altitudine misura="metri">80</altitudine>
          <terreno>Argilloso e vulcanico esposto a sud-ovest</terreno>
          <densita_p>4000/5000 per ettaro allevate con sistema di doppio capovolto</densita_p>
          <periodoraccolta>Seconda decade di settembre</periodoraccolta>
-         <vinificazione>L&apos;uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C fino al raggiungimento di una gradazione alcolica di 5 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
+         <vinificazione>L'uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C fino al raggiungimento di una gradazione alcolica di 5 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
          <gradazione>7.5</gradazione>
          <colore>Colore paglierino con riflessi dorati</colore>
-         <degustazione>Ha spuma cremosa, non aggressiva, perlage fine e persistente. All&apos;olfatto si riconoscono sentori di agrumi, fiori d’arancio e frutta gialla. Il suo sapore è intenso, dolce ed equilibrato, piacevolmente aromatico</degustazione>
+         <degustazione>Ha spuma cremosa, non aggressiva, perlage fine e persistente. All'olfatto si riconoscono sentori di agrumi, fiori d’arancio e frutta gialla. Il suo sapore è intenso, dolce ed equilibrato, piacevolmente aromatico</degustazione>
          <abbinamenti>Principalmente con i dolci, a base di creme e frutta o biscotteria secca</abbinamenti>
          <temperatura>6</temperatura>
          <prezzo valuta="euro">3.5</prezzo>
@@ -73,16 +80,16 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <categoria>Dolce</categoria>
          <stato>Spumante</stato>
          <uve>100% Moscato Colli</uve>
-         <provenienza>Boccon e Vo&apos;</provenienza>
+         <provenienza>Boccon e Vo'</provenienza>
          <produzione>130 q per ettaro</produzione>
          <altitudine misura="metri">80</altitudine>
          <terreno>Argilloso e vulcanico, mezzo impasto esposto a sud-ovest</terreno>
          <densita_p>5000 per ettaro allevate con sistema di doppio capovolto</densita_p>
          <periodoraccolta>Prima decade di settembre</periodoraccolta>
-         <vinificazione>L&apos;uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 17/19 °C fino al raggiungimento di una gradazione alcolica di 6 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
+         <vinificazione>L'uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 17/19 °C fino al raggiungimento di una gradazione alcolica di 6 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
          <gradazione>8</gradazione>
          <colore>Paglierino più o meno intenso</colore>
-         <degustazione>Perlage fine e spuma persistente. All&apos;olfatto caratteristico, fragrante con un inimitabile aroma muschiato dell&apos;uva che ricorda il glicine ed il tiglio, la pesca e l&apos;albicocca con sentori di salvia e limoni. Il suo sapore è intenso, dolce ed equilibrato, piacevolmente aromatico</degustazione>
+         <degustazione>Perlage fine e spuma persistente. All'olfatto caratteristico, fragrante con un inimitabile aroma muschiato dell'uva che ricorda il glicine ed il tiglio, la pesca e l'albicocca con sentori di salvia e limoni. Il suo sapore è intenso, dolce ed equilibrato, piacevolmente aromatico</degustazione>
          <abbinamenti>Eccellente con i dolci</abbinamenti>
          <temperatura>6</temperatura>
          <prezzo valuta="euro">3.5</prezzo>
@@ -94,16 +101,16 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <categoria>Dolce</categoria>
          <stato>Spumante</stato>
          <uve>Moscato Amburgo e Moscato rosa</uve>
-         <provenienza>Vo&apos;</provenienza>
+         <provenienza>Vo'</provenienza>
          <produzione>150 q per ettaro</produzione>
          <altitudine misura="metri">50</altitudine>
          <terreno>Argilloso, mezzo impasto esposto a sud</terreno>
          <densita_p>4000 per ettaro allevate con sistema di doppio capovolto</densita_p>
          <periodoraccolta>Prima decade di settembre</periodoraccolta>
-         <vinificazione>L&apos;uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C fino al raggiungimento di una gradazione alcolica di 6 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
+         <vinificazione>L'uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C fino al raggiungimento di una gradazione alcolica di 6 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
          <gradazione>8</gradazione>
          <colore>Rosato più o meno intenso</colore>
-         <degustazione>Spuma persistente, perlage fine. All&apos;olfatto caratteristico, fragrante di frutta rossa ma la caratteristica particolare il profumo di rose. Si riconosce infatti il profumo della rosa rossa. Il suo sapore è intenso, dolce ed equilibrato, piacevolmente aromatico</degustazione>
+         <degustazione>Spuma persistente, perlage fine. All'olfatto caratteristico, fragrante di frutta rossa ma la caratteristica particolare il profumo di rose. Si riconosce infatti il profumo della rosa rossa. Il suo sapore è intenso, dolce ed equilibrato, piacevolmente aromatico</degustazione>
          <abbinamenti>Eccellente con i dolci</abbinamenti>
          <temperatura>6</temperatura>
          <prezzo valuta="euro">3.5</prezzo>
@@ -115,16 +122,16 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <categoria>Dolce</categoria>
          <stato>Spumante</stato>
          <uve>Marzemino I.g.t. veneto</uve>
-         <provenienza>Vo&apos;</provenienza>
+         <provenienza>Vo'</provenienza>
          <produzione>150 q per ettaro</produzione>
          <altitudine misura="metri">40</altitudine>
          <terreno>Argilloso</terreno>
          <densita_p>4000 per ettaro allevate con sistema di doppio capovolto</densita_p>
-         <periodoraccolta></periodoraccolta>
-         <vinificazione>L&apos;uva vendemmiata a mano viene sgranellata con acini interi. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C  ed una macerazione 48 o 60 ore fino al raggiungimento di una gradazione di 6 gradi. Segue svinatura e pressatura soffice e filtrazione. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
+         <periodoraccolta/>
+         <vinificazione>L'uva vendemmiata a mano viene sgranellata con acini interi. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C  ed una macerazione 48 o 60 ore fino al raggiungimento di una gradazione di 6 gradi. Segue svinatura e pressatura soffice e filtrazione. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
          <gradazione>8</gradazione>
          <colore>Rossastro intenso</colore>
-         <degustazione>All&apos;olfatto caratteristico, profumo gradevole, persistente con note che ricordano la ciliegia matura e la viola. Il suo sapore è intenso, dolce e di fresca corposità</degustazione>
+         <degustazione>All'olfatto caratteristico, profumo gradevole, persistente con note che ricordano la ciliegia matura e la viola. Il suo sapore è intenso, dolce e di fresca corposità</degustazione>
          <abbinamenti>Si abbina benissimo con i salumi e con i formaggi freschi. Buono anche come fine pasto e con i dolci</abbinamenti>
          <temperatura>12</temperatura>
          <prezzo valuta="euro">3.5</prezzo>
@@ -136,17 +143,17 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <categoria>Secco</categoria>
          <stato>Spumante</stato>
          <uve>100% prosecco</uve>
-         <provenienza>Boccon e Vo&apos;</provenienza>
+         <provenienza>Boccon e Vo'</provenienza>
          <produzione>120 q per ettaro</produzione>
          <altitudine misura="metri">50</altitudine>
          <terreno>Argilloso, vulcanico</terreno>
          <densita_p>4000/5000 per ettaro allevate con sistema di doppio capovolto</densita_p>
          <periodoraccolta>Seconda decade di settembre</periodoraccolta>
-         <vinificazione>L&apos;uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C fino al raggiungimento di una gradazione di 6 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
+         <vinificazione>L'uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C fino al raggiungimento di una gradazione di 6 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
          <gradazione>11.5</gradazione>
          <colore>Paglierino tenue</colore>
-         <degustazione>All&apos;olfatto caratteristico, Il profumo è intensamente fruttato e floreale. In bocca l&apos;esplosine della spuma porta tutta l&apos;aroma del prodotto alle papille gustative per un pieno appagamento dei sensi. Il suo sapore è intenso e persistente</degustazione>
-         <abbinamenti>Ottimo come aperitivo, ma si sposa bene con crostacei, gnocchi di zucca, salame, ma anche per un&apos;occasione informale di un incontro</abbinamenti>
+         <degustazione>All'olfatto caratteristico, Il profumo è intensamente fruttato e floreale. In bocca l'esplosine della spuma porta tutta l'aroma del prodotto alle papille gustative per un pieno appagamento dei sensi. Il suo sapore è intenso e persistente</degustazione>
+         <abbinamenti>Ottimo come aperitivo, ma si sposa bene con crostacei, gnocchi di zucca, salame, ma anche per un'occasione informale di un incontro</abbinamenti>
          <temperatura>6</temperatura>
          <prezzo valuta="euro">3</prezzo>
       </vino>
@@ -157,16 +164,16 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <categoria>Secco</categoria>
          <stato>Frizzante</stato>
          <uve>100% prosecco</uve>
-         <provenienza>Boccon e Vo&apos;</provenienza>
+         <provenienza>Boccon e Vo'</provenienza>
          <produzione>120 q per ettaro</produzione>
          <altitudine misura="metri">100</altitudine>
          <terreno>Argilloso, vulcanico</terreno>
          <densita_p>4000/5000 per ettaro allevate con sistema di doppio capovolto</densita_p>
          <periodoraccolta>Seconda decade di settembre</periodoraccolta>
-         <vinificazione>L&apos;uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C fino al raggiungimento di una gradazione di 6 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
+         <vinificazione>L'uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C fino al raggiungimento di una gradazione di 6 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e avviato poi in seguito alla spumantizzazione</vinificazione>
          <gradazione>10.5</gradazione>
          <colore>Paglierino tenue</colore>
-         <degustazione>All&apos;olfatto delicato con sentori floreali e fruttati. In bocca è fresco e vivace, leggermente amabile ed armonico</degustazione>
+         <degustazione>All'olfatto delicato con sentori floreali e fruttati. In bocca è fresco e vivace, leggermente amabile ed armonico</degustazione>
          <abbinamenti>Ottimo come aperitivo, antipasto ma anche tutto pasto, con minestre, carni bianche e piatti a base di pesce</abbinamenti>
          <temperatura>6</temperatura>
          <prezzo valuta="euro">3.75</prezzo>
@@ -178,13 +185,13 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <categoria>Secco</categoria>
          <stato>Frizzante</stato>
          <uve>100% prosecco o glera</uve>
-         <provenienza>Boccon e Vo&apos;</provenienza>
+         <provenienza>Boccon e Vo'</provenienza>
          <produzione>110 q per ettaro</produzione>
          <altitudine misura="metri">80</altitudine>
          <terreno>Argilloso, vulcanico</terreno>
          <densita_p>4000/5000 per ettaro allevate con sistema di doppio capovolto</densita_p>
          <periodoraccolta>Seconda decade di settembre</periodoraccolta>
-         <vinificazione>L&apos;uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C fino al raggiungimento di una gradazione di 6 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e in seguito avviato alla rifermentazione</vinificazione>
+         <vinificazione>L'uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18/20 °C fino al raggiungimento di una gradazione di 6 gradi. Il vino così ottenuto viene stoccato in serbatoi a temperatura controllata e in seguito avviato alla rifermentazione</vinificazione>
          <gradazione>11</gradazione>
          <colore>Giallo paglierino con contenuti riflessi verdolini</colore>
          <degustazione>Ha un profumo fresco e delicato, con nette sensazioni di fruttato. In bocca è fresco e vivace, il sapore è morbido e allegro</degustazione>
@@ -199,7 +206,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <categoria>Secco</categoria>
          <stato>Fermo</stato>
          <uve>100% Sauvignon del veneto</uve>
-         <provenienza>Vo&apos;</provenienza>
+         <provenienza>Vo'</provenienza>
          <produzione>100 q per ettaro</produzione>
          <altitudine misura="metri">50</altitudine>
          <terreno>Argilloso</terreno>
@@ -208,7 +215,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <vinificazione>L'uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18 gradi a termine fermentazione affinamento sulle fecce nobili per 3/4 mesi</vinificazione>
          <gradazione>12.5</gradazione>
          <colore>Giallo paglierino con lievi riflessi verdi</colore>
-         <degustazione>All&apos;olfatto classico profumo di foglia di fico, di miele d&apos;acacia, e di frutta verde. Ma la particolarità più eclatante è che nel bouquet si riconosca l&apos;odore della &quot;pipì di gatto&quot;, segno distintivo di un buon sauvignon. Molto saporito e sapido al palato morbido e vellutato, richiami varietali netti e retrogusto vivo e molto persistente</degustazione>
+         <degustazione>All'olfatto classico profumo di foglia di fico, di miele d'acacia, e di frutta verde. Ma la particolarità più eclatante è che nel bouquet si riconosca l'odore della "pipì di gatto", segno distintivo di un buon sauvignon. Molto saporito e sapido al palato morbido e vellutato, richiami varietali netti e retrogusto vivo e molto persistente</degustazione>
          <abbinamenti>Accompagna bene piatti di formaggi, pesce e in particolare pietanze con asparagi</abbinamenti>
          <temperatura>12</temperatura>
          <prezzo valuta="euro">4</prezzo>
@@ -220,16 +227,16 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <categoria>Secco</categoria>
          <stato>Fermo</stato>
          <uve>100% Pinot bianco del veneto</uve>
-         <provenienza>Vo&apos;</provenienza>
+         <provenienza>Vo'</provenienza>
          <produzione>90 q per ettaro</produzione>
          <altitudine misura="metri">50</altitudine>
          <terreno>Argilloso</terreno>
          <densita_p>5000 per ettaro allevate con sistema di doppio capovolto</densita_p>
          <periodoraccolta>Prima decade di settembre</periodoraccolta>
-         <vinificazione>L&apos;uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18 gradi. A termine fermentazione affinamento sulle fecce nobili per 3/4 mesi</vinificazione>
+         <vinificazione>L'uva vendemmiata a mano viene sgranellata con acini interi, segue pressatura soffice per depressione, illimpidimento del mosto con il freddo. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 18 gradi. A termine fermentazione affinamento sulle fecce nobili per 3/4 mesi</vinificazione>
          <gradazione>12.5</gradazione>
          <colore>Giallo paglierino scarico con lievi riflessi verdi</colore>
-         <degustazione>All&apos;olfatto profumo delicato, gradevole, di frutta verde, si riconosce la mela e la banana. Molto saporito strutturato, armonico e persistente elegante di corpo</degustazione>
+         <degustazione>All'olfatto profumo delicato, gradevole, di frutta verde, si riconosce la mela e la banana. Molto saporito strutturato, armonico e persistente elegante di corpo</degustazione>
          <abbinamenti>Tutta la gamma degli antipasti magri, piatti a base di uova e di pesce. Aperitivo</abbinamenti>
          <temperatura>12</temperatura>
          <prezzo valuta="euro">4</prezzo>
@@ -241,13 +248,13 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <categoria>Secco</categoria>
          <stato>Fermo</stato>
          <uve>100% Barbera del veneto</uve>
-         <provenienza>Vo&apos;</provenienza>
+         <provenienza>Vo'</provenienza>
          <produzione>100 q per ettaro</produzione>
          <altitudine misura="metri">50</altitudine>   
          <terreno>Argilloso e mezzo impasto</terreno>
          <densita_p>5000 per ettaro allevate con sistema di doppio capovolto e cordone speronato</densita_p>
          <periodoraccolta>Prima decade di settembre</periodoraccolta>
-         <vinificazione>L&apos;uva vendemmiata a mano viene sgranellata con acini interi Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 22/25 gradi per 8/10 giorni con continui rimontaggi. Segue svinatura e pressatura soffice, chiusura di fermentazione, travaso ed affinamento per 4/5 mesi</vinificazione>
+         <vinificazione>L'uva vendemmiata a mano viene sgranellata con acini interi Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 22/25 gradi per 8/10 giorni con continui rimontaggi. Segue svinatura e pressatura soffice, chiusura di fermentazione, travaso ed affinamento per 4/5 mesi</vinificazione>
          <gradazione>13.5</gradazione>
          <colore>Rosso rubino con riflessi granato, brillante con una buona viscosità</colore>
          <degustazione>Ha un profumo fine, intenso, netto, con sentori composti di frutta rossa di confettura, erbacei e di sottobosco. Al palato dimostra buona struttura, ottimo equilibrio e lunga persistenza aromatica.</degustazione>
@@ -262,13 +269,13 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
          <categoria>Secco</categoria>
          <stato>Fermo</stato>
          <uve>100% Franc del veneto</uve>
-         <provenienza>Vo&apos;</provenienza>
+         <provenienza>Vo'</provenienza>
          <produzione>90 q per ettaro</produzione>
          <altitudine misura="metri">40</altitudine>
          <terreno>Argilloso e mezzo impasto, pedecollinare</terreno>
          <densita_p>5000 per ettaro allevate con sistema di doppio capovolto.</densita_p>
          <periodoraccolta>Prima decade di settembre</periodoraccolta>
-         <vinificazione>L&apos;uva vendemmiata a mano viene sgranellata con acini interi. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 22/25 gradi per 7/8 giorni con continui rimontaggi. Segue svinatura e pressatura soffice, chiusura di fermentazione, travaso ed affinamento per 4 mesi</vinificazione>
+         <vinificazione>L'uva vendemmiata a mano viene sgranellata con acini interi. Avvio di fermentazione con lieviti selezionati ad una temperatura controllata di 22/25 gradi per 7/8 giorni con continui rimontaggi. Segue svinatura e pressatura soffice, chiusura di fermentazione, travaso ed affinamento per 4 mesi</vinificazione>
          <gradazione>12.5</gradazione>
          <colore>Rosso rubino carico con riflessi violacei</colore>
          <degustazione>Ha un profumo intenso aromi delicatamente vegetali erbacei e di frutta rossa, si può sentire il peperone, il cacao, il tabacco. Al gusto una armoniosa fusione di persistenza aromatica con una struttura interessante e con tannini di particolare, vinoso</degustazione>
@@ -281,7 +288,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
    <prenotazioni>
    	<commissione>
    		<cliente>Riki</cliente>
-   		<ordine>Colli Euganei Fior d&apos;Arancio D.O.C.G.</ordine>
+   		<ordine>Colli Euganei Fior d'Arancio D.O.C.G.</ordine>
    		<quantita>6</quantita>
    		<data>2012-03-20</data>
    		<evaso>false</evaso>
@@ -309,7 +316,7 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
    	</commissione>
    	<commissione>
    		<cliente>Ale</cliente>
-   		<ordine>Colli Euganei Fior d&apos;Arancio D.O.C.G</ordine>
+   		<ordine>Colli Euganei Fior d'Arancio D.O.C.G</ordine>
    		<quantita>6</quantita>
    		<data>2012-03-17</data>
    		<evaso>false</evaso>
@@ -335,6 +342,30 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
    		<data>2012-03-14</data>
    		<evaso>false</evaso>
    	</commissione>
-   </prenotazioni>
+   
+      <commissione>
+   		<cliente>esame2</cliente>
+   		<ordine>Colli Euganei Fior d'Arancio D.O.C.G.</ordine>
+   		<quantita>6</quantita>
+   		<data>2012-03-27</data>
+   		<evaso>false</evaso>
+   	</commissione>
+      
+      <commissione>
+   		<cliente>esame2</cliente>
+   		<ordine>Moscato del Veneto</ordine>
+   		<quantita>3</quantita>
+   		<data>2012-03-27</data>
+   		<evaso>false</evaso>
+   	</commissione>
+      
+      <commissione>
+   		<cliente>esame2</cliente>
+   		<ordine>Rosato</ordine>
+   		<quantita>12</quantita>
+   		<data>2012-03-27</data>
+   		<evaso>false</evaso>
+   	</commissione>
+      </prenotazioni>
    
 </dati>

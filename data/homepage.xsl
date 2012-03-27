@@ -36,17 +36,17 @@ indent='yes'/>
 							<span xml:lang="en">Homepage</span>
 					</li>
 					<li class="catalogo">
-						<a tabindex="1" accesskey="c" href="catalogo.cgi">Catalogo Vini</a>
+						<a tabindex="1" accesskey="c" href="catalogo.cgi">Catalogo Vini<span class="acckey">(c)</span></a>
 					</li>
 					<li class="chisiamo">
-						<a tabindex="2" accesskey="s" href="chi_siamo.cgi">Chi Siamo</a>
+						<a tabindex="2" accesskey="s" href="chi_siamo.cgi">Chi Siamo<span class="acckey">(s)</span></a>
 					</li>
 					<li class="areapersonale">
-						<a tabindex="3" accesskey="a" href="areapersonale.cgi">Area Personale</a>
+						<a tabindex="3" accesskey="a" href="areapersonale.cgi">Area Personale<span class="acckey">(a)</span></a>
 					</li>
 					<li class="logout">
 						<a tabindex="4" accesskey="l" href="logout.cgi">
-							<span xml:lang="en">Logout</span>
+							<span xml:lang="en">Logout</span><span class="acckey">(l)</span>
 						</a>
 					</li>
 				</ul>

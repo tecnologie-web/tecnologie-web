@@ -59,6 +59,11 @@ img {
 span.firstLetter  {
 	font-size: 1.8em;
 }
+span.acckey {
+	float: right;
+	margin-right: 0.5em;
+	font-size: 0.9em;
+}
 .clear {
 	clear: both;
 }
