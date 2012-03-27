@@ -60,38 +60,89 @@
 \begin_body
 
 \begin_layout Section
-Javascript
+Meriti
 \end_layout
 
 \begin_layout Standard
-Si è scelto di utilizzare javascript per filtrare i prodotti mostrati al
- utente in base a dei criteri come per etichetta, per tipologia (bianco,
- rosso o rosato), per categoria(dolce o secco) e per stato(frizzante, fermo
- o spumante).
- Questo filtraggio viene fatto lato client in modo che non ci siano delle
- chiamate al server ogni volta che l'utente cambia criterio di ricerca.
+Schema riassuntivo delle parti svolte e sviluppate da ogni componente del
+ gruppo.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Cattelan Giacomo: 
+\end_layout
+
+\begin_layout Itemize
+struttura e validazione XML
+\end_layout
+
+\begin_layout Itemize
+trasformazione XSL
+\end_layout
+
+\begin_layout Itemize
+modellazione pagine Perl
 \end_layout
 
 \begin_layout Standard
-La ricerca prende i diversi parametri e mostra solo i prodotti che soddisfano
- le proprietà scelte.
- Se il campo etichetta è vuoto, la ricerca va fatta solo su tipologia, categoria
- e stato tralasciando l'etichetta di tale prodotto.
+Cornaglia Alessandro:
+\end_layout
+
+\begin_layout Itemize
+modellazione pagine, controlli Perl
+\end_layout
+
+\begin_layout Itemize
+inserimento dati XML
 \end_layout
 
 \begin_layout Standard
-Si è deciso di utilizzare javascript anche per rilevare se il browser che
- l'utente sta utilizzando supporta certi metodi.
- Quall'ora il browser non li supporti vengono nascoste certe funzionalità(es.
- non è possibile effetturare la ricerca dei prodotti se il browser scelto
- è Internet Explorer nelle versioni inferiori alla 9).
- 
+De Stefani Riccardo:
+\end_layout
+
+\begin_layout Itemize
+struttura e validazione XHTML
+\end_layout
+
+\begin_layout Itemize
+struttura e validazione CSS
+\end_layout
+
+\begin_layout Itemize
+curatore grafico
 \end_layout
 
 \begin_layout Standard
-Comunque si sono utilizzati dei metodi standard, si è seguita una struttura
- consigliata dalla W3C riguardo a metodi e modalità di accesso all DOM HTML
- del documento e 
+Sotomayor Jorge:
+\end_layout
+
+\begin_layout Itemize
+funzionalità client-side Javascript
+\end_layout
+
+\begin_layout Itemize
+verificatore codice e relazione
+\end_layout
+
+\begin_layout Standard
+Il gruppo tiene a precisare che le scelte intraprese durante la fase di
+ progettazione e sviluppo sono sempre state prese in collettività e che
+ ogni membro ha piena conoscenza anche delle parti del progetto che non
+ ha svolto direttamente.
+ Inoltre si informa che la relazione è stata stesa congiuntamente.
+\end_layout
+
+\begin_layout Section
+Ringraziamenti
+\end_layout
+
+\begin_layout Standard
+Si ringrazia la Cantina Benato per l'idea, le informazioni e il materiale
+ forniti.
 \end_layout
 
 \end_body

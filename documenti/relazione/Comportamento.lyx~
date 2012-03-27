@@ -209,7 +209,177 @@ Il metodo get si è reso utile per la visualizzazione dettagliata del singolo
 Il metodo post invece è stato utilizzato in ogni pagina in cui un utente
  ha la possibilità di interagire con il sito inserendo dati o inviado richieste
  al server.
- La tecnica scelta è stata utile nelle pagine in cui 
+ La tecnica scelta è stata utile per assicurare l'usabilità nelle pagine
+ in cui un utente inserisce dei dati da inviare al server, perchè così facendo
+ è possibile segnalare specificatamente gli errori di immissione e mantenere
+ i dati corretti.
+ È possibile osservare il comportamento appena descritto nei file 
+\emph on
+login.cgi
+\emph default
+ e 
+\emph on
+registrati.cgi
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Le sessioni sono state usate per mantenere e controllare lo stato di un
+ utente loggato, e su questo il gruppo ha dovuto superare il problema determinat
+o dal fatto che la release installata nel server del laboratorio si è dimostrata
+ meno recente di quella che si è usata nelle prove locali.
+ Per ovviare a questo problema si sono dovute applicare le sessioni come
+ richiesto dalla release 
+\emph on
+3.95
+\emph default
+; l'uso delle sessioni in questa maniera richiede che venga passato l'id
+ di una sessione da una pagina all'altra.
+ Questo modo di agire è applicabile in tre diversi modi, tramite: get, post
+ o cookie.
+ Il metodo risultato più elegante e sicuro è risultato essere il metodo
+ dei cookie, tralasciando il rischio che un utente possa disabilitare localmente
+ l'uso dei coockie, perchè stando allo studio di analisi dell'utenza si
+ presuppone che la maggior parte dei nostri utenti
+\emph on
+ 
+\emph default
+non abbia conoscenze sufficienti per far ciò.
+\end_layout
+
+\begin_layout Subsection
+Scelte implementative
+\end_layout
+
+\begin_layout Standard
+Per garantire l'usabilità e una buona esperienza di navigazione del nostro
+ sito, si sono rese necessarie alcune scelte.
+ 
+\end_layout
+
+\begin_layout Standard
+Si è scelto di reindirizzare un utente alla propria pagina personale una
+ volta che effettua correttamente un ordine, dove è visibile la buona riuscita
+ dell'operazione e l'insieme delle varie ordinazioni non ancora evase.
+ La scelta è dovuta al fatto che la tecnologia che ci consente di stampare
+ la pagina 
+\emph on
+catalogo.cgi
+\emph default
+ non ci consente di stampare un messaggio che avvisi l'utente che la sua
+ ordinazione è stata ricevuta correttamente.
+\end_layout
+
+\begin_layout Standard
+Anche quando un utente effettua il login questo viene reindirizzato alla
+ propria pagina personale, scelta che è sembrata la migliore all'interno
+ del gruppo.
+\end_layout
+
+\begin_layout Standard
+Quando invece un utente autenticato effettua l'operazione di logout, questo
+ viene rimandato alla pagina 
+\emph on
+index.cgi
+\emph default
+ .
+\end_layout
+
+\begin_layout Subsection
+Sicurezza e controlli
+\end_layout
+
+\begin_layout Subsubsection
+Controlli
+\end_layout
+
+\begin_layout Standard
+Il sito per garantire il buon funzionamento, effettua i dovuti controlli
+ sui dati che un utente può immettere, lato server.
+ Le pagine in cui un utente ha la possibilità di inserire dati che incidono
+ sullo stato del sito sono: 
+\emph on
+prenota.cgi
+\emph default
+ e 
+\emph on
+registrati.cgi
+\emph default
+ .
+\end_layout
+
+\begin_layout Standard
+Nel file 
+\emph on
+prenota.cgi
+\emph default
+ viene opportunamente controllato, mediante espressione regolare, che la
+ quantità di bottiglie di vino che un utente si accinge a prenotare si maggiore
+ di zero.
+ L'integrità referenziale fra l'utente, identificato da uno username unico,
+ e la prenotazione di una determinata quantità di prodotti enologici viene
+ garantita dall'uso delle sessioni.
+\end_layout
+
+\begin_layout Standard
+All'interno del file 
+\emph on
+registrati.cgi
+\emph default
+, invece, i controlli che vengono effettuati sono decisamente superiori.
+ Per ogni campo dati richiesto per la registrazione viene controllato che
+ non siano presenti parentesi angolari, così da evitare spiacevoli inconvenienti
+, e che i campi obbligatori non vengano lasciati vuoti.
+ È previsto il caso che un utente abbia uno o più nomi o cognomi, purchè
+ questi siano separati da spazi, e che siano costituiti da caratteri validi.
+ Viene controllata la forma della email che viene inserita e che il numero
+ di telefono fornito sia composto da soli numeri.
+\end_layout
+
+\begin_layout Standard
+Prima che un utente venga effettivamente registrato, vie controllato che
+ la password inserita corrisponda a quella di conferma e che lo username
+ non sia già stato scelto da un altro utente.
+\end_layout
+
+\begin_layout Standard
+Per ogni errore riscontrato viene visualizzato un messaggio esplicativo
+ affianco al campo di input dato; invece i campi corretti, fatta eccezzione
+ per la password e conferma, vengono riproposti così che l'utente non debba
+ reinserirli.
+\end_layout
+
+\begin_layout Subsubsection
+Sicurezza
+\end_layout
+
+\begin_layout Standard
+Si è scelto di memorizzare le password in maniera criptata utilizzando la
+ funzione 
+\emph on
+crypt
+\emph default
+ messa a disposizione dal modulo CGI.
+ La funzione implementa un algoritmo di sicurezza a chiave condivisa SHA1,
+ e come chiave condivisa è stata scelta la stringa 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+ciao
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+È assicurato che le funzionalità offerte per gli utenti registrati siano
+ raggiungibili solo da utenti autenticati e viceversa.
 \end_layout
 
 \end_body

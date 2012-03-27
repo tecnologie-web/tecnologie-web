@@ -78,74 +78,73 @@ La costruzione stessa del codice HTML è stata realizzata tenendo conto delle
 \end_layout
 
 \begin_layout Itemize
-Uso di XHTML strict, validando le pagine finali al validatore del W3C; 
+Uso di XHTML strict, validando le pagine finali al validatore del W3C 
 \end_layout
 
 \begin_layout Itemize
 la struttura, la presentazione e il comportamento sono completamente separati,
  grazie ad un codice HTML semantico, css in fogli di stile esterni, funzioni
- javascript in un file esterno; 
+ javascript in un file esterno 
 \end_layout
 
 \begin_layout Itemize
 inserimento nelle pagine dei link "Torna su" per ritornare in alto nella
- stessa pagina; 
+ stessa pagina
 \end_layout
 
 \begin_layout Itemize
 inserimento di un link nascosto visivamente ma presente, che permette ai
- lettori di schermo di far saltare il menu di navigazione; 
+ lettori di schermo di far saltare il menu di navigazione
 \end_layout
 
 \begin_layout Itemize
-mantenimento coerente della presentazione visiva dei link visitati e non;
- 
+mantenimento coerente della presentazione visiva dei link visitati e non
 \end_layout
 
 \begin_layout Itemize
 link del menu di navigazione corredati di accesskey e tab index.
  Inoltre il link che punterebbe alla pagina in cui siamo viene disabilitato
- onde evitare link circolari; 
+ onde evitare link circolari 
 \end_layout
 
 \begin_layout Itemize
 uso del path per mostrare all'utente dove si trova in ogni momento, al fine
- di favorire l'orientamento; 
+ di favorire l'orientamento
 \end_layout
 
 \begin_layout Itemize
 realizzazione di tabelle accessibili, come nella pagina "chi siamo", corredando
  i table header di "id", "abbr", e "scope".
  Ogni cella quindi ha il suo attributo "headers" con cui riferirsi alle
- intestazioni;
+ intestazioni
 \end_layout
 
 \begin_layout Itemize
 form divisi in vari fieldset per agevolare il compilamento dell'utente e
- facilitare la vista della form;
+ facilitare la vista della form
 \end_layout
 
 \begin_layout Itemize
 controllo dei colori con il software reperibile al sito colororacle.org,
  che mostra come vengono viste le pagine del nostro sito dagli utenti affetti
- da daltonismo, e con WCAG contrast analyzer di Mozilla Firefox;
+ da daltonismo, e con WCAG contrast analyzer di Mozilla Firefox
 \end_layout
 
 \begin_layout Itemize
 test su degradi del sito effettuati con Web Developer Tool di Mozilla Firefox,
- simulando la disabilitazione di immagini, stili css e javascript;
+ simulando la disabilitazione di immagini, stili css e javascript
 \end_layout
 
 \begin_layout Itemize
-test di navigazione su browser non visuali come Lynx;
+test di navigazione su browser non visuali come Lynx
 \end_layout
 
 \begin_layout Itemize
-test di lettura dello schermo con Fangs di Mozilla Firefox;
+test di lettura dello schermo con Fangs di Mozilla Firefox
 \end_layout
 
 \begin_layout Itemize
-predisposizione di un layout css dedicato alla stampa.
+predisposizione di un layout css dedicato alla stampa
 \end_layout
 
 \end_body

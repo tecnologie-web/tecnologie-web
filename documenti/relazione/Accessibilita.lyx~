@@ -73,7 +73,7 @@ Per quanto riguarda l'accessibilità del sito, le pagine sono state sottoposte
 \end_layout
 
 \begin_layout Standard
-La costruzione stessa del codice html è stata realizzata tenendo conto delle
+La costruzione stessa del codice HTML è stata realizzata tenendo conto delle
  regole generali di accessibilità:
 \end_layout
 
@@ -114,7 +114,7 @@ uso del path per mostrare all'utente dove si trova in ogni momento, al fine
 \end_layout
 
 \begin_layout Itemize
-realizzazione di tabelle accessibili, come nella pagina "chisiamo", corredando
+realizzazione di tabelle accessibili, come nella pagina "chi siamo", corredando
  i table header di "id", "abbr", e "scope".
  Ogni cella quindi ha il suo attributo "headers" con cui riferirsi alle
  intestazioni;

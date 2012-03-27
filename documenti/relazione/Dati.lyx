@@ -92,6 +92,7 @@ status open
 \begin_inset Graphics
 	filename img/diagramma1.png
 	lyxscale 20
+	scale 75
 
 \end_inset
 
@@ -104,9 +105,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\lang italian
-Logo ufficiale Cantina Benato
+Diagramma relazionale
 \end_layout
 
 \end_inset
@@ -121,7 +120,7 @@ Logo ufficiale Cantina Benato
 
 \begin_layout Standard
 Dallo schema soprastante si può osservare che tra gli Utenti e i Prodotti
- c'è una relazione “molti a molti” che si traduce nell'entita Prenotazioni
+ c'è una relazione “molti a molti” che si traduce nell'entità Prenotazioni
  che è uno storico delle prenotazioni evase o no.
 \end_layout
 
