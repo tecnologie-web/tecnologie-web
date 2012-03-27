@@ -120,11 +120,11 @@
 	-o-transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 	transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
-.pr_container .form_prenota #prenota:hover, .pr_container .form_prenota #prenota:focus {
+.pr_container .form_prenota .prenota:hover, .pr_container .form_prenota #prenota:focus {
 	background-color: #357ae8;
 	border: 1px solid #2f5bb7;
 }
-.pr_container .form_prenota #prenota:active {
+.pr_container .form_prenota .prenota:active {
 	box-shadow: 1px 1px 5px #444 inset;
 }
 
