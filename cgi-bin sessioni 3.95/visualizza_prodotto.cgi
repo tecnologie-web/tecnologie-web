@@ -50,7 +50,9 @@ if($radice->exists($path))
       my @temperatura=$vini[0]->getElementsByTagName('temperatura');
       my @prezzo=$vini[0]->getElementsByTagName('prezzo');
       my $page = new CGI;
-      &intestazione($page,"Vista dettagliata prodotto",$string,"descrizione");
+      my $keys = "cantina, Benato, cantina Benato, visualizzazione prodotto, dettagli vino, catalogo, vino in bottiglia";
+      my $descr = "Visualizzazione dettagliata delle carattersitiche di un nostro vino in bottiglia";
+      &intestazione($page,"Vista dettagliata prodotto",$keys,$descr);
       &header($page);
       &path($page,'<span xml:lang="en">Homepage </span> &#187; Catalogo Vini &#187; Vista Dettagliata Prodotto');
       &start_container($page);

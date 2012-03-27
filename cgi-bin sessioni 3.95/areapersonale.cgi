@@ -40,8 +40,8 @@ else {#----->la sessione è stata caricata correttamente
    my $lung = @prenotazioni;
 
    my $title = "Area Personale";
-   my $keywords = "cantina, Benato, cliente, area personale, vini prenotati";
-   my $descr = "Visualizza l'area personale del cliente, mostrando i vini prenotati";
+   my $keywords = "cantina, Benato, cantina Benato, area cliente, area personale, vini prenotati";
+   my $descr = "Visualizza la tua area personale, mostrando i tuoi vini prenotati";
    &intestazione($page,$title,$keywords,$descr);
    &header($page);
    &path($page,'<span xml:lang="en">Homepage</span> &#187; Area Personale');

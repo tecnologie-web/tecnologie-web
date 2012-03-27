@@ -12,9 +12,9 @@
 				<meta name="author"
 					content="Giacomo Cattelan, Alessandro Cornaglia, Riccardo De Stefani, Jorge Sotomayor" />
 				<meta name="description"
-					content="Cantina Benato, vendita al dettaglio presso la nostra cantina di Boccon di Vo e prenotazione online dal nostro sito di vini tipici dei Colli Euganei in bottiglia " />
+					content="Cantina Benato, vendita al dettaglio presso la nostra cantina di Boccon di Vo e prenotazione dal nostro catalogo online di vini tipici dei Colli Euganei in bottiglia " />
 				<meta name="keywords"
-					content="Cantina Benato, vini in bottiglia, vini bianchi, vini rossi, vini rosati, vini dolci, vini secchi, vini frizzanti, vini fermi, vini spumanti" />
+					content="Cantina Benato, catalogo, vini in bottiglia, vini bianchi, vini rossi, vini rosati, vini dolci, vini secchi, vini frizzanti, vini fermi, vini spumanti" />
 				<link href="../css/screen/main.css" rel="stylesheet" media="screen"
 					type="text/css" />
 				<link href="../css/print/main.css" rel="stylesheet" media="print"

@@ -12,7 +12,7 @@ my %cookies=CGI::Cookie->fetch;
 
 
 my $title = "Registrati";
-my $keywords = "cantina, Benato, cantina Benato, registrazione, prenotazione, vini, vini in bottiglia";
+my $keywords = "cantina, Benato, cantina Benato, registrazione al sito, prenotazione online, vini, vini in bottiglia";
 my $descr = "Registrazione utente al sito della cantina Benato, per poter prenotare online i nostri vini in bottiglia";
 
 # if not sessione
