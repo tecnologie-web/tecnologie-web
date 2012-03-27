@@ -35,6 +35,14 @@ xsd:schemaLocation="http://www.cantinabenato.it schema.xsd">
 			<email>jorgesoto777@gmail.com</email>
 			<telefono>3485281917</telefono>
 		</utente>
+      <utente>
+			<username>esame</username>
+			<password>pabKBYt8bh73A</password>
+			<nome>Nome</nome>
+			<cognome>Cognome</cognome>
+			<email>username@dominio.com</email>
+			<telefono>1234567890</telefono>
+		</utente>
 	</iscritti>
    <prodotti>
       <vino>

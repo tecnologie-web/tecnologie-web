@@ -11,7 +11,7 @@ require "funzioni/static.cgi";
 my $page = new CGI;
 my %cookies=CGI::Cookie->fetch;
 my $title = "Chi Siamo";
-my $keywords = "cantina, Benato, descrizione, storia, contatti, orari, vini";
+my $keywords = "cantina, Benato, cantina Benato, descrizione, storia, contatti, orari, vini";
 my $descr = "Storia della cantina Benato, i nostri orari di apertura e chiusura, i contatti per telefonarci o scriverci";
 &intestazione($page,$title,$keywords,$descr);
 &header($page);
